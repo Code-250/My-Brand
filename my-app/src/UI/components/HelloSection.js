@@ -8,19 +8,24 @@ function HelloSection(){
     return(
         <div className='Hello-container'>
             <div className='wrapper'>
-                <div>
-                    <p className='hey'>Hellooo!!! I am afull stack web developer & a web designer at the same 
-                    got a project to work on </p>
+                
+                <div >
+                    
+                    <p className='hey'>
+                        <b>Hey There, I'm Richard</b><br></br>
+                        A web developer & a designer at the same time
+                     from Kigali Rwanda, I create best websites to  help people 
+                     enjoy being online.</p>
                     <Button className='btns'
                             buttoStyle='btn--primary'
                             buttonSize='btn--large'
                             >
                                 GET IN TOUCH
                     </Button>  
-
+                    
                 </div>
                 
-                    <img src='/images/PROFILE.JPG'alt='background'></img>
+                <img src='/images/PROFILE.JPG'alt='background'className='profile'></img>
                     
             </div> 
                
