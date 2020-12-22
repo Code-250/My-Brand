@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Blogs from './Blogs'
+import Footer from './UI/components/Footer'
 // import Projects from './Projects';
 // import Blogs from './Blogs'
 
@@ -15,13 +16,14 @@ class App extends React.Component {
       <Router>
         <div>
           <NavBar/>
-          <Route path='/' exact component={Home}/>
-          <Route path='/projects' component={Projects} />
-          <Route path='/About' component={About}/>
-          <Route path='/Blogs' component={Blogs}/>
-          {/* <Route path='/Projects' Component={Projects}/>
-          <Route path='/Blogs'  Component={Blogs}/> */}
-       
+          <Switch>
+            <Route path='/' exact component={Home}/>
+            <Route path='/projects' component={Projects} />
+            <Route path='/About' component={About}/>
+            <Route path='/Blogs' component={Blogs}/>
+          </Switch>
+          
+          <Footer/>
         </div>
         
 
