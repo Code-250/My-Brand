@@ -1,10 +1,10 @@
-import React from 'react'
-import './App.css'
+import  React from 'react'
+import './App.css';
 
-function Blogs () {
+function Blogs(){
     return(
-        <div>
-            <h1>Blog Page</h1>
+        <div className='App'>
+            <h1>Hello Blogs</h1>
         </div>
     )
 }

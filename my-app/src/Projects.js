@@ -1,10 +1,10 @@
-import React from 'react'
-import './App.css'
+import  React from 'react'
+import './App.css';
 
-function Projects () {
+function Projects(){
     return(
-        <div>
-            <h1>projects</h1>
+        <div className='App'>
+            <h1>Hello Projects</h1>
         </div>
     )
 }

@@ -1,17 +1,11 @@
-import React from 'react';
+import  React from 'react'
 import './App.css';
 
-
-function About (){
+function About(){
     return(
-        <div>
-            <h1>About Page</h1>
-            <h1>About Page</h1>
-            <h1>About Page</h1>
-            <h1>About Page</h1>
+        <div className='App'>
+            <h1>Hello About</h1>
         </div>
-            
-       
     )
 }
 
