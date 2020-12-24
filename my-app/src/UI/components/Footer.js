@@ -25,8 +25,44 @@ function Footer() {
                     </form>
                 </div>
             </section>
+            <section className='footer-contact'>
+                <h1>
+                    CONTACT US
+                </h1>
+                <div className='contact-container'>
+                    <div className='contact-wrapper'>
+                        <form classNane='form'>
+                            <input type='text'
+                            palceholder="your Full Name"
+                            className='contact-input'/>
+                            <input type='email'
+                            palceholder="your email"
+                            className='contact-input'/>
+                        </form>
+                    </div>
+                    <div className='message'>
+                         <input type='text'
+                        palceholder="Send your message here"
+                        className='contact-message'/>
+                        <Button buttonStyle='btn--outline'
+                        className='Subscribe'
+                        >Send</Button>
+                        
+                    </div>
+                   
+                </div>
+                
+                
+            </section>
             <div className='footer-links'>
                 <div className='footer-link-wrapper'>
+                <div className='footer-link-items'>
+                        <h2>Projects</h2>
+                        <Link to='/'>Want to try this </Link>
+                        <Link to='/'>What are we capable of?</Link>
+                        <Link to='/'>Work with us</Link>
+                        <Link to='/'>Who is </Link>
+                    </div>
                     <div className='footer-link-items'>
                         <h2>About Us</h2>
                         <Link to='/Projects'>Who is this guy?</Link>
@@ -34,15 +70,17 @@ function Footer() {
                         <Link to='/'>Work with us</Link>
                         <Link to='/'>Who is </Link>
                     </div>
+                    
+                </div>
+                <div className='footer-link-wrapper'>
+                    
                     <div className='footer-link-items'>
                         <h2>Contact Us</h2>
-                        <Link to='/Projects'>Who is this guy?</Link>
-                        <Link to='/'>What are we capable of?</Link>
+                        <Link to='/Projects'>Contact</Link>
+                        <Link to='/'>Drop an idea and inquiries</Link>
                         <Link to='/'>Work with us</Link>
                         <Link to='/'>Who is </Link>
                     </div>
-                </div>
-                <div className='footer-link-wrapper'>
                     <div className='footer-link-items'>
                         <h2>Social Media</h2>
                         <Link to='/'>Facebook</Link>
@@ -50,17 +88,11 @@ function Footer() {
                         <Link to='/'>Instagram</Link>
                         <Link to='/'>Linked In</Link>
                     </div>
-                    <div className='footer-link-items'>
-                        <h2>Projects</h2>
-                        <Link to='/'>Want to try this </Link>
-                        <Link to='/'>What are we capable of?</Link>
-                        <Link to='/'>Work with us</Link>
-                        <Link to='/'>Who is </Link>
-                    </div>
                 </div>
             </div>
             <section className='social-media'>
                 <div className='social-media-wrap'>
+                <small className='website-rights'>no copyright reserved</small>
                     <div className='social-icons'>
                         <Link to='/'
                         target-label='_blank'
@@ -83,9 +115,13 @@ function Footer() {
                         >
                             <i className='fab-fa-linkedin-f'></i>
                         </Link>
+                        
                     </div>
+                   
                 </div>
+                
             </section>
+            
         </div>
     )
 }

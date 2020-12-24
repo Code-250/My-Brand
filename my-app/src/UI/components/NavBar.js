@@ -36,20 +36,16 @@ function NavBar (){
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/Projects' classname="nav-links" onClick={closeMobileMenu}>
-                           <p className='change'>PROJECTS</p>
+                            <Link to='/about' classname="nav-links" onClick={closeMobileMenu}>
+                           <p className='change'>ABOUT ME</p>
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/About" classname="nav-links" onClick={closeMobileMenu}>
-                            <p className='change'>ABOUT ME</p>
+                            <Link to="/contacts" classname="nav-links" onClick={closeMobileMenu}>
+                            <p className='change'>CONTACT US</p>
                             </Link>
                         </li>
-                         <li className='nav-item'>
-                            <Link to='/Blogs' classname="nav-links" onClick={closeMobileMenu}>
-                            <p class='change'>BLOGS</p>
-                            </Link> 
-                         </li>
+                        
                     </ul>
                     {button && <Button buttonStyle='btn--outline'>Login</Button>}
                     

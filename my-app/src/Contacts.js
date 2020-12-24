@@ -1,7 +1,7 @@
 import  React from 'react'
 import './App.css';
 
-function Projects(){
+function Contacts(){
     return(
         <div className='App'>
             <h1>Hello Projects</h1>
@@ -9,4 +9,4 @@ function Projects(){
     )
 }
 
-export default Projects;
+export default Contacts;
