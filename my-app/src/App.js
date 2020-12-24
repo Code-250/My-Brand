@@ -5,8 +5,9 @@ import './App.css';
 import Home from './Home';
 import About from './About';
 import Contacts from './Contacts';
-import Blogs from './Blogs'
-import Footer from './UI/components/Footer'
+import Blogs from './Blogs';
+import Footer from './UI/components/Footer';
+import Login from './UI/components/Login'
 // import Projects from './Projects';
 // import Blogs from './Blogs'
 
@@ -21,6 +22,7 @@ class App extends React.Component {
             <Route path='/Contacts' component={Contacts} />
             <Route path='/About' component={About}/>
             <Route path='/Blogs' component={Blogs}/>
+            <Route path='/Login' component={Login}/>
           </Switch>
           
           <Footer/>

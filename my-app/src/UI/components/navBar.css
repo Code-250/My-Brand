@@ -61,7 +61,7 @@
   align-items: center;
   text-decoration: none;
   outline:none;
-  padding: 40px;
+  padding: 15px;
   height: 100%;
 }
 .change{
@@ -151,7 +151,7 @@
   .nav-links-mobile {
     display: block;
     text-align: center;
-    margin: 2rem auto;
+    margin: 4rem auto;
     border-radius: 4px;
     width: 80%;
     text-decoration: none;
