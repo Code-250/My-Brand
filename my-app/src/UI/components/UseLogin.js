@@ -1,11 +1,13 @@
 import{ useState, useEffect} from 'react'
 
-const UseLogin=()=>{
+const UseLogin= Validate =>{
     const [values,setValues]=useState({
         username:'',
         password:''
     })
-    const [errors, setErrors]=useState({})
+    const [errors, setErrors]=useState({});
+    const[isSubmitting, setSubmit] = useState(false);
+
 
 
     const handleChange = e =>{
@@ -17,8 +19,10 @@ const UseLogin=()=>{
     };
     const handleSubmit = e=>{
         e.preventDefault();
+
+        setErrors(Validate(values));
     };
-    return {handleChange, values,handleSubmit}
+    return {handleChange, values,handleSubmit, errors}
 }
 
 export default UseLogin;

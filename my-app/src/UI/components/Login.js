@@ -1,10 +1,11 @@
-import React from 'react'
-
-import UseLogin from './UseLogin'
+import React from 'react';
+import './Login.css';
+import UseLogin from './UseLogin';
+import Validate from './ValidateInfo'
 
 const Login = () => {
 
-    const {handleChange, values,handleSubmit }= UseLogin()
+    const {handleChange, values,handleSubmit,errors}= UseLogin(Validate)
 
     return (
         <div className='form-content-right'>
@@ -19,7 +20,7 @@ const Login = () => {
                         value={values.username}
                         onChange={handleChange}
                         />
-                    
+                        {errors.username && <p>{errors.username}</p>}
                 </div>
                 <div className='form-inputs'>
                     
@@ -30,6 +31,7 @@ const Login = () => {
                         value={values.password}
                         onChange={handleChange}
                         />
+                        {errors.password && <p>{errors.password}</p>}
                     
                 </div>
                 <button className='form-input-btn'

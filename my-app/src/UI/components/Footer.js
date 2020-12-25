@@ -2,7 +2,8 @@ import React from 'react'
 import '../../App.css';
 import { Button } from './Button';
 import {Link} from 'react-router-dom';
-import './Footer.css'
+import './Footer.css';
+import {faFacebbol} from 'react-icons'
 
 function Footer() {
     return (
@@ -98,8 +99,11 @@ function Footer() {
                         target-label='_blank'
                         arial-label='Facebook'
                         className='social-icon-link facebook'
+                        
                         >
-                            <i className='fab-fa-facebook-f'></i>
+                            <i className='fab-fa-facebook-f'>
+                                <faFacebook color="white"/>
+                            </i>
                         </Link>
                         <Link to='/'
                         target-label='_blank'
