@@ -7,14 +7,14 @@ import About from './About';
 import Contacts from './Contacts';
 import Blogs from './Blogs';
 import Footer from './UI/components/Footer';
-import Login from './UI/components/Login'
-// import Projects from './Projects';
-// import Blogs from './Blogs'
+import Form from './UI/components/Form'
+
 
 class App extends React.Component {
   render(){
     return (
-      <Router>
+      
+        <Router>
         <div>
           <NavBar/>
           <Switch>
@@ -22,18 +22,14 @@ class App extends React.Component {
             <Route path='/Contacts' component={Contacts} />
             <Route path='/About' component={About}/>
             <Route path='/Blogs' component={Blogs}/>
-            <Route path='/Login' component={Login}/>
+            <Route path='/Login' component={Form}/>
+            
+            
           </Switch>
           
-          <Footer/>
-        </div>
-        
-
           
-    
-      </Router>
-      
-   
+        </div>
+        </Router>
     );
   }
   

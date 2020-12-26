@@ -3,7 +3,6 @@ import '../../App.css';
 import { Button } from './Button';
 import {Link} from 'react-router-dom';
 import './Footer.css';
-import {faFacebbol} from 'react-icons'
 
 function Footer() {
     return (
@@ -34,16 +33,16 @@ function Footer() {
                     <div className='contact-wrapper'>
                         <form classNane='form'>
                             <input type='text'
-                            palceholder="your Full Name"
+                            placeholder="your Full Name"
                             className='contact-input'/>
                             <input type='email'
-                            palceholder="your email"
+                            placeholder="your email"
                             className='contact-input'/>
                         </form>
                     </div>
                     <div className='message'>
                          <input type='text'
-                        palceholder="Send your message here"
+                        placeholder="Send your message here"
                         className='contact-message'/>
                         <Button buttonStyle='btn--outline'
                         className='Subscribe'
@@ -66,7 +65,7 @@ function Footer() {
                     </div>
                     <div className='footer-link-items'>
                         <h2>About Us</h2>
-                        <Link to='/Projects'>Who is this guy?</Link>
+                        <Link to='/About'>Who is this guy?</Link>
                         <Link to='/'>What are we capable of?</Link>
                         <Link to='/'>Work with us</Link>
                         <Link to='/'>Who is </Link>

@@ -1,4 +1,4 @@
-import{ useState, useEffect} from 'react'
+import{ useState} from 'react'
 
 const UseLogin= Validate =>{
     const [values,setValues]=useState({
@@ -6,7 +6,7 @@ const UseLogin= Validate =>{
         password:''
     })
     const [errors, setErrors]=useState({});
-    const[isSubmitting, setSubmit] = useState(false);
+    const[isSubmitting, setIsSubmitting] = useState(false);
 
 
 
@@ -21,6 +21,7 @@ const UseLogin= Validate =>{
         e.preventDefault();
 
         setErrors(Validate(values));
+        setIsSubmitting(true);
     };
     return {handleChange, values,handleSubmit, errors}
 }

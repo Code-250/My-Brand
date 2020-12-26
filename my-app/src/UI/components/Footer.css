@@ -41,7 +41,7 @@ p{
 
 .footer-input{
     padding:8px 20px;
-    border-radius:2px;
+    border-radius:10px;
     margin-right:10px;
     outline:none;
     border:none;
@@ -76,15 +76,28 @@ form{
     width:100%;
 }
 .contact-message{
-    padding:50px;    
+    padding:50px;
+    border-radius:10px;
+    margin:15px    
 }
 .contact-input{
     width:100%;
     margin:15px;
     padding:10px;
+    border-radius:10px;
 }
+.contact-input::placeholder{
+    color:#747171;
+    font-weight:bold;
+}
+.contact-message::placeholder{
+    color:#747171;
+    font-size:20px;
+    opacity:.4;
+}
+
 .footer-links{
-    widows: 100%;
+    width: 100%;
     max-width:1000px;
     display:flex;
     justify-content:center;
@@ -126,6 +139,9 @@ form{
     margin-bottom:32px;
 }
 .footer-input::placeholder{
+    color:#b1b1b1b1;
+}
+.contact-input::placeholder{
     color:#b1b1b1b1;
 }
 

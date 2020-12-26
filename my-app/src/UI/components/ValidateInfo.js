@@ -1,3 +1,4 @@
+
 export default function Validate (values){
     let errors={}
     // username
@@ -8,7 +9,7 @@ export default function Validate (values){
 if (!values.password){
     errors.password="password required"
 }else if(values.password.length<8){
-    errors.password = "password needs to be 8 characters or more"
+    errors.password = "password needs to be at least 8 characters or more"
 }
 return errors;
 }

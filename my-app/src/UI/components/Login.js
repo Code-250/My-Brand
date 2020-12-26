@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
+import{Link} from 'react-router-dom';
 import './Login.css';
 import UseLogin from './UseLogin';
-import Validate from './ValidateInfo'
+import Validate from './ValidateInfo';
+
 
 const Login = () => {
 
-    const {handleChange, values,handleSubmit,errors}= UseLogin(Validate)
+    const {handleChange, values,handleSubmit,errors}= UseLogin(Validate);
 
     return (
         <div className='form-content-right'>
@@ -16,7 +18,7 @@ const Login = () => {
                         <input type='text'
                         name='username'
                         className='form-input'
-                        placeholder='Enter your username'
+                        placeholder=' username'
                         value={values.username}
                         onChange={handleChange}
                         />
@@ -27,22 +29,25 @@ const Login = () => {
                         <input type='password'
                         name='password'
                         className='form-input'
-                        placeholder='Enter your password'
+                        placeholder='password'
                         value={values.password}
                         onChange={handleChange}
                         />
                         {errors.password && <p>{errors.password}</p>}
                     
                 </div>
-                <button className='form-input-btn'
-                type='submit'>
-                    Login
-                </button>
+               
+                    <button className='form-input-btn'
+                    type='submit'>
+                        Login
+                    </button>
+                 
+                
                 <span classname='form-input-signup'>
                     does not have an account? SignUp<a href='#'>here</a>
                 </span>
             </form>
-          
+           
         </div>
     )
 }

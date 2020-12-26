@@ -50,7 +50,7 @@ function NavBar (){
                         </li>
                         
                     </ul>
-                   <Link to='/contact'> {button && <Button buttonStyle='btn--outline'>Login</Button>}</Link>
+                   <Link to='/Form'> {button && <Button buttonStyle='btn--outline'>Login</Button>}</Link>
                     
                     
                 </div>
