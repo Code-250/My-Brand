@@ -2,6 +2,7 @@ import React from 'react'
 import './HelloSection'
 import '../../App.css';
 import {Button} from './Button';
+import {Link} from 'react-router-dom';
 import './HelloSection.css'
 
 function HelloSection(){
@@ -16,12 +17,15 @@ function HelloSection(){
                         A web developer & a designer at the same time
                      from Kigali Rwanda, I create best websites to  help people 
                      enjoy being online.</p>
-                    <Button className='btns'
-                            buttoStyle='btn--primary'
-                            buttonSize='btn--large'
-                            >
-                                GET IN TOUCH
-                    </Button>  
+                    <Link to='/contacts'>
+                        <Button className='btns'
+                                buttoStyle='btn--primary'
+                                buttonSize='btn--large'
+                                >
+                                    GET IN TOUCH
+                        </Button>  
+                    </Link>
+                    
                     
                 </div>
                 

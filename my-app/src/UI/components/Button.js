@@ -21,7 +21,7 @@ export const Button = ({
 
     return(
         <div>
-            <Link to='/login' className='btn--mobile'>
+            
                 <button
                 className={`btn 
                 ${checkButtonStyle} 
@@ -31,9 +31,8 @@ export const Button = ({
                 >
                     {children}
                 </button>
-            </Link>
+            
         </div>
-        
         
     )
 }
