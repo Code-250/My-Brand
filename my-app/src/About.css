@@ -44,4 +44,37 @@
     font-size:20px;
     margin-left:300px;
     margin-right:350px;
+    font-weight:italic;
+}
+@media screen and (max-width:768px){
+    img{
+        margin-top:75px;
+        margin-left:150px;
+        height:300px;
+        width:230px;
+       
+    }
+    .about-wrapper{
+        display:none;
+        color:rgba(255,255,255,.7);
+    font-size:15px;
+    width:200px;
+    padding:30px;
+    
+    
+    }
+    .clients{
+        padding:10px;
+        font-size:20px;
+        width:100%
+    }
+    .talk{
+        width:90%;
+        
+    }
+    #compliment{
+        margin:0px;
+        width:100%;
+       
+    }
 }

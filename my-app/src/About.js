@@ -36,12 +36,12 @@ function About(){
                          <h1 className="talk">
                              'What our clients talk about us'
                          </h1>
-                         <i id='compliment'>
+                         <p id='compliment'>
                             "having Richard in our team was just a relief becuse 
                             he is a hard work and he is good "
                             "having Richard in our team was just a relief becuse 
                             he is a hard work and he is good "
-                        </i>
+                        </p>
                         <h1 className='talk'>
                             director of andela
                         </h1>
