@@ -1,11 +1,30 @@
 .about-container{
     background:linear-gradient(45deg, rgb(28,27,27) 0%, rgb(24,27,27) 100%);
-    height:400px;
+    height:300px;
     width:100%;
-    margin:0px;
+    display:grid;
+    grid-template-columns: repeat(2,auto);
 
     
 }
-p{
-    color:#81818181;
+.about-wrapper{
+    color:rgba(255,255,255,.7);
+    font-size:20px;
+    width:500px;
+    padding:100px;
+    margin-left:60px;
+}
+.descript{
+    font-size:40px;
+    padding:60px;
+    padding-right:20px;
+    margin-left:30px;
+}
+.intro{
+    font-size:40px;
+    margin-right:10px;
+}
+.explain{
+   margin-left:100px;
+   
 }

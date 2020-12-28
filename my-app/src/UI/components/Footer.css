@@ -86,6 +86,12 @@ form{
     padding:10px;
     border-radius:10px;
 }
+.subscribe{
+    width:20%;
+    justify-content:flex-end;
+    align-self:flex-end;
+
+}
 .contact-input::placeholder{
     color:#747171;
     font-weight:bold;
@@ -183,12 +189,29 @@ form{
         width:100%;
     }
     .btn{
-        width:100%;
+        width:70%;
     }
     .footer-link-wrapper{
         flex-direction:column;
     }
     .footer-media-wrap{
         flex-direction:column;
+    }
+    .contact-input{
+        width:100%;
+    }
+    .contact-container{
+        display:flex;
+        flex-direction:column;
+    }
+    .message{
+        width:100%;
+        
+    }
+    .subscribe{
+        width:20%;
+        justify-content:flex-end;
+        align-self:flex-end;
+
     }
 }

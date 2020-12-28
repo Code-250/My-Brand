@@ -1,5 +1,5 @@
-import React,{useState} from 'react';
-import{Link} from 'react-router-dom';
+import React from 'react';
+
 import './Login.css';
 import UseLogin from './UseLogin';
 import Validate from './ValidateInfo';

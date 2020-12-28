@@ -5,25 +5,28 @@ import Footer from './UI/components/Footer';
 
 function About(){
     return(
-        <div className='App'>
-            <h1>Hello About</h1>
+        <div className='container'>
             <div className='about-container'>
                 <div className='about-wrapper'>
                     <p>who is this guy?</p>
                     <p>what does he do ?</p> 
                     <p>what do we need to know about him?</p>
                 </div>
+                <img src='/images/PROFILE.JPG' alt='profile-picture'></img>
             </div>    
-                    <div>
-                        <p>
+                    <div className='descript'>
+                        <h1 className='intro'> 
+                            WHO IS RICHARD
+                        </h1>
+                        <label className='explain'>
                             I am a beginer fullstack developer 
                             who is dedicated into helpng people 
                             in other words users to have the most
                             responsive websites and web apps.
                             Below are different services that we offer 
                             and the expertise.
-                        </p>
-                    </div>
+                        </label>
+                    </div> 
                     {/* services that we offer. */}
 
                     {/* expertise */}

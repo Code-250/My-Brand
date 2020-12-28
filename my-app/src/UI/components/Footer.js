@@ -46,9 +46,10 @@ function Footer() {
                             <input type='text'
                             placeholder="Send your message here"
                             className='contact-message'/>
-                            <Button buttonStyle='btn--outline'
-                            className='Subscribe'
-                            >Send</Button>
+                           <div className='subscribe'>
+                                <Button 
+                                >Send</Button>
+                            </div> 
                             
                         </div>
                     

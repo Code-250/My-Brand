@@ -6,7 +6,6 @@ import Home from './Home';
 import About from './About';
 import Contacts from './Contacts';
 import Blogs from './Blogs';
-import Footer from './UI/components/Footer';
 import Form from './UI/components/Form'
 
 
