@@ -7,14 +7,16 @@ import About from './About';
 import Contacts from './Contacts';
 import Blogs from './Blogs';
 import Form from './UI/components/Form'
+import ScrollToTop from './ScrollToTop';
 
 
 class App extends React.Component {
   render(){
     return (
-      
+        
         <Router>
         <div>
+        <ScrollToTop/>
           <NavBar/>
           <Switch>
             <Route path='/' exact component={Home}/>
