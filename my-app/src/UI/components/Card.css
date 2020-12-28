@@ -39,6 +39,12 @@
     border-radius: 10px;
     text-decoration: none;
   }
+  #projects{
+    margin:-20px
+  }
+  #blog{
+    margin:-20px;
+  }
   
   .cards__item__pic-wrap {
    position:relative;

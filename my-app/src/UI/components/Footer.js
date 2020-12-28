@@ -11,7 +11,7 @@ function Footer() {
             <div className='footer-container'>
                 <section className='footer-subscription'>
                     <h1 className='footer-subscription-heading'>
-                        Have a new project to work on 
+                        Join us to see more projects and Blogs!!
                     </h1>
                     <p>
                         you can unsubscribe at any time.

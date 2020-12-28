@@ -32,6 +32,21 @@ function About(){
                     {/* expertise */}
 
                     {/* what our clients talk about us */}
+                    <div className='clients'>
+                         <h1 className="talk">
+                             'What our clients talk about us'
+                         </h1>
+                         <i id='compliment'>
+                            "having Richard in our team was just a relief becuse 
+                            he is a hard work and he is good "
+                            "having Richard in our team was just a relief becuse 
+                            he is a hard work and he is good "
+                        </i>
+                        <h1 className='talk'>
+                            director of andela
+                        </h1>
+                                                               
+                    </div>
                     
             <Footer/>
         </div>
