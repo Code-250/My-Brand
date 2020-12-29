@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import About from './About';
@@ -8,10 +9,9 @@ import Form from './UI/components/Form'
 import ScrollToTop from './ScrollToTop';
 import project from './UI/components/project';
 import blog from './UI/components/blog';
+import NavBar from './UI/components/NavBar';
 
-
-class App extends React.Component {
-  render(){
+function App (){
     return (
         
         <Router>
@@ -36,5 +36,5 @@ class App extends React.Component {
     );
 
   }
-}
+
 export default App;

@@ -1,5 +1,4 @@
-import React from 'react'
-import './HelloSection'
+import React from 'react';
 import '../../App.css';
 import {Button} from './Button';
 import {Link} from 'react-router-dom';
@@ -10,21 +9,25 @@ function HelloSection(){
         <div className='Hello-container'>
             <div className='wrapper'>
                 
-                <div >
+                <div className='intro'>
                     
                     <p className='hey'>
-                        <b>Hey There, I'm Richard</b><br></br>
+                        <b>Hey There, I'm Richard</b>
                         A web developer & a designer at the same time
-                     from Kigali Rwanda, I create best websites to  help people 
-                     enjoy being online.</p>
-                    <Link to='/contacts'>
-                        <Button className='btns'
-                                buttoStyle='btn--primary'
-                                buttonSize='btn--large'
-                                >
-                                    GET IN TOUCH
-                        </Button>  
-                    </Link>
+                        from Kigali Rwanda, I create best websites to  help people 
+                        enjoy being online.
+                    </p>
+                 <div id='button-btn'>
+                    
+                            <Button className='btns'
+                                    buttoStyle='btn--primary'
+                                    buttonSize='btn--large'
+                                    >
+                                        GET IN TOUCH
+                            </Button>  
+                        
+                </div>
+                    
                     
                     
                 </div>
