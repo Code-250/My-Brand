@@ -1,11 +1,26 @@
-import React from 'react'
+import {useState} from 'react';
 
-const UseLogin = () => {
-    return (
-        <div>
+const useLogin = (ValidateInfo) => {
+    const [Values, setValues] = useState({
+        username:'',
+        password:''
+    })
+    const  [errors, setErrors] = useState({})
+
+    const handleChange = e=>{
+        const {name,Value} =e.target
+        setValues({
             
-        </div>
-    )
+            ...Values,
+            [name]:Value 
+        });
+        
+    };
+    const handleSubmit =e=>{
+        e.preventDefault();
+        setErrors(ValidateInfo(Values))
+    }
+    return{ handleChange, Values,handleSubmit, errors}
 }
 
-export default UseLogin
+export default useLogin;
