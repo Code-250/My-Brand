@@ -43,3 +43,35 @@ span{
 a{
     color:cyan;
 }
+@media screen and (max-width: 960px){
+    .form-content-right{
+        width:90%;
+        margin-left:10px;
+        padding:10px;
+    }
+    .form{
+        width:90%;
+        padding:15px;
+        margin:2px;
+    }
+    .form-input-btn{
+        width:20%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .form-content-right{
+        width:90%;
+        margin-left:10px;
+        padding:10px;
+    }
+    .form{
+        width:90%;
+        padding:15px;
+        margin:2px;
+    }
+    .form-input-btn{
+        width:20%;
+    }
+
+}
