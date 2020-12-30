@@ -11,7 +11,7 @@ const Login = () => {
     return (
         <div className='form-content-right'>
             <form className='form' onSubmit={handleSubmit}>
-                <h1>Login</h1>
+                <h1 id="header">Login</h1>
                 <div className='form-inputs'>
                     
                         <input 
