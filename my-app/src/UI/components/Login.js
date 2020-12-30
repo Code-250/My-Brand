@@ -6,7 +6,7 @@ import ValidateInfo from './ValidateInfo';
 
 const Login = () => {
 
-    const { hangleChange, Values,handleSubmit,errors} =useLogin(ValidateInfo)
+    const { handleChange, values,handleSubmit,errors} =useLogin(ValidateInfo)
 
     return (
         <div className='form-content-right'>
@@ -20,10 +20,10 @@ const Login = () => {
                         name='username'
                         className='form-input'
                         placeholder=' username'
-                        Value={Values.username}
-                        onChange={hangleChange}
+                        value={values.username}
+                        onChange={handleChange}
                         />
-                 {errors.username &&  <p>{errors.username}</p>}
+                        {errors.username && <p>{errors.username}</p>}
                 </div>
                 <div className='form-inputs'>
                     
@@ -33,11 +33,11 @@ const Login = () => {
                         name='password'
                         className='form-input'
                         placeholder='password'
-                        Value={Values.password}
-                        onChange={hangleChange}
+                        value={values.password}
+                        onChange={handleChange}
                         />
            
-           {errors.password && <p>{errors.password}</p>}
+                        {errors.password && <p>{errors.password}</p>}
                 </div>
                
                  

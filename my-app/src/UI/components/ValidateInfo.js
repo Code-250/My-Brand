@@ -1,16 +1,14 @@
-const ValidateInfo = (Values) => {
-    let errors = {}
+export default function ValidateInfo  (values)  {
+    let errors ={};
 
-    if (!Values.username){
-        errors.username='username Required'
+    if(!values.username.trim()){
+        errors.username ='username Required'
     }
-    // password
-    if(!Values.password){
-        errors.password ='password Required'
-    }else if(Values.password.length <8){
-        errors.password = 'password requires at least 8 characters'
+    if (!values.password){
+     errors.password = 'password Required'
+    }else if(values.password.length <8){
+        errors.password ='password should be at least 8 characters.'
     }
-    return errors
+    return errors;
 }
 
-export default ValidateInfo
