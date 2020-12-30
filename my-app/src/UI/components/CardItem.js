@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 
 function CardItem(){
     return(
-        <>
-            <li className='cards__item'>
+        <div className="holster">
+            <li className='cards__item container x mandatory-scroll-snapping'>
                 <Link className='cards__item__link'>
                     <figure className='cards__item__pic-wrap'>
                         <img src='/images/PROFILE.jpg' alt='card-profile'
@@ -15,7 +15,7 @@ function CardItem(){
                     </div>
                 </Link>
             </li>
-        </>    
+        </div>    
     )
 }
 

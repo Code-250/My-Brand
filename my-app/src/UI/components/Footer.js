@@ -23,7 +23,7 @@ function Footer() {
                             placeholder='your email'
                             className='footer-input'
                             />
-                            <Button buttonStyle='btn--outline'className='Subscribe'>Subscribtion</Button>
+                            <Button buttonStyle='btn--outline'id='Subscribe'>Subscribtion</Button>
                         </form>
                     </div>
                 </section>
@@ -93,16 +93,6 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <section className='social-media'>
-                    <div className='social-media-wrap'>
-                    <small className='website-rights'>no copyright reserved</small>
-                        <div className='social-icons'>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </section>
                 
             </div>
         </>
