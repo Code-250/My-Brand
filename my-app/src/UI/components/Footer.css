@@ -54,7 +54,7 @@ p{
     display:flex;
     flex-direction:row;
     padding:10px;
-    grid-gap:30px;
+    grid-gap:80px;
     max-width:1000px;
     width:100%;
 }

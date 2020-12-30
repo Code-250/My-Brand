@@ -23,7 +23,7 @@ export const Button = ({
         <div>
             
                 <button
-                className={`btn 
+                className={`btn
                 ${checkButtonStyle} 
                 ${checkButtonSize}`}
                 onClick={onClick}
