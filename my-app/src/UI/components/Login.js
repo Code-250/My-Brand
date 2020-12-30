@@ -1,13 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import './Login.css';
-import UseLogin from './UseLogin';
-import Validate from './ValidateInfo';
+import useLogin from './useLogin';
+import ValidateInfo from './ValidateInfo';
 
 
 const Login = () => {
 
-    const {handleChange, values,handleSubmit,errors}= UseLogin(Validate);
+    const { hangleChange, Values,handleSubmit,errors} =useLogin(ValidateInfo)
 
     return (
         <div className='form-content-right'>
@@ -15,26 +14,30 @@ const Login = () => {
                 <h1>Login</h1>
                 <div className='form-inputs'>
                     
-                        <input type='text'
+                        <input 
+                        id='username'
+                        type='text'
                         name='username'
                         className='form-input'
                         placeholder=' username'
-                        value={values.username}
-                        onChange={handleChange}
+                        Value={Values.username}
+                        onChange={hangleChange}
                         />
-                        {errors.username && <p>{errors.username}</p>}
+                 {errors.username &&  <p>{errors.username}</p>}
                 </div>
                 <div className='form-inputs'>
                     
-                        <input type='password'
+                        <input 
+                        id='password'
+                        type='password'
                         name='password'
                         className='form-input'
                         placeholder='password'
-                        value={values.password}
-                        onChange={handleChange}
+                        Value={Values.password}
+                        onChange={hangleChange}
                         />
-                        {errors.password && <p>{errors.password}</p>}
-                    
+           
+           {errors.password && <p>{errors.password}</p>}
                 </div>
                
                  
