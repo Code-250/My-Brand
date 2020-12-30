@@ -1,26 +1,26 @@
 import {useState} from 'react';
 
 const useLogin = (ValidateInfo) => {
-    const [Values, setValues] = useState({
+    const [values, setValues] = useState({
         username:'',
         password:''
-    })
+        
+    });
     const  [errors, setErrors] = useState({})
 
     const handleChange = e=>{
-        const {name,Value} =e.target
+        const {name,value} =e.target
         setValues({
-            
-            ...Values,
-            [name]:Value 
+            ...values,
+            [name]:value 
         });
         
     };
     const handleSubmit =e=>{
         e.preventDefault();
-        setErrors(ValidateInfo(Values))
+        setErrors(ValidateInfo(values));
     }
-    return{ handleChange, Values,handleSubmit, errors}
+    return{ handleChange, values,handleSubmit, errors}
 }
 
 export default useLogin;
