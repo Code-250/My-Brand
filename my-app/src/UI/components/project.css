@@ -65,8 +65,9 @@
         margin-left: 180px;
         margin-right: 50px;
     }
-    /* .describe{
-       padding-left:140px;
-    } */
+    .describe{
+       padding-left:40px;
+       color:#4b4a4a;
+    }
 
 }
