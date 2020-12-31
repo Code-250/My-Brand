@@ -17,6 +17,7 @@
     transition:all 0.3s ease-out;
 } 
 .btn--outline{
+    margin:5px;
     border-radius:10px;
     background-color:transparent;
     color:#fff;

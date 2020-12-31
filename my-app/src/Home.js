@@ -5,13 +5,18 @@ import Card from './UI/components/Card';
 import Footer from './UI/components/Footer';
 
 
+
 function Home(){
     return(
-        <div className='App'>
-            <HelloSection/>
-            <Card/>
-            <Footer/>
-        </div>
+      
+            <div className='App'>
+                <HelloSection/>
+                <Card/>
+                <Footer/>
+                
+            </div>
+        
+        
     )
 }
 export default Home;

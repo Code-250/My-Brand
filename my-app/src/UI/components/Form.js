@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
 
 import Login from './Login';
 
@@ -14,8 +13,8 @@ const Form = () => {
     }
     return (
         <div>
-            
-            { !isSubmitted ? <Login submitForm={submitForm }/> : <Home/>}
+             { !isSubmitted ? <Login submitForm={submitForm }/> : <Home/>}
+           
         </div>
     )
 }

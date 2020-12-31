@@ -1,21 +1,22 @@
-import React,{useState} from 'react';
-import{Link} from 'react-router-dom';
+import React from 'react';
 import './Login.css';
-import UseLogin from './UseLogin';
-import Validate from './ValidateInfo';
+import useLogin from './useLogin';
+import ValidateInfo from './ValidateInfo';
 
 
 const Login = () => {
 
-    const {handleChange, values,handleSubmit,errors}= UseLogin(Validate);
+    const { handleChange, values,handleSubmit,errors} =useLogin(ValidateInfo)
 
     return (
         <div className='form-content-right'>
             <form className='form' onSubmit={handleSubmit}>
-                <h1>Login</h1>
+                <h1 id="header">Login</h1>
                 <div className='form-inputs'>
                     
-                        <input type='text'
+                        <input 
+                        id='username'
+                        type='text'
                         name='username'
                         className='form-input'
                         placeholder=' username'
@@ -26,21 +27,25 @@ const Login = () => {
                 </div>
                 <div className='form-inputs'>
                     
-                        <input type='password'
+                        <input 
+                        id='password'
+                        type='password'
                         name='password'
                         className='form-input'
                         placeholder='password'
                         value={values.password}
                         onChange={handleChange}
                         />
+           
                         {errors.password && <p>{errors.password}</p>}
-                    
                 </div>
                
+                 
                     <button className='form-input-btn'
-                    type='submit'>
-                        Login
-                    </button>
+                        type='submit'>
+                            Login
+                        </button>
+                 
                  
                 
                 <span classname='form-input-signup'>
