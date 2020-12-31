@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 const project = () => {
     return (
         <div className='container'>
-            <div id='wrapper'>
+            <div className='wrapper'>
                 <h1 id='heading'>
                     CREATING A LIST IF TODOS
             </h1>
