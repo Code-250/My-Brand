@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './Footer';
-import './project.css';
+import '../../App.css';
 import {Link} from 'react-router-dom'
 
 const project = () => {

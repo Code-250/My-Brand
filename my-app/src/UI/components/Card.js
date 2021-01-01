@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link}  from 'react-router-dom';
 import CardItem from './CardItem';
-import './Card.css';
+import '../../App.css';
 
 function Card(){
     return(

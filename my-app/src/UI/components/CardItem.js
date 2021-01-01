@@ -11,7 +11,8 @@ function CardItem(){
                         className='cards__item__img'/>
                     </figure>
                     <div className='cards__item__info'>
-                        <h5 className='cards__item__text'/>
+                        <h5 className='cards__item__text'>Explore the software scheduler
+                                and your day to day life planner</h5>
                     </div>
                 </div>
             </li>

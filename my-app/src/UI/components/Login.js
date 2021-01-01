@@ -1,5 +1,5 @@
 import React from 'react';
-import './Login.css';
+import '../../App.css';
 import useLogin from './useLogin';
 import ValidateInfo from './ValidateInfo';
 
