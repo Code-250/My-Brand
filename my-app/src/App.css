@@ -95,6 +95,10 @@ img{
   font-size:1.9rem;
   line-height:3rem;
 }
+.greetings{
+  padding:20px;
+  color:rgb(126, 123, 123)
+}
 p{
     display:flex;
     align-items:center;
@@ -130,6 +134,7 @@ b{
 .about-header{
   font-size:3.4rem;
   text-align:center;
+  color:rgb(126, 123, 123)
 }
 .about-intro{
   margin:4rem auto;
@@ -153,38 +158,35 @@ b{
 .img-skill{
   filter:grayscale();
   margin:auto;
-  max-width:4rem;
-  height:2.5rem
+  max-width:5rem;
+ height:90px;
 }
 li{
   margin-right:2.5rem;
   text-align:center;
   list-style:none;
   text-decoration: none;
+  line-height: 2;
 }
 
 /*======================= cards section
  =======================================*/
 
+.cards{
+  width:90%;
+  margin:90px;
+}
 
+ .projects {
+  text-align: center;
 
- h1 {
-  text-align: start;
-  margin:20px;
   color:rgb(126, 123, 123);
+
 }
-.holster{
-  display:flex;
-  align-items:center;
-  flex-flow:column nowrap;
-}
-.cards {
-  padding: 59px;
-  background: #fff;
-  scroll-snap-align: x mandatory;
-}
+
 
 .cards__container {
+  width:100%;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -195,18 +197,21 @@ li{
 }
  .cards__items {
     margin-bottom: 24px;
+    display:flex;
   }
   .cards__item {
 
-   display:grid;
+   display:flex;
+   flex-direction:row;
     border-radius: 10px;
     padding:10px;
+    
   }
 
 .cards__item__link {
   padding :20px;
-   display:grid;
-   grid-template-columns: 1fr,1fr,1fr;
+   /* display:grid;
+   grid-template-columns: 1fr,1fr,1fr; */
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -260,6 +265,10 @@ li{
 }
 .hello{
   width:100%;
+}
+.blog-title{
+  text-align:center;
+  color:rgb(126, 123, 123)
 }
 .describe{
   display:flex;
@@ -316,6 +325,7 @@ padding:600px;
   align-items:center;
   text-align:center;
   color:#969393;
+  margin-top:20px;
 }
 
 .footer-subscription > h1 {
@@ -326,6 +336,9 @@ padding:600px;
 p{
   font-weight:bold;
   font-size:20px;
+}
+.contact{
+  color:rgb(126, 123, 123)
 }
 
 .footer-input{
@@ -485,9 +498,9 @@ form{
   margin-left:500px;
   margin-right:500px;
 }
-#header{
-  display:flex;
-  justify-content:center;
+.login-header{
+  color:rgb(126, 123, 123);
+  text-align: center;
 }
 .form-inputs{
   display:flex;
@@ -500,6 +513,7 @@ form{
 .form-input{
   padding:15px;
   margin:20px;
+  border-radius: 10px;
  
 }
 .form-inputs p{
@@ -508,11 +522,15 @@ form{
   margin-left:30px;
 }
 .form-input-btn{
-  margin-left:200px;
-  margin-right:200px;
+  margin-left:180px;
+  margin-right:170px;
   margin-top:20px;
   padding: 10px;
   font-size: 15px;
+  border-radius:10px;
+}
+.active{
+  background-color: #71717171;
 }
 span{
   color:aliceblue;

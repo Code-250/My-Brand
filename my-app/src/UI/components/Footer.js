@@ -28,7 +28,7 @@ function Footer() {
                     </div>
                 </section>
                 <section className='footer-contact'>
-                    <h1>
+                    <h1 className='contact'>
                         CONTACT US
                     </h1>
                     <div className='contact-container'>
