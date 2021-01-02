@@ -1,27 +1,23 @@
 import React from 'react';
 import Footer from './Footer';
-import './project.css';
+import '../../App.css';
 import {Link} from 'react-router-dom'
 
 const project = () => {
     return (
-        <div className='container'>
-            <div className='wrapper'>
+        <div className='project-container'>
+            <div className='project-header'>
                 <h1 id='heading'>
                     CREATING A LIST IF TODOS
             </h1>
             </div>
 
             
-            <div className='bog-description'>
+            <div className='project-img'>
                 {/* description image of project */}
-                <img src='/images/PROFILE.JPG' alt="project-description" id="profile"></img>
-                <p>
-                    Hello did you know that we have 
-                </p>
+                <img src='/images/PROFILE.JPG' alt="project-description"></img>
             </div>
-            <div>
-                <div id='describe'>
+                <div className='project-description'>
                     <p >
                         I am humbly to meet your high responsibility to apply for the permission of carrying out internship in your Company.
                         In fact; I am student who is pursuing bachelor degree in Electronics and Telecommunications Engineering, moreover I am student in year 3 in College of Science and Technology (CST).
@@ -30,14 +26,13 @@ const project = () => {
                         I am looking forward hearing from you and I hope my request will be put into consideration.
                         
                     </p>
-                    <Link to='/' className='more'>get more details about this project</Link>
+                    <Link to='/' className='link'>get more details about this project</Link>
                 </div>
                 <icon>
                     {/* icon of liking the page */}
                     {/* icon of viewed page */}
                     {/* icon of comments on the page */}
                 </icon>
-            </div>
             <Footer/>
         </div>
     )

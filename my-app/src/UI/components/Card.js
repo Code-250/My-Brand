@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link}  from 'react-router-dom';
 import CardItem from './CardItem';
-import './Card.css';
+import '../../App.css';
 
 function Card(){
     return(
         <div className='cards'>
-            <h1 id='projects'>PROJECTS</h1>
+            <h1 className='projects'>PROJECTS</h1>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
@@ -50,7 +50,7 @@ function Card(){
                 </div>
             </div>
             
-            <h1 id='blogs'>blogs</h1>
+            <h1 className='blog-title'>blogs</h1>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>

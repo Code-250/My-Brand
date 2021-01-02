@@ -1,24 +1,21 @@
 import React from 'react'
 import Footer from './Footer';
-import './project.css'
+import '../../App.css'
 
 function blog() {
     return (
-        <div className='container'>
-            <div className='hello'>
-                 <div className='wrapper'>
-                    <h1 className="heading">
+            <div className='blog-container'>
+                <div className='blog-header'>
+                    <h1 id="blog-heading">
                         title of blog
                     </h1>
-            
+                
                 </div>
-                
-                
-                <div className='bog-description'>
+                <div className='blog-img'>
                     {/* description image of project */}
                     <img src='/images/PROFILE.JPG' alt="project-description" id="profile"></img>
                 </div>
-                <div className='describe'>
+                <div className='blog-description'>
                     {/* description of a project */}
                     <p>
                             I am humbly to meet your high responsibility to apply for the permission of carrying out internship in your Company.
@@ -28,16 +25,10 @@ function blog() {
                             I am looking forward hearing from you and I hope my request will be put into consideration.
 
                         </p>
-                        
-                    <icon>
-                        {/* icon of liking the page */}
-                        {/* icon of viewed page */}
-                        {/* icon of comments on the page */}
-                    </icon>
                 </div>
                 <Footer className='footer'/>
+            
             </div>
-        </div>
     )
 }
 

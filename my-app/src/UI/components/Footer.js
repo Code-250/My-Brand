@@ -2,7 +2,7 @@ import React from 'react'
 import '../../App.css';
 import { Button } from './Button';
 import {Link} from 'react-router-dom';
-import './Footer.css';
+import '../../App.css';
 
 
 function Footer() {
@@ -28,7 +28,7 @@ function Footer() {
                     </div>
                 </section>
                 <section className='footer-contact'>
-                    <h1>
+                    <h1 className='contact'>
                         CONTACT US
                     </h1>
                     <div className='contact-container'>
@@ -43,9 +43,13 @@ function Footer() {
                             </form>
                         </div>
                         <div className='message'>
-                            <input type='text'
+                            <textarea type='textarea'
                             placeholder="Send your message here"
-                            className='contact-message'/>
+                            className='contact-message'
+                            cols='30'
+                            rows='10'
+                            >
+                            </textarea>
                            <div className='subscribe'>
                                 <Button 
                                 >Send</Button>
