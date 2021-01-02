@@ -7,7 +7,7 @@ function HelloSection(){
     return(
         <section className='Home-container'>     
                 <div className='header'>
-                    <h1>
+                    <h1 className='greetings'>
                         Hello, <br />
                         I'am <span>Richard Munyemana</span><br />Fullstack Developer
                     </h1>

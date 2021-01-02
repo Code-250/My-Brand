@@ -16,7 +16,7 @@ function About(){
                 </p>
                 <div className='skill-container'>
                     <div classNane='design skill'>
-                        <img className='img-skill' src='./images/designer.svg'alt='desgn-logo'/>
+                        <img className='img-skill' src='./images/designer.svg' alt='Designer-log'/>
                         <h2 className='skill-title'>Design</h2>
                         <ul>
                             <li>Figma</li>

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../App.css';
+import {Link} from 'react-router-dom';
 import useLogin from './useLogin';
 import ValidateInfo from './ValidateInfo';
 
@@ -11,7 +12,7 @@ const Login = () => {
     return (
         <div className='form-content-right'>
             <form className='form' onSubmit={handleSubmit}>
-                <h1 id="header">Login</h1>
+                <h1 className="login-header">Login</h1>
                 <div className='form-inputs'>
                     
                         <input 
@@ -49,7 +50,7 @@ const Login = () => {
                  
                 
                 <span classname='form-input-signup'>
-                    does not have an account? SignUp<a href='#'>here</a>
+                    does not have an account? SignUp<Link to='signup'>here</Link>
                 </span>
             </form>
            

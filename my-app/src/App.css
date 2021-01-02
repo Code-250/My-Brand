@@ -95,6 +95,10 @@ img{
   font-size:1.9rem;
   line-height:3rem;
 }
+.greetings{
+  padding:20px;
+  color:rgb(126, 123, 123)
+}
 p{
     display:flex;
     align-items:center;
@@ -130,6 +134,7 @@ b{
 .about-header{
   font-size:3.4rem;
   text-align:center;
+  color:rgb(126, 123, 123)
 }
 .about-intro{
   margin:4rem auto;
@@ -153,38 +158,35 @@ b{
 .img-skill{
   filter:grayscale();
   margin:auto;
-  max-width:4rem;
-  height:2.5rem
+  max-width:5rem;
+ height:90px;
 }
 li{
   margin-right:2.5rem;
   text-align:center;
   list-style:none;
   text-decoration: none;
+  line-height: 2;
 }
 
 /*======================= cards section
  =======================================*/
 
+.cards{
+  width:90%;
+  margin:90px;
+}
 
+ .projects {
+  text-align: center;
 
- h1 {
-  text-align: start;
-  margin:20px;
   color:rgb(126, 123, 123);
+
 }
-.holster{
-  display:flex;
-  align-items:center;
-  flex-flow:column nowrap;
-}
-.cards {
-  padding: 59px;
-  background: #fff;
-  scroll-snap-align: x mandatory;
-}
+
 
 .cards__container {
+  width:100%;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -195,18 +197,21 @@ li{
 }
  .cards__items {
     margin-bottom: 24px;
+    display:flex;
   }
   .cards__item {
 
-   display:grid;
+   display:flex;
+   flex-direction:row;
     border-radius: 10px;
     padding:10px;
+    
   }
 
 .cards__item__link {
   padding :20px;
-   display:grid;
-   grid-template-columns: 1fr,1fr,1fr;
+   /* display:grid;
+   grid-template-columns: 1fr,1fr,1fr; */
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -250,47 +255,90 @@ li{
 /*====================== project page=====================================*/
 /*====================== project page=====================================*/
 
-.wrapper{
+.project-container{
+  width:95%;
+  margin-left:73px;
+}
+.project-header{
   background:linear-gradient(45deg, rgb(28,27,27) 0%, rgb(24,27,27) 100%);
-  height:400px;
+  width:95%;
+  height:40vh;
+  text-align:center;
+  color:rgb(126, 123, 123);
+
+}
+#heading{
+  padding:120px;
+}
+.project-img{
   width:100%;
-  margin-top:-20px;
- 
+  padding:30px;
+  margin-left:80px;
 
 }
-.hello{
+.project-description{
+width:80%;
+text-align:center;
+display:flex;
+flex-direction:column;
+margin-left:80px;
+align-items:center;
+color:black;
+opacity:.8;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:30px;
+}
+.link{
+  margin-bottom:20px;
+  font-size:17px;
+  color:#1f3868;
+}
+.link:hover{
+  border-bottom: 1px solid #1f3868;
+}
+
+/* =============blog-page======================= */
+/* =============blog-page======================= */
+.blog-container{
+  width:95%;
+  margin-left:73px;
+}
+.blog-header{
+  background:linear-gradient(45deg, rgb(28,27,27) 0%, rgb(24,27,27) 100%);
+  width:95%;
+  height:40vh;
+  text-align:center;
+  color:rgb(126, 123, 123);
+
+}
+#blog-heading{
+  padding:120px;
+}
+.blog-img{
   width:100%;
-}
-.describe{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:50px;
-  flex-direction:column;
-  margin-top:0px;
-  color:rgb(54, 52, 52);
-  line-height: 1.5;
-}
-.more{
-  font-size:20px;
-  margin-top:-70px;
-  margin-left:900px;
-  color:blue;
-}
-.heading{
-padding:600px;
+  padding:30px;
+  margin-left:80px;
 
 }
-.bog-description{
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  flex-direction:column;
-
+.blog-description{
+width:80%;
+text-align:center;
+display:flex;
+flex-direction:column;
+margin-left:80px;
+align-items:center;
+color:black;
+opacity:.8;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:30px;
 }
-#profile{
-  width:60%;
-  height:500px;
+.link{
+  margin-bottom:20px;
+  font-size:17px;
+  color:#1f3868;
+}
+.link:hover{
+  border-bottom: 1px solid #1f3868;
 }
 
 /*============================== Footer Section====================== */
@@ -316,6 +364,7 @@ padding:600px;
   align-items:center;
   text-align:center;
   color:#969393;
+  margin-top:20px;
 }
 
 .footer-subscription > h1 {
@@ -326,6 +375,9 @@ padding:600px;
 p{
   font-weight:bold;
   font-size:20px;
+}
+.contact{
+  color:rgb(126, 123, 123)
 }
 
 .footer-input{
@@ -485,9 +537,9 @@ form{
   margin-left:500px;
   margin-right:500px;
 }
-#header{
-  display:flex;
-  justify-content:center;
+.login-header{
+  color:rgb(126, 123, 123);
+  text-align: center;
 }
 .form-inputs{
   display:flex;
@@ -500,6 +552,7 @@ form{
 .form-input{
   padding:15px;
   margin:20px;
+  border-radius: 10px;
  
 }
 .form-inputs p{
@@ -508,11 +561,15 @@ form{
   margin-left:30px;
 }
 .form-input-btn{
-  margin-left:200px;
-  margin-right:200px;
+  margin-left:180px;
+  margin-right:170px;
   margin-top:20px;
   padding: 10px;
   font-size: 15px;
+  border-radius:10px;
+}
+.active{
+  background-color: #71717171;
 }
 span{
   color:aliceblue;
