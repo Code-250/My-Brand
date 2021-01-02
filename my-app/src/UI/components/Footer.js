@@ -3,6 +3,7 @@ import '../../App.css';
 import { Button } from './Button';
 import {Link} from 'react-router-dom';
 import '../../App.css';
+import Contact from './Contact';
 
 
 function Footer() {
@@ -27,40 +28,7 @@ function Footer() {
                         </form>
                     </div>
                 </section>
-                <section className='footer-contact'>
-                    <h1 className='contact'>
-                        CONTACT US
-                    </h1>
-                    <div className='contact-container'>
-                        <div className='contact-wrapper'>
-                            <form classNane='form'>
-                                <input type='text'
-                                placeholder="your Full Name"
-                                className='contact-input'/>
-                                <input type='email'
-                                placeholder="your email"
-                                className='contact-input'/>
-                            </form>
-                        </div>
-                        <div className='message'>
-                            <textarea type='textarea'
-                            placeholder="Send your message here"
-                            className='contact-message'
-                            cols='30'
-                            rows='10'
-                            >
-                            </textarea>
-                           <div className='subscribe'>
-                                <Button 
-                                >Send</Button>
-                            </div> 
-                            
-                        </div>
-                    
-                    </div>
-                    
-                    
-                </section>
+                <Contact/>
                 <div className='footer-links'>
                     <div className='footer-link-wrapper'>
                     <div className='footer-link-items'>

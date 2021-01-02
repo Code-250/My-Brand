@@ -8,17 +8,9 @@ import About from './About';
 
 
 function Home(){
-    const navBarLinks = document.getElementsByClassName('navbar-links');
-    const oneLink =document.querySelectorAll('.change');
-
-    oneLink.forEach((About)=>{
-        About.addEventListener("click",()=>{
-            Home.scrollTo(About);
-        })
-    })
     return(
       
-            <div className='App'>
+            <div className='App' id='home'>
                 <HelloSection/>
                 <About/>
                 <Card/>
