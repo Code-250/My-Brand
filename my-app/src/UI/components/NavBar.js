@@ -31,24 +31,27 @@ function NavBar (){
                         
                         </i>
                     </div>
-                    <ul className={click ?'nav-menu-active' : 'nav-menu'}>
-                        <li className='nav-item'>
-                            <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-                               <p className="change">Home</p> 
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to='/about' className="nav-links" onClick={closeMobileMenu}>
-                           <p className='change'>About</p>
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/contacts" className="nav-links" onClick={closeMobileMenu}>
-                            <p className='change'>Contact</p>
-                            </Link>
-                        </li>
-                        <Link to='/Login'> {button && <Button buttonStyle='btn--outline'className='btn'>Login</Button>}</Link>
-                    </ul>
+                    <div className='navbar-links'>
+                        <ul className={click ?'nav-menu-active' : 'nav-menu'}>
+                            <li className='nav-item'>
+                                <Link to='/' className="nav-links" onClick={closeMobileMenu}>
+                                <p className="change">Home</p> 
+                                </Link>
+                            </li>
+                            <li className='nav-item'>
+                                <Link to='/about' className="nav-links" onClick={closeMobileMenu}>
+                            <p className='change'>About</p>
+                                </Link>
+                            </li>
+                            <li className='nav-item'>
+                                <Link to="/contacts" className="nav-links" onClick={closeMobileMenu}>
+                                <p className='change'>Contact</p>
+                                </Link>
+                            </li>
+                            <Link to='/Login'> {button && <Button buttonStyle='btn--outline'className='btn'>Login</Button>}</Link>
+                        </ul>
+                    </div>
+                    
                    
             </nav>
         </>

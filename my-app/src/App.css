@@ -255,51 +255,90 @@ li{
 /*====================== project page=====================================*/
 /*====================== project page=====================================*/
 
-.wrapper{
+.project-container{
+  width:95%;
+  margin-left:73px;
+}
+.project-header{
   background:linear-gradient(45deg, rgb(28,27,27) 0%, rgb(24,27,27) 100%);
-  height:400px;
-  width:100%;
-  margin-top:-20px;
- 
-
-}
-.hello{
-  width:100%;
-}
-.blog-title{
+  width:95%;
+  height:40vh;
   text-align:center;
-  color:rgb(126, 123, 123)
-}
-.describe{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:50px;
-  flex-direction:column;
-  margin-top:0px;
-  color:rgb(54, 52, 52);
-  line-height: 1.5;
-}
-.more{
-  font-size:20px;
-  margin-top:-70px;
-  margin-left:900px;
-  color:blue;
-}
-.heading{
-padding:600px;
+  color:rgb(126, 123, 123);
 
 }
-.bog-description{
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  flex-direction:column;
+#heading{
+  padding:120px;
+}
+.project-img{
+  width:100%;
+  padding:30px;
+  margin-left:80px;
 
 }
-#profile{
-  width:60%;
-  height:500px;
+.project-description{
+width:80%;
+text-align:center;
+display:flex;
+flex-direction:column;
+margin-left:80px;
+align-items:center;
+color:black;
+opacity:.8;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:30px;
+}
+.link{
+  margin-bottom:20px;
+  font-size:17px;
+  color:#1f3868;
+}
+.link:hover{
+  border-bottom: 1px solid #1f3868;
+}
+
+/* =============blog-page======================= */
+/* =============blog-page======================= */
+.blog-container{
+  width:95%;
+  margin-left:73px;
+}
+.blog-header{
+  background:linear-gradient(45deg, rgb(28,27,27) 0%, rgb(24,27,27) 100%);
+  width:95%;
+  height:40vh;
+  text-align:center;
+  color:rgb(126, 123, 123);
+
+}
+#blog-heading{
+  padding:120px;
+}
+.blog-img{
+  width:100%;
+  padding:30px;
+  margin-left:80px;
+
+}
+.blog-description{
+width:80%;
+text-align:center;
+display:flex;
+flex-direction:column;
+margin-left:80px;
+align-items:center;
+color:black;
+opacity:.8;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:30px;
+}
+.link{
+  margin-bottom:20px;
+  font-size:17px;
+  color:#1f3868;
+}
+.link:hover{
+  border-bottom: 1px solid #1f3868;
 }
 
 /*============================== Footer Section====================== */
