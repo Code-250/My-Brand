@@ -202,6 +202,7 @@ li{
  .cards__items {
     margin-bottom: 24px;
     display:flex;
+    background-color: white;
   }
   .cards__item {
 
@@ -631,4 +632,12 @@ a{
   background: #fff;
   color:#242424;
   transition:250ms;
+}
+/* =======mediaqueries=============== */
+/* =======mediaqueries=============== */
+
+@media screen and (max-width:1050px){
+  .container{
+    grid-gap:5rem;
+  }
 }
