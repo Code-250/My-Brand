@@ -26,14 +26,12 @@ function NavBar (){
             <nav className="navbar">
                     <b className='brand-title'>Richard
                     </b>
-                    <div className="menu-icons" onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'}>
-                        
-                        </i>
+                    <div className="menu-icon" onClick={handleClick}>
+                        <i className={click ? 'fas, fa-times' : 'fas fa-bars'}/>
                     </div>
                     <div className='navbar-links'>
                         <ul className={click ?'nav-menu-active' : 'nav-menu'}>
-                            <li className='nav-item'>
+                            <li className='nav-items'>
                                 <Link to='home' 
                                 activeClass='active'
                                 spy={true}
@@ -44,7 +42,7 @@ function NavBar (){
                                 <p className="change">Home</p> 
                                 </Link>
                             </li>
-                            <li className='nav-item'>
+                            <li className='nav-items'>
                                 <Link to='projects' 
                                 activeClass='active'
                                 spy={true}
@@ -55,7 +53,7 @@ function NavBar (){
                                 <p className="change">Projects</p> 
                                 </Link>
                             </li>
-                            <li className='nav-item'>
+                            <li className='nav-items'>
                                 <Link to='blogs' 
                                 activeClass='active'
                                 spy={true}
@@ -66,7 +64,7 @@ function NavBar (){
                                 <p className="change">Blogs</p> 
                                 </Link>
                             </li>
-                            <li className='nav-item'>
+                            <li className='nav-items'>
                                 <Link to='about' 
                                     activeClass='active'
                                     spy={true}
@@ -77,7 +75,7 @@ function NavBar (){
                                     <p className='change'>About</p>
                                 </Link>
                             </li>
-                            <li className='nav-item'>
+                            <li className='nav-items'>
                                 <Link to="contact"
                                     activeClass='active'
                                     spy={true}

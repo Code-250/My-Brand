@@ -29,6 +29,14 @@ html{
     z-index: 1;
 
   }
+  .brand-title{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+    color:#fff;
+    font-size:50px;
+    font-weight:bold;
+  }
   .navbar-links{
     margin-top:20px;
   }
@@ -38,8 +46,9 @@ html{
  
   
   }
+
   
-  .nav-item {
+  .nav-items {
     height: 20px;
     
   }
@@ -49,7 +58,7 @@ html{
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding:0;
     height: 100%;
     cursor:pointer;
     
@@ -67,13 +76,26 @@ html{
   .fa-bars {
     color: #fff;
   }
+
   
   .nav-links-mobile {
     display: none;
   }
-  
-  .menu-icon {
-    display: none;
+  .menu-icon{
+    display:none
+  }
+  @media screen and (max-width:768px){
+    .navbar-links{
+      display:none;
+
+    }
+    .brand-title{
+      margin-left:150px;
+    }
+    .menu-icon{
+      display:flex;
+      background-color:white;
+    }
   }
 /* =============================Hello section ==================*/
 /* =============================Hello section ==================*/
@@ -103,19 +125,6 @@ img{
   padding:20px;
   color:rgb(126, 123, 123)
 }
-p{
-    display:flex;
-    align-items:center;
-    padding:20px;
-    margin-top:0px;
-}
-b{
-    display:flex;justify-content:center;
-    padding:20px;
-    color:#fff;
-    font-size:50px;
-    font-weight:bold;
-}
 
 #button-btn {
     display:flex;
@@ -128,6 +137,9 @@ b{
   justify-content:center;
   align-self: center;
   margin:10px;
+}
+@media screen and (max-width:768px){
+
 }
 
 /* ===========================About section========================== */
@@ -202,7 +214,6 @@ li{
  .cards__items {
     margin-bottom: 24px;
     display:flex;
-    background-color: white;
   }
   .cards__item {
 
@@ -316,6 +327,10 @@ font-size:30px;
   color:rgb(126, 123, 123);
 
 }
+.blog-title{
+  text-align:center;
+  color:#969393;
+}
 #blog-heading{
   padding:120px;
 }
@@ -377,7 +392,11 @@ font-size:30px;
    'Lucida Grande', 'Lucida Sans',
     Arial, sans-serif;
 }
-p{
+.subscription-text{
+  display:flex;
+  align-items:center;
+  padding:20px;
+  margin-top:0px;
   font-weight:bold;
   font-size:20px;
 }
@@ -636,8 +655,60 @@ a{
 /* =======mediaqueries=============== */
 /* =======mediaqueries=============== */
 
-@media screen and (max-width:1050px){
-  .container{
-    grid-gap:5rem;
-  }
+@media screen and (max-width:768px){
+.main-body{
+  width:100%;
+  
+}
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  top: 80px;
+  left:0;
+  opacity: 1;
+  transition: all 0.5s ease; 
+}
+.nav-menu.active {
+  background: #242222;
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.menu-icons {
+  display: block;
+  position: absolute;
+  top: 0;
+  right:0;
+  transform: translate(-100%, 60%);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.fa-times {
+  color: #fff;
+  font-size: 2rem;
+}
+.nav-links-mobile {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 4px;
+  width: 80%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #fff;
+  padding: 14px 20px;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-out;
+}
+
+.nav-links-mobile:hover {
+  background: #fff;
+  color: #242424;
+  transition: 250ms;
+}
 }

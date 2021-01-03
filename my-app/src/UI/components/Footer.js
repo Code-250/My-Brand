@@ -14,7 +14,7 @@ function Footer() {
                     <h1 className='footer-subscription-heading'>
                         Join us to see more projects and Blogs!!
                     </h1>
-                    <p>
+                    <p className='subscription-text'>
                         you can unsubscribe at any time.
                     </p>
                     <div className="input-areas">
