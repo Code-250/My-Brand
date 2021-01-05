@@ -4,7 +4,7 @@ import { Button } from './Button';
 import '../../App.css';
 
 
-function NavBar (){
+function NavBar (props){
       const [click, setClick] = useState(false);
       const [button, setButton] = useState(true);
 
@@ -86,7 +86,7 @@ function NavBar (){
                                     <p className='change'>Contact</p>
                                 </Link>
                             </li>
-                            <Link to='/Login'> {button && <Button buttonStyle='btn--outline'className='btn'>Login</Button>}</Link>
+                             {button && <Button onClick={ this.props.history.push('/Login')}buttonStyle='btn--outline'className='btn'>Login</Button>}
                         </ul>
                     </div>
                     

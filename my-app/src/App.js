@@ -7,6 +7,7 @@ import ScrollToTop from './ScrollToTop';
 import project from './UI/components/project';
 import blog from './UI/components/blog';
 import NavBar from './UI/components/NavBar';
+import Login from './UI/components/Login';
 
 function App (){
     return (
@@ -17,7 +18,7 @@ function App (){
                 <NavBar/>
                         <Switch>
                           <Route path='/' exact component={Home}/>
-                          <Route path='/Login' component={Form}/>
+                          <Route path='/Login' component={Login}/>
                           <Route path='/blog1' component={blog}/>
                           <Route path='/project1' component={project}/>
                   
