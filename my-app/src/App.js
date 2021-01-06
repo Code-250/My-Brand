@@ -16,14 +16,13 @@ function App (){
           <div className='main-body'>
               <ScrollToTop/>
                 <NavBar/>
-                        <Switch>
+                        
                           <Route path='/' exact component={Home}/>
-                          <Route path='/Login' component={Login}/>
+                          <Route  exact path='/Login'exact component={Login}/>
                           <Route path='/blog1' component={blog}/>
                           <Route path='/project1' component={project}/>
                   
                   
-                        </Switch>
           </div>
         </Router>
     );

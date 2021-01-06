@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-scroll';
 import { Button } from './Button';
 import '../../App.css';
-
+import auth from './Admin-pages/auth';
+import {withRouter} from 'react-router-dom'
 
 function NavBar (props){
       const [click, setClick] = useState(false);
@@ -86,7 +87,13 @@ function NavBar (props){
                                     <p className='change'>Contact</p>
                                 </Link>
                             </li>
-                             {button && <Button onClick={ this.props.history.push('/Login')}buttonStyle='btn--outline'className='btn'>Login</Button>}
+                             {button && <Button onClick={
+                                 ()=>{
+                                     auth.login(()=>{
+                                         props.history('/Login')
+                                        })
+                                    }} 
+                                        buttonStyle='btn--outline'className='btn'>Login</Button>}
                         </ul>
                     </div>
                     
