@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link, withRoute} from 'react-router-dom';
 import { Button } from './Button';
 import '../../App.css';
-import auth from './Admin-pages/auth';
+import ContactMessage from './Admin-pages/ViewContactMessage'
 
 
 function NavBar (props){
@@ -67,7 +67,7 @@ function NavBar (props){
                                 </Link>
                             </li>
                             <li className='nav-items'>
-                                <Link to='/viewContactMessages/:name' 
+                                <Link to='/ContactMessage/:name' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}

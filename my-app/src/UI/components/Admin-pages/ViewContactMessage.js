@@ -2,17 +2,17 @@ import {useParams} from "react-router-dom";
 import withAuth from './withAuth'
 const ContactMessage= ()=>{
     const{name} =useParams();
-    const withAuth = (Home) =>{
-        const AuthRoute = ()=>{
-            const isAuth = !!lacalStorage.getItem("token");
-            if(isAuth){
-                return <Home/>
-            }else {
-                return <Redirect to="/Login"/>
-            }
-        };
-        return AuthRoute
-    }
+    // const withAuth = (Home) =>{
+    //     const AuthRoute = ()=>{
+    //         const isAuth = !!lacalStorage.getItem("token");
+    //         if(isAuth){
+    //             return <Home/>
+    //         }else {
+    //             return <Redirect to="/Login"/>
+    //         }
+    //     };
+    //     return AuthRoute
+    // }
     return (
         <div>
           <h1 className="title is-1">This is the contact message Page</h1>
@@ -35,4 +35,4 @@ const ContactMessage= ()=>{
       );
 }
 
-export default withAuth(ContactMessage);
+export default ContactMessage;
