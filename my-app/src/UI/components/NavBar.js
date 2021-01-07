@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react'
-import {Link} from 'react-scroll';
+import {Link, withRoute} from 'react-router-dom';
 import { Button } from './Button';
 import '../../App.css';
 import auth from './Admin-pages/auth';
-import {withRouter} from 'react-router-dom'
+
 
 function NavBar (props){
+    const  [isOpen, setOpen] = useState(false);
       const [click, setClick] = useState(false);
       const [button, setButton] = useState(true);
 
-      const handleClick = ()=>setClick(!click);
       const closeMobileMenu= ()=>setClick(false);
       const showButton=()=>{
           if (window.innerWidth<=960){
@@ -24,16 +24,28 @@ function NavBar (props){
       window.addEventListener('resize',showButton);
     return (
         <>
-            <nav className="navbar">
+            <nav className="navbar" role=' navigation'
+            aria-label='main-navigation'>
                     <b className='brand-title'>Richard
                     </b>
-                    <div className="menu-icon" onClick={handleClick}>
-                        <i className={click ? 'fas, fa-times' : 'fas fa-bars'}/>
+                    <div className="menu-icon">
+                        <a
+                        role="button"
+                        className={`navbar-burger burger ${isOpen && 'is-active'}`}
+                        aria-label="menu"
+                        aria-expended="false"
+                        onClick={()=>setOpen(!isOpen)}
+                        >
+                            <span aria-hidden ='true'></span>
+                            <span aria-hidden ='true'></span>
+                            <span aria-hidden ='true'></span>
+                        </a>
                     </div>
+
                     <div className='navbar-links'>
                         <ul className={click ?'nav-menu-active' : 'nav-menu'}>
                             <li className='nav-items'>
-                                <Link to='home' 
+                                <Link to='/' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -44,7 +56,7 @@ function NavBar (props){
                                 </Link>
                             </li>
                             <li className='nav-items'>
-                                <Link to='projects' 
+                                <Link to='/projects' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -55,7 +67,7 @@ function NavBar (props){
                                 </Link>
                             </li>
                             <li className='nav-items'>
-                                <Link to='blogs' 
+                                <Link to='/viewContactMessages/:name' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -66,7 +78,7 @@ function NavBar (props){
                                 </Link>
                             </li>
                             <li className='nav-items'>
-                                <Link to='about' 
+                                <Link to='/about' 
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
@@ -77,7 +89,7 @@ function NavBar (props){
                                 </Link>
                             </li>
                             <li className='nav-items'>
-                                <Link to="contact"
+                                <Link to="/viewContactMessage"
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
@@ -87,13 +99,10 @@ function NavBar (props){
                                     <p className='change'>Contact</p>
                                 </Link>
                             </li>
-                             {button && <Button onClick={
-                                 ()=>{
-                                     auth.login(()=>{
-                                         props.history('/Login')
-                                        })
-                                    }} 
+                            <Link to='/Login'>
+                             {button && <Button 
                                         buttonStyle='btn--outline'className='btn'>Login</Button>}
+                            </Link>
                         </ul>
                     </div>
                     

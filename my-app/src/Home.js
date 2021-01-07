@@ -6,7 +6,6 @@ import Footer from './UI/components/Footer';
 import About from './About';
 
 
-
 function Home(){
     return(
       
@@ -15,6 +14,7 @@ function Home(){
                 <About/>
                 <Card/>
                 <Footer/>
+                
                 
             </div>
         
