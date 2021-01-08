@@ -8,7 +8,7 @@ import ScrollToTop from './ScrollToTop';
 import blog from './UI/components/blog';
 import NavBar from './UI/components/NavBar';
 // import Login from './UI/components/Login';
-import ContactMessage from './UI/components/Admin-pages/ViewContactMessage';
+import Contact from './UI/components/Contact';
 
 function App (){
     return (
@@ -20,8 +20,9 @@ function App (){
                         <Switch>
                           <Route path='/' exact component={Home}/>
                           <Route   path='/Login'exact component={Form}/>
-                          <Route path='/viewContactMessages/:name' component={ContactMessage}/>
+                          <Route path='/CONTACT' component={Contact}/>
                           <Route path='/blog' component={blog}/>
+                          <Route path= "**" component = {()=> "404 NOTFOUND"} />
 
                         </Switch>
                         

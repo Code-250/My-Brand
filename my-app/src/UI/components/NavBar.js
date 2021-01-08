@@ -1,11 +1,21 @@
 import React, {useState, useEffect} from 'react'
-import {Link, withRoute} from 'react-router-dom';
-import { Button } from './Button';
+import {NavLink, withRouter} from 'react-router-dom';
+
 import '../../App.css';
-import ContactMessage from './Admin-pages/ViewContactMessage'
 
 
-function NavBar (props){
+
+function NavBar ({history}){
+    const isAuth =!!localStorage.getItem("token");
+    const loginUser =()=>{
+        localStorage.setItem("token", "some-login-token");
+        history.push("/about/visit");
+    };
+    const logoutUser =()=>{
+        localStorage.removeItem("token");
+        history.push("/");
+    }
+
     const  [isOpen, setOpen] = useState(false);
       const [click, setClick] = useState(false);
       const [button, setButton] = useState(true);
@@ -45,7 +55,7 @@ function NavBar (props){
                     <div className='navbar-links'>
                         <ul className={click ?'nav-menu-active' : 'nav-menu'}>
                             <li className='nav-items'>
-                                <Link to='/' 
+                                <NavLink to='/' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -53,10 +63,10 @@ function NavBar (props){
                                 duration={500}
                                 className="nav-links" onClick={closeMobileMenu}>
                                 <p className="change">Home</p> 
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <Link to='/projects' 
+                                <NavLink to='/projects' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -64,10 +74,10 @@ function NavBar (props){
                                 duration={500}
                                 className="nav-links" onClick={closeMobileMenu}>
                                 <p className="change">Projects</p> 
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <Link to='/ContactMessage/:name' 
+                                <NavLink to='/ContactMessage/:name' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -75,10 +85,10 @@ function NavBar (props){
                                 duration={500}
                                 className="nav-links" onClick={closeMobileMenu}>
                                 <p className="change">Blogs</p> 
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <Link to='/about' 
+                                <NavLink to='/about' 
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
@@ -86,10 +96,10 @@ function NavBar (props){
                                     duration={500}
                                     className="nav-links" onClick={closeMobileMenu}>
                                     <p className='change'>About</p>
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <Link to="/viewContactMessage"
+                                <NavLink to="/viewContactMessage"
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
@@ -97,12 +107,17 @@ function NavBar (props){
                                     duration={500} 
                                     className="nav-links" onClick={closeMobileMenu}>
                                     <p className='change'>Contact</p>
-                                </Link>
+                                </NavLink>
                             </li>
-                            <Link to='/Login'>
-                             {button && <Button 
-                                        buttonStyle='btn--outline'className='btn'>Login</Button>}
-                            </Link>
+                            <NavLink to='/Login'>
+                                 {!isAuth ?(<button 
+                                        buttonStyle='btn--outline'className='btn'onClick={loginUser}>Login</button>
+                                 ) :(<button 
+                                    buttonStyle='btn--outline'className='btn'onClick={logoutUser}>Logout</button>)}
+                                         
+                                
+                             
+                            </NavLink>
                         </ul>
                     </div>
                     
@@ -112,4 +127,4 @@ function NavBar (props){
     )
 }
 
-export default NavBar
+export default withRouter(NavBar);

@@ -6,6 +6,7 @@ const useLogin = (ValidateInfo) => {
         password:''
         
     });
+    
     const  [errors, setErrors] = useState({})
 
     const handleChange = e=>{
@@ -19,6 +20,7 @@ const useLogin = (ValidateInfo) => {
     const handleSubmit =e=>{
         e.preventDefault();
         setErrors(ValidateInfo(values));
+
     }
     return{ handleChange, values,handleSubmit, errors}
 }
