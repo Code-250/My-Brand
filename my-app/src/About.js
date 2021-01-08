@@ -1,9 +1,11 @@
 import  React from 'react'
 import './App.css';
 import withAuth from './withAuth';
-import {useParams} from 'react-router-dom';
+
+
+
 function About(){
-const name = useParams()
+    
 
     return(
         <div className='about' id='about'>
@@ -11,7 +13,7 @@ const name = useParams()
                 <h1 className='about-header'>
                     About
                 </h1>
-                <p>{name}</p>
+               
                 <p className='about-intro'>
                     My aim is to design and implement high quality web
                     application I value strong communication,

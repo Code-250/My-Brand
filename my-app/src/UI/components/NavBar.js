@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {NavLink, withRouter} from 'react-router-dom';
-
+import {Button} from "./Button";
 import '../../App.css';
 
 
@@ -9,7 +9,7 @@ function NavBar ({history}){
     const isAuth =!!localStorage.getItem("token");
     const loginUser =()=>{
         localStorage.setItem("token", "some-login-token");
-        history.push("/about/visit");
+        history.push("/Login");
     };
     const logoutUser =()=>{
         localStorage.removeItem("token");
@@ -99,7 +99,7 @@ function NavBar ({history}){
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <NavLink to="/viewContactMessage"
+                                <NavLink to="/contact"
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
@@ -109,15 +109,18 @@ function NavBar ({history}){
                                     <p className='change'>Contact</p>
                                 </NavLink>
                             </li>
-                            <NavLink to='/Login'>
-                                 {!isAuth ?(<button 
-                                        buttonStyle='btn--outline'className='btn'onClick={loginUser}>Login</button>
-                                 ) :(<button 
-                                    buttonStyle='btn--outline'className='btn'onClick={logoutUser}>Logout</button>)}
-                                         
+                            <Button buttonStyle='btn--outline' className='btn'>
+                            
+                                 { !isAuth? (<button 
+                                       onClick={loginUser}>Login</button>)
+                                    
+                                   :(<button 
+                                    onClick={logoutUser}>Logout</button>
+                                    
+                                   )}
                                 
-                             
-                            </NavLink>
+                                
+                            </Button> 
                         </ul>
                     </div>
                     

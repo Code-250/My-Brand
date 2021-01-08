@@ -1,11 +1,11 @@
 import React from "react";
 import {Redirect} from "react-router-dom"
 
-const withAuth =(Component)=>{
+const withAuth =(Contact)=>{
     const AuthRoute= ()=>{
-        const isAuth = localStorage.getItem("token")
+        const isAuth = !!localStorage.getItem("token")
         if(isAuth){
-            return (<Component/>)
+            return (<Contact/>)
         }else{
             return <Redirect exact to ="/"/>
         }
