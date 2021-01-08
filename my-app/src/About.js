@@ -39,7 +39,7 @@ function About(){
                         <ul>
                             <li>Node</li>
                             <li>Express</li>
-                            <li>MngoDB and PostgressDB</li>
+                            <li>MongoDB and PostgressDB</li>
                         </ul>   
                     </div>
                     <div classNane='Testing skill'>

@@ -92,10 +92,7 @@ html{
     .brand-title{
       margin-left:150px;
     }
-    .menu-icon{
-      display:flex;
-      background-color:white;
-    }
+    
   }
 /* =============================Hello section ==================*/
 /* =============================Hello section ==================*/
@@ -139,7 +136,21 @@ img{
   margin:10px;
 }
 @media screen and (max-width:768px){
-
+ .profile{
+   display:none;
+ }
+ .btns{
+  display:none;
+ }
+ .greetings{
+   display:flex;
+   flex-direction: column;
+   text-align:center;
+   margin-left:120px;
+ }
+ #button-btn{
+   display:none;
+ }
 }
 
 /* ===========================About section========================== */
@@ -184,6 +195,23 @@ li{
   text-decoration: none;
   line-height: 2;
 }
+@media screen and (max-width:768px){
+  .about-intro{
+    width:90%;
+  }
+  .skill-container{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    font-size:20px;
+  }
+  .img-skill{
+    max-width:5rem;
+  }
+  li{
+    margin-left:30px;
+  }
+}
 
 /*======================= cards section
  =======================================*/
@@ -215,7 +243,7 @@ li{
     margin-bottom: 24px;
     display:flex;
   }
-  .cards__item {
+  .cards__items {
 
    display:flex;
    flex-direction:row;
@@ -227,7 +255,7 @@ li{
 .cards__item__link {
   padding :20px;
    /* display:grid;
-   grid-template-columns: 1fr,1fr,1fr; */
+   grid-template-rows: 1fr,1fr,1fr; */
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -265,6 +293,19 @@ li{
     line-height: 24px;
     margin:0px;
     padding:0px;
+  }
+  @media screen and(max-width:768px){
+    .cards__items{
+      flex-direction:column;
+    }
+    .cards__items {
+
+      display:flex;
+      flex-direction:column;
+       border-radius: 10px;
+       padding:10px;
+       
+     }
   }
   
 
