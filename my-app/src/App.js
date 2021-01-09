@@ -10,6 +10,7 @@ import NavBar from './UI/components/NavBar';
 import Login from './UI/components/Login';
 import Contact from './UI/components/Contact';
 import Signup from "./UI/components/RegisterForm";
+import CreatePost from "./UI/components/Admin-pages/CreatePost"
 
 
 function App (){
@@ -25,6 +26,7 @@ function App (){
                           <Route path='/contact' component={Contact}/>
                           <Route path='/blog' component={blog}/>
                           <Route path="/signup" component={Signup}/>
+                          <Route path="/createPost" component={CreatePost}/>
                           
 
                         </Switch>
