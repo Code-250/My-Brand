@@ -5,6 +5,7 @@ import '../../App.css';
 
 
 
+
 function NavBar ({history}){
     const isAuth =!!localStorage.getItem("token");
     const loginUser =()=>{

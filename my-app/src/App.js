@@ -9,6 +9,8 @@ import blog from './UI/components/blog';
 import NavBar from './UI/components/NavBar';
 import Login from './UI/components/Login';
 import Contact from './UI/components/Contact';
+import Signup from "./UI/components/RegisterForm";
+
 
 function App (){
     return (
@@ -22,6 +24,8 @@ function App (){
                           <Route   path='/Login'exact component={Login}/>
                           <Route path='/contact' component={Contact}/>
                           <Route path='/blog' component={blog}/>
+                          <Route path="/signup" component={Signup}/>
+                          
 
                         </Switch>
                         

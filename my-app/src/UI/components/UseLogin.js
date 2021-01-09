@@ -3,7 +3,9 @@ import {useState} from 'react';
 const useLogin = (ValidateInfo) => {
     const [values, setValues] = useState({
         username:'',
-        password:''
+        email:"",
+        password:'',
+        ComfirmPassword:""
         
     });
     

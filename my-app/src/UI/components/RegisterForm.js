@@ -1,20 +1,15 @@
-import React from 'react';
-import '../../App.css';
-import {Link} from 'react-router-dom';
-import {Route} from "react-router-dom";
-import useLogin from './useLogin';
-import ValidateInfo from './ValidateInfo';
-import Signup from "./RegisterForm";
+import React from "react";
+import useLogin from "./useLogin";
+import ValidateInfo from "./ValidateInfo";
+import {Link} from "react-router-dom";
+import "../../App.css"
 
-
-const Login = () => {
-
+const Signup= ()=>{
     const { handleChange, values,handleSubmit,errors} =useLogin(ValidateInfo)
-
-    return (
-        <div className='form-content-right'>
+    return(
+        <div className="form-content-right">
             <form className='form' onSubmit={handleSubmit}>
-                <h1 className="login-header">Login</h1>
+                <h1 className="login-header">Register</h1>
                 <div className='form-inputs'>
                     
                         <input 
@@ -27,6 +22,18 @@ const Login = () => {
                         onChange={handleChange}
                         />
                         {errors.username && <p>{errors.username}</p>}
+                </div>
+                <div className="form-inputs">
+                <input 
+                        id='email'
+                        type='email'
+                        name='email'
+                        className='form-input'
+                        placeholder=' Email Address'
+                        value={values.email}
+                        onChange={handleChange}
+                        />
+                        {errors.email && <p>{errors.email}</p>}
                 </div>
                 <div className='form-inputs'>
                     
@@ -42,21 +49,34 @@ const Login = () => {
            
                         {errors.password && <p>{errors.password}</p>}
                 </div>
-               
+                <div className='form-inputs'>
+                    
+                        <input 
+                        id='comfirm-password'
+                        type='password'
+                        name='comfirm-password'
+                        className='form-input'
+                        placeholder='comfirm-password'
+                        value={values.CmfirmPassword}
+                        onChange={handleChange}
+                        />
+           
+                        {errors.ComfirmPassword && <p>{errors.ComfirmPassword}</p>}
+                </div>
                
                     <button className='form-input-btn'
                         type='submit'>
-                            Login
+                            Register
                         </button>
             
                  
                 
                 <span classname='form-input-signup'>
-                    does not have an account? SignUp<Link to ='/signup'>here</Link>
+                    Already have an Account? <Link to='/Login'>login</Link>
                 </span>
             </form>
         </div>
     )
 }
 
-export default Login
+export default Signup;
