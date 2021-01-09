@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 function AdCardItem(){
@@ -15,8 +15,8 @@ function AdCardItem(){
                                 and your day to day life planner</h5>
                     </div>
                 </div>
-                <button>edit</button>
-                <button>delete</button>
+                <button ClassName="btn-edit">edit</button>
+                <button className="btn-delete">delete</button>
             </li>
         </div>    
     )

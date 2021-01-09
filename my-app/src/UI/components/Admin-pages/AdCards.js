@@ -2,6 +2,7 @@ import React from 'react';
 import {Link}  from 'react-scroll';
 import AdCardItem from './AdCardItem';
 
+
 function Card(){
     return(
         <div className='cards'>

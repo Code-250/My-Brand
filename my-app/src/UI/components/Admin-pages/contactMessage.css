@@ -1,3 +1,8 @@
+.btn-edit{
+    font-size:20px;
+    margin:20px;
+}
+
 .contact-container{
     width:90%;
     margin-left:50px;
@@ -43,4 +48,19 @@ box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
 }
 .subscription-no{
     font-size:60px;
+}
+
+/* dashboard css */
+
+.dashboard-title{
+  background-color:#242424;
+  max-width:90%;
+  height:60vh;
+  margin-left:90px;
+}
+.dashboard-hello{
+    text-align:center;
+    padding-top:30px;
+    margin-bottom:4rem;
+    color:#fff;
 }

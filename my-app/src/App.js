@@ -9,7 +9,6 @@ import blog from './UI/components/blog';
 import NavBar from './UI/components/NavBar';
 import Login from './UI/components/Login';
 import Contact from './UI/components/Contact';
-import Dashboard from "./UI/components/Admin-pages/Dashboard";
 
 function App (){
     return (
