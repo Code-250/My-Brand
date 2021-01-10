@@ -89,14 +89,14 @@ function NavBar ({history}){
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <NavLink to='/about' 
+                                <NavLink to='/dashboard' 
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
                                     offset={-130}
                                     duration={500}
                                     className="nav-links" onClick={closeMobileMenu}>
-                                    <p className='change'>About</p>
+                                    <p className='change'>Dashboard</p>
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
