@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+
 
 function CreateBlog() {
+    
     return (
         <div className='bolog-container'>
             <input>create title of a blog</input>
+            
             <div>
                 <link>
                 <button>upload image</button>
@@ -16,4 +19,4 @@ function CreateBlog() {
     )
 }
 
-export default CreateBlog
+export default CreateBlog;

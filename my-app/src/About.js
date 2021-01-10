@@ -1,14 +1,19 @@
 import  React from 'react'
 import './App.css';
-import './App.css';
+import withAuth from './withAuth';
+
+
 
 function About(){
+    
+
     return(
         <div className='about' id='about'>
             <section>
                 <h1 className='about-header'>
                     About
                 </h1>
+               
                 <p className='about-intro'>
                     My aim is to design and implement high quality web
                     application I value strong communication,
@@ -39,7 +44,7 @@ function About(){
                         <ul>
                             <li>Node</li>
                             <li>Express</li>
-                            <li>MngoDB and PostgressDB</li>
+                            <li>MongoDB and PostgressDB</li>
                         </ul>   
                     </div>
                     <div classNane='Testing skill'>
@@ -56,4 +61,4 @@ function About(){
      )
 }
 
-export default About;
+export default withAuth(About);

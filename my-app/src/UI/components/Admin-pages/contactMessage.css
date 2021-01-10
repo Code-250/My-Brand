@@ -1,0 +1,66 @@
+.btn-edit{
+    font-size:20px;
+    margin:20px;
+}
+
+.contact-container{
+    width:90%;
+    margin-left:50px;
+    
+}
+.contact-title{
+    text-align:center;
+    color:rgb(81, 83, 81);
+    padding-bottom:40px;
+}
+.contact-message{
+text-align:center;
+box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    text-decoration: none;
+}
+.contact-header{
+    padding-bottom :20px;
+    font-weight:bold;
+    font-size:26px;
+}
+.message{
+    font-size:20px;
+    font-family:'Times New Roman', Times, serif;
+}
+/* subscription css */
+
+.subscribe-container{
+    width:90%;
+    margin-left:100px;
+}
+.subscription-title{
+    text-align:center;
+    color:rgb(81, 83, 81);
+    padding-bottom:40px;
+}
+.subscription-header{
+    font-size:28px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom:40px;
+}
+.subscription-no{
+    font-size:60px;
+}
+
+/* dashboard css */
+
+.dashboard-title{
+  background-color:#242424;
+  max-width:90%;
+  height:60vh;
+  margin-left:90px;
+}
+.dashboard-hello{
+    text-align:center;
+    padding-top:30px;
+    margin-bottom:4rem;
+    color:#fff;
+}
