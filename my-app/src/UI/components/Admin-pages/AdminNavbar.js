@@ -53,7 +53,7 @@ const AdNavbar =()=>{
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <NavLink to='/projects' 
+                                <NavLink to='/createPost' 
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
