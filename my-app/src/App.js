@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import './App.css';
 import Home from './Home';
@@ -11,28 +11,33 @@ import Login from './UI/components/Login';
 import Contact from './UI/components/Contact';
 import Signup from "./UI/components/RegisterForm";
 import CreatePost from "./UI/components/Admin-pages/CreatePost"
+import PrivateRoute from "./context/PrivateRoute";
+import{AuthContext} from "./context/context";
+import Dashboard from "./UI/components/Admin-pages/Dashboard"
 
 
-function App (){
+function App (props){
     return (
-        
-        <Router>
-          <div className='main-body'>
-              <ScrollToTop/>
-                <NavBar/>
-                        <Switch>
-                          <Route path='/' exact component={Home}/>
-                          <Route   path='/Login'exact component={Login}/>
-                          <Route path='/contact' component={Contact}/>
-                          <Route path='/blog' component={blog}/>
-                          <Route path="/signup" component={Signup}/>
-                          <Route path="/createPost" component={CreatePost}/>
-                          
+        <AuthContext.Provider value={false}>
+          <Router>
+            <div className='main-body'>
+                <ScrollToTop/>
+                  <NavBar/>
+                          <Switch>
+                            <Route path='/' exact component={Home}/>
+                            <Route   path='/Login'exact component={Login}/>
+                            <Route path='/contact' component={Contact}/>
+                            <Route path='/blog' component={blog}/>
+                            <Route path="/signup" component={Signup}/>
+                            <PrivateRoute path="/dashboard" component={Dashboard}/>
+                            <Route path="/createPost" component={CreatePost}/>
+                            
 
-                        </Switch>
-                        
-          </div>
-        </Router>
+                          </Switch>
+                          
+            </div>
+          </Router>
+        </AuthContext.Provider>
     );
 }
 

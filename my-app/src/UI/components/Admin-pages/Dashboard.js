@@ -4,7 +4,7 @@ import ContactMessage from "./contactMessage"
 import Subscribe from "./subscription";
 import AdNavbar from "./AdminNavbar";
 import "./contactMessage.css"
-const Dashboard = () =>{
+const Dashboard = (props) =>{
     return(
         <div >
             <AdNavbar/>

@@ -4,7 +4,7 @@ import HelloSection from './UI/components/HelloSection';
 import Card from './UI/components/Card';
 import Footer from './UI/components/Footer';
 import About from './About';
-import Dashboard from "./UI/components/Admin-pages/Dashboard";
+// import Dashboard from "./UI/components/Admin-pages/Dashboard";
 
 function Home(){
     return(
@@ -15,7 +15,7 @@ function Home(){
                 <Card/>
                 <Footer/>
                
-                <Dashboard/>
+                {/* <Dashboard/> */}
                 
             </div>
         
