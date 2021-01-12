@@ -239,15 +239,13 @@ li{
   position:relative;
   margin:30px;
 }
- .cards__items {
-    margin-bottom: 24px;
-    display:flex;
-  }
+ 
   .cards__items {
 
    display:flex;
    flex-direction:row;
     border-radius: 10px;
+     margin-bottom: 24px;
     padding:10px;
     
   }

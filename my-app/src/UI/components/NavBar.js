@@ -112,11 +112,11 @@ function NavBar ({history}){
                             </li>
                             <Button buttonStyle='btn--outline' className='btn'>
                             
-                                 { !isAuth? (<button 
-                                       onClick={loginUser}>Login</button>)
+                                 { !isAuth? (<label
+                                       onClick={loginUser}>Login</label>)
                                     
-                                   :(<button 
-                                    onClick={logoutUser}>Logout</button>
+                                   :(<label 
+                                    onClick={logoutUser}>Logout</label>
                                     
                                    )}
                                 
