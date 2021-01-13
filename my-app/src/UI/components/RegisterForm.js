@@ -7,22 +7,10 @@ import "../../App.css"
 const Signup= ()=>{
     const { handleChange, values,handleSubmit,errors} =useLogin(ValidateInfo)
     return(
-        <div className="form-content-right">
+        <div className="form-content-right register">
             <form className='form' onSubmit={handleSubmit}>
                 <h1 className="login-header">Register</h1>
-                <div className='form-inputs'>
-                    
-                        <input 
-                        id='username'
-                        type='text'
-                        name='username'
-                        className='form-input'
-                        placeholder=' username'
-                        value={values.username}
-                        onChange={handleChange}
-                        />
-                        {errors.username && <p>{errors.username}</p>}
-                </div>
+
                 <div className="form-inputs">
                 <input 
                         id='email'
