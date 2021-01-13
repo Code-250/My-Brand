@@ -4,7 +4,7 @@ import React from 'react'
 function CardItem(){
     return(
         <div className="holster">
-            <li className='cards__item container x mandatory-scroll-snapping'>
+            <li className='cards__item'>
                 <div className='cards__item__link'>
                     <figure className='cards__item__pic-wrap'>
                         <img src='/images/PROFILE.jpg' alt='card-profile'

@@ -65,7 +65,9 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                
+                <div className="icons">
+                    
+                </div>
             </div>
         </>
     )

@@ -19,7 +19,7 @@ function NavBar ({history}){
 
     const  [isOpen, setOpen] = useState(false);
       const [click, setClick] = useState(false);
-      const [button, setButton] = useState(true);
+      const [button,setButton] = useState(true);
 
       const closeMobileMenu= ()=>setClick(false);
       const showButton=()=>{
@@ -100,14 +100,14 @@ function NavBar ({history}){
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <NavLink to="/contact"
+                                <NavLink to="/About"
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
                                     offset={-130}
                                     duration={500} 
                                     className="nav-links" onClick={closeMobileMenu}>
-                                    <p className='change'>Contact</p>
+                                    <p className='change'>About</p>
                                 </NavLink>
                             </li>
                             <Button buttonStyle='btn--outline' className='btn'>

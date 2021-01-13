@@ -14,6 +14,7 @@ import CreatePost from "./UI/components/Admin-pages/CreatePost"
 import PrivateRoute from "./context/PrivateRoute";
 import{AuthContext} from "./context/context";
 import Dashboard from "./UI/components/Admin-pages/Dashboard"
+import About from './About';
 
 
 function App (props){
@@ -26,7 +27,7 @@ function App (props){
                           <Switch>
                             <Route path='/' exact component={Home}/>
                             <Route   path='/Login'exact component={Login}/>
-                            <Route path='/contact' component={Contact}/>
+                            <Route path='/about' component={About}/>
                             <Route path='/blog' component={blog}/>
                             <Route path="/signup" component={Signup}/>
                             <PrivateRoute path="/dashboard" component={Dashboard}/>

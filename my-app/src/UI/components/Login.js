@@ -1,12 +1,10 @@
-import React,{useState} from 'react';
+import React from 'react';
 import '../../App.css';
-import {Link, Redirect} from 'react-router-dom';
-import {Route} from "react-router-dom";
+import {Link} from 'react-router-dom';
+
 import useLogin from './useLogin';
 import ValidateInfo from './ValidateInfo';
-import Signup from "./RegisterForm";
-import { useAuth} from "../../context/context";
-import axios from "axios";
+
 
 
 const Login = () => {
