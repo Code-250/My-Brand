@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {NavLink, withRouter} from 'react-router-dom';
+import {NavLink, Link, withRouter} from 'react-router-dom';
 import {Button} from "./Button";
 import '../../App.css';
 
@@ -7,15 +7,6 @@ import '../../App.css';
 
 
 function NavBar ({history}){
-    const isAuth =!!localStorage.getItem("token");
-    const loginUser =()=>{
-        localStorage.setItem("token", "some-login-token");
-        history.push("/Login");
-    };
-    const logoutUser =()=>{
-        localStorage.removeItem("token");
-        history.push("/");
-    }
 
     const  [isOpen, setOpen] = useState(false);
       const [click, setClick] = useState(false);
@@ -110,18 +101,11 @@ function NavBar ({history}){
                                     <p className='change'>About</p>
                                 </NavLink>
                             </li>
-                            <Button buttonStyle='btn--outline' className='btn'>
-                            
-                                 { !isAuth? (<label
-                                       onClick={loginUser}>Login</label>)
-                                    
-                                   :(<label 
-                                    onClick={logoutUser}>Logout</label>
-                                    
-                                   )}
-                                
-                                
-                            </Button> 
+                            <Link to={"/login"}>
+                                <Button buttonStyle='btn--outline' className='btn'>
+                                        Login
+                                </Button>
+                             </Link>
                         </ul>
                     </div>
                     

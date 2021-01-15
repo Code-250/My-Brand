@@ -13,6 +13,31 @@ const Signup= ()=>{
 
                 <div className="form-inputs">
                 <input 
+                        id='firstName'
+                        type='text'
+                        name='firstName'
+                        className='form-input'
+                        placeholder=' first name'
+                        value={values.firstName}
+                        onChange={handleChange}
+                        />
+                        {errors.firstName && <p>{errors.firstName}</p>}
+                </div>
+                <div className="form-inputs">
+                <input 
+                        id='LastName'
+                        type='text'
+                        name='lastName'
+                        className='form-input'
+                        placeholder=' Last Name'
+                        value={values.lastName}
+                        onChange={handleChange}
+                        />
+                        {errors.lastName && <p>{errors.lastName}</p>}
+                </div>
+
+                <div className="form-inputs">
+                <input 
                         id='email'
                         type='email'
                         name='email'
