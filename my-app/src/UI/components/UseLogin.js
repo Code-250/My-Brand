@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import axios from "axios"
 
 const useLogin = (ValidateInfo) => {
     const [values, setValues] = useState({
@@ -6,7 +7,7 @@ const useLogin = (ValidateInfo) => {
         lastName:"",
         email:"",
         password:'',
-        ComfirmPassword:""
+    password_comfirm:""
         
     });
     
@@ -16,7 +17,7 @@ const useLogin = (ValidateInfo) => {
         const {name,value} =e.target
         setValues({
             ...values,
-            [name]:value 
+            [name]:value  
         });
         
     };
@@ -24,6 +25,16 @@ const useLogin = (ValidateInfo) => {
         e.preventDefault();
         setErrors(ValidateInfo(values));
 
+        axios.post("http://localhost:8000/signup",values).then(
+            response=>{
+                console.log(response)
+            }
+        ).catch(
+            err=>{
+                console.log(err);
+            }
+        )
+        
     }
     return{ handleChange, values,handleSubmit, errors}
 }

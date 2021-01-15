@@ -65,16 +65,16 @@ const Signup= ()=>{
                 <div className='form-inputs'>
                     
                         <input 
-                        id='comfirm-password'
+                        id='comfirm'
                         type='password'
                         name='comfirm-password'
                         className='form-input'
                         placeholder='comfirm-password'
-                        value={values.CmfirmPassword}
+                        value={values.password_comfirm}
                         onChange={handleChange}
                         />
            
-                        {errors.ComfirmPassword && <p>{errors.ComfirmPassword}</p>}
+                        {errors.password_comfirm && <p>{errors.password_comfirm}</p>}
                 </div>
                
                     <button className='form-input-btn'

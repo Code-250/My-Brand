@@ -15,8 +15,8 @@ export default function ValidateInfo  (values)  {
     }else if(values.password.length <8){
         errors.password ='password should be at least 8 characters.'
     }
-     if(values.password !== values.ComfirmPassword){
-        errors.ComfirmPassword="Password does not match"
+     if(values.password !== values.password_comfirm){
+        errors.password_comfirm="Password does not match"
     }
     return errors;
 }

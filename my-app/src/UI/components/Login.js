@@ -8,7 +8,7 @@ import ValidateInfo from './ValidateInfo';
 
 
 const Login = () => {
-    
+
 
     const { handleChange, values,handleSubmit,errors} =useLogin(ValidateInfo);
 
@@ -20,14 +20,14 @@ const Login = () => {
                         
                             <input 
                             id='username'
-                            type='text'
-                            name='username'
+                            type='email'
+                            name='email'
                             className='form-input'
-                            placeholder=' username'
+                            placeholder=' email address'
                             value={values.username}
                             onChange={handleChange}
                             />
-                            {errors.username && <p>{errors.username}</p>}
+                            {errors.email && <p>{errors.email}</p>}
                     </div>
                     <div className='form-inputs'>
                         
