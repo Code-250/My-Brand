@@ -1,6 +1,5 @@
 import  React from 'react'
 import './App.css';
-import withAuth from './withAuth';
 
 
 
@@ -61,4 +60,4 @@ function About(){
      )
 }
 
-export default withAuth(About);
+export default About;

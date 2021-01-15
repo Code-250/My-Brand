@@ -7,22 +7,35 @@ import "../../App.css"
 const Signup= ()=>{
     const { handleChange, values,handleSubmit,errors} =useLogin(ValidateInfo)
     return(
-        <div className="form-content-right">
+        <div className="form-content-right register">
             <form className='form' onSubmit={handleSubmit}>
                 <h1 className="login-header">Register</h1>
-                <div className='form-inputs'>
-                    
-                        <input 
-                        id='username'
+
+                <div className="form-inputs">
+                <input 
+                        id='firstName'
                         type='text'
-                        name='username'
+                        name='firstName'
                         className='form-input'
-                        placeholder=' username'
-                        value={values.username}
+                        placeholder=' first name'
+                        value={values.firstName}
                         onChange={handleChange}
                         />
-                        {errors.username && <p>{errors.username}</p>}
+                        {errors.firstName && <p>{errors.firstName}</p>}
                 </div>
+                <div className="form-inputs">
+                <input 
+                        id='LastName'
+                        type='text'
+                        name='lastName'
+                        className='form-input'
+                        placeholder=' Last Name'
+                        value={values.lastName}
+                        onChange={handleChange}
+                        />
+                        {errors.lastName && <p>{errors.lastName}</p>}
+                </div>
+
                 <div className="form-inputs">
                 <input 
                         id='email'
@@ -52,16 +65,16 @@ const Signup= ()=>{
                 <div className='form-inputs'>
                     
                         <input 
-                        id='comfirm-password'
+                        id='comfirm'
                         type='password'
                         name='comfirm-password'
                         className='form-input'
                         placeholder='comfirm-password'
-                        value={values.CmfirmPassword}
+                        value={values.password_comfirm}
                         onChange={handleChange}
                         />
            
-                        {errors.ComfirmPassword && <p>{errors.ComfirmPassword}</p>}
+                        {errors.password_comfirm && <p>{errors.password_comfirm}</p>}
                 </div>
                
                     <button className='form-input-btn'

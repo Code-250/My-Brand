@@ -14,8 +14,6 @@ function Home(){
                 <About/>
                 <Card/>
                 <Footer/>
-               
-                {/* <Dashboard/> */}
                 
             </div>
         

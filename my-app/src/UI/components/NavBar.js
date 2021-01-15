@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {NavLink, withRouter} from 'react-router-dom';
+import {NavLink, Link, withRouter} from 'react-router-dom';
 import {Button} from "./Button";
 import '../../App.css';
 
@@ -7,19 +7,10 @@ import '../../App.css';
 
 
 function NavBar ({history}){
-    const isAuth =!!localStorage.getItem("token");
-    const loginUser =()=>{
-        localStorage.setItem("token", "some-login-token");
-        history.push("/Login");
-    };
-    const logoutUser =()=>{
-        localStorage.removeItem("token");
-        history.push("/");
-    }
 
     const  [isOpen, setOpen] = useState(false);
       const [click, setClick] = useState(false);
-      const [button, setButton] = useState(true);
+      const [button,setButton] = useState(true);
 
       const closeMobileMenu= ()=>setClick(false);
       const showButton=()=>{
@@ -100,28 +91,21 @@ function NavBar ({history}){
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <NavLink to="/contact"
+                                <NavLink to="/About"
                                     activeClass='active'
                                     spy={true}
                                     smooth={true}
                                     offset={-130}
                                     duration={500} 
                                     className="nav-links" onClick={closeMobileMenu}>
-                                    <p className='change'>Contact</p>
+                                    <p className='change'>About</p>
                                 </NavLink>
                             </li>
-                            <Button buttonStyle='btn--outline' className='btn'>
-                            
-                                 { !isAuth? (<button 
-                                       onClick={loginUser}>Login</button>)
-                                    
-                                   :(<button 
-                                    onClick={logoutUser}>Logout</button>
-                                    
-                                   )}
-                                
-                                
-                            </Button> 
+                            <Link to={"/login"}>
+                                <Button buttonStyle='btn--outline' className='btn'>
+                                        Login
+                                </Button>
+                             </Link>
                         </ul>
                     </div>
                     
