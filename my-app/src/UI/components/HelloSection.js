@@ -10,7 +10,7 @@ function HelloSection(){
                 <div className='header'>
                     <h1 className='greetings'>
                         Hello, <br />
-                        I'am <span>Richard Munyemana</span><br />Fullstack Developer
+                        I'am <span>Richard Munyemana</span>Fullstack Developer
                     </h1>
                     <div id='button-btn'>
                         <Link to='contact'
