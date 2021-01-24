@@ -7,7 +7,8 @@ const useLogin = (ValidateInfo) => {
         lastName:"",
         email:"",
         password:'',
-    password_comfirm:""
+    password_comfirm:"",
+    
         
     });
     
@@ -25,15 +26,7 @@ const useLogin = (ValidateInfo) => {
         e.preventDefault();
         setErrors(ValidateInfo(values));
 
-        axios.post("http://localhost:8000/signup",values).then(
-            response=>{
-                console.log(response)
-            }
-        ).catch(
-            err=>{
-                console.log(err);
-            }
-        )
+        
         
     }
     return{ handleChange, values,handleSubmit, errors}
