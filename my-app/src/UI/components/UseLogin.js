@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import axios from "axios"
 
 const useLogin = (ValidateInfo) => {
     const [values, setValues] = useState({

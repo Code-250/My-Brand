@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import './App.css';
 import Home from './Home';
@@ -9,12 +9,13 @@ import blog from './UI/components/blog';
 import NavBar from './UI/components/NavBar';
 import Login from './UI/components/Login';
 import Contact from './UI/components/Contact';
-import Signup from "./UI/components/RegisterForm";
+import SignUp from "./UI/components/RegisterForm";
 import CreatePost from "./UI/components/Admin-pages/CreatePost"
 import PrivateRoute from "./context/PrivateRoute";
 import{AuthContext} from "./context/context";
 import Dashboard from "./UI/components/Admin-pages/Dashboard"
 import About from './About';
+import {Container} from "react-bootstrap";
 
 
 function App (props){
@@ -29,7 +30,15 @@ function App (props){
                             <Route   path='/Login'exact component={Login}/>
                             <Route path='/about' component={About}/>
                             <Route path='/blog' component={blog}/>
-                            <Route path="/signup" component={Signup}/>
+                            <Container className="d-flex align-items-center 
+                            justify-content-center pt-5"
+                            style={{minheight:"100vh"}}>
+                              <div  
+                               style={{maxwidth:'200px'}}>
+                                  <Route path="/signup" component={SignUp}/>
+                              </div>
+                                
+                            </Container>
                             <PrivateRoute path="/dashboard" component={Dashboard}/>
                             <Route path="/createPost" component={CreatePost}/>
                             
