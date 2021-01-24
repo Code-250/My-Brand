@@ -12,7 +12,7 @@ import Contact from './UI/components/Contact';
 import SignUp from "./UI/components/RegisterForm";
 import CreatePost from "./UI/components/Admin-pages/CreatePost"
 import PrivateRoute from "./context/PrivateRoute";
-import{AuthContext} from "./context/context";
+import{AuthContent} from "./context/context";
 import Dashboard from "./UI/components/Admin-pages/Dashboard"
 import About from './About';
 import {Container} from "react-bootstrap";
@@ -20,7 +20,9 @@ import {Container} from "react-bootstrap";
 
 function App (props){
     return (
-        <AuthContext.Provider value={false}>
+      <>
+        
+        <AuthContent.Provider value={true}>
           <Router>
             <div className='main-body'>
                 <ScrollToTop/>
@@ -48,7 +50,8 @@ function App (props){
                           
             </div>
           </Router>
-        </AuthContext.Provider>
+         </AuthContent.Provider>
+      </>
     );
 }
 
