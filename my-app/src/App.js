@@ -27,7 +27,7 @@ function App (props){
                   <NavBar/>
                           <Switch>
                             <Route path='/' exact component={Home}/>
-                            <Route   path='/Login'exact component={Login}/>
+                            
                             <Route path='/about' component={About}/>
                             <Route path='/blog' component={blog}/>
                             <Container className="d-flex align-items-center 
@@ -35,6 +35,7 @@ function App (props){
                             style={{minheight:"100vh"}}>
                               <div  
                                style={{maxwidth:'200px'}}>
+                                 <Route   path='/Login'exact component={Login}/>
                                   <Route path="/signup" component={SignUp}/>
                               </div>
                                 

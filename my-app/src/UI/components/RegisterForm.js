@@ -6,39 +6,48 @@ import {Form, Button, Card} from  "react-bootstrap"
      const passwordRef= useRef();
      const passwordComfirmRef= useRef();
     return (
-        <Card>
-            <Card.Body style={{backgroundColor: '#212529'}}>
-                <h2 className="text-center mb-4">Sign Up</h2>
-                <Form>
-                    <Form.Group>
-                        
+        <>
+            <Card style={{width:"80%"}}>
+                <Card.Body style={{backgroundColor: '#212529'}}>
+                    <h2 className="text-center mb-4">Sign Up</h2>
+                    <Form className="align-items-center">
+                        <Form.Group>
+                            
                         <Form.Control 
+                        style={{width:"120%"}}
                         id="email"
                         type="email" 
                         placeholder="Email" 
                         ref={emailRef} required/>
-                    </Form.Group>
-                    <Form.Group>
-                    <Form.Control 
-                    id="password"
-                    type="password"  
-                    placeholder="Password"
-                    ref={passwordRef} required/>
-                    </Form.Group>
-                    <Form.Group>
-                    <Form.Control 
-                    id="password-comfirm"
-                    type="password"
-                     placeholder="Comfirm passwrd"
-                      ref={passwordComfirmRef}
-                       required/>
-                    </Form.Group>
-                    <Button style={{backgroundColor:"black"},{border:'none'}}
-                    className ="w-100"
-                    type="submit">Sign Up</Button>
-                </Form>
-            </Card.Body>
-        </Card>
+                        </Form.Group>
+                        <Form.Group>
+                        <Form.Control 
+                        style={{width:"120%"}}
+                        id="password"
+                        type="password"  
+                        placeholder="Password"
+                        ref={passwordRef} required/>
+                        </Form.Group>
+                        <Form.Group>
+                        <Form.Control 
+                        style={{width:"120%"}}
+                        id="password-comfirm"
+                        type="password"
+                        placeholder="Comfirm passwrd"
+                        ref={passwordComfirmRef}
+                        required/>
+                        </Form.Group>
+                        <Button style={{border:'none',width:"30%",backgroundColor:"black", marginLeft:'2rem'}}
+                        
+                        type="submit">Sign Up</Button>
+                    </Form>
+                    <div className="w-100 text-center mt-2" style={{color:"white"}}>
+                        already have an account? Log In
+                    </div>
+                </Card.Body>
+            </Card>
+            
+        </>
     )
 }
 export default SignUp;

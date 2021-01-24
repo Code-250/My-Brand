@@ -1,63 +1,49 @@
-import React from 'react';
-import '../../App.css';
-import {Link} from 'react-router-dom';
+import React,{useRef} from 'react';
+import {Form, Button, Card} from  "react-bootstrap"
 
-import useLogin from './useLogin';
-import ValidateInfo from './ValidateInfo';
-
-
+     
 
 const Login = () => {
 
+    const emailRef= useRef();
+     const passwordRef= useRef();
 
-    const { handleChange, values,handleSubmit,errors} =useLogin(ValidateInfo);
+     return (
+        <>
+        <Card style={{width:"80%"}}>
+            <Card.Body style={{backgroundColor: '#212529'}}>
+                <h2 style={{color:"white"}} className="text-center mb-4">Log In</h2>
+                <Form className="align-items-center">
+                    <Form.Group>
+                        
+                    <Form.Control 
+                    style={{width:"120%"}}
+                    id="email"
+                    type="email" 
+                    placeholder="Email" 
+                    ref={emailRef} required/>
+                    </Form.Group>
+                    <Form.Group>
+                    <Form.Control 
+                    style={{width:"120%"}}
+                    id="password"
+                    type="password"  
+                    placeholder="Password"
+                    ref={passwordRef} required/>
+                    </Form.Group>
 
-        return (
-            <div className='form-content-right'>
-                <form className='form' onSubmit={handleSubmit}>
-                    <h1 className="login-header">Login</h1>
-                    <div className='form-inputs'>
-                        
-                            <input 
-                            id='username'
-                            type='email'
-                            name='email'
-                            className='form-input'
-                            placeholder=' email address'
-                            value={values.username}
-                            onChange={handleChange}
-                            />
-                            {errors.email && <p>{errors.email}</p>}
-                    </div>
-                    <div className='form-inputs'>
-                        
-                            <input 
-                            id='password'
-                            type='password'
-                            name='password'
-                            className='form-input'
-                            placeholder='password'
-                            value={values.password}
-                            onChange={handleChange}
-                            />
-            
-                            {errors.password && <p>{errors.password}</p>}
-                    </div>
-                
-                
-                        <button className='form-input-btn'
-                            type='submit'>
-                                Login
-                            </button>
-                
+                    <Button style={{border:'none',width:"30%",backgroundColor:"black", marginLeft:'2rem'}}
                     
-                    
-                    <span classname='form-input-signup'>
-                        does not have an account? SignUp<Link to ='/signup'>here</Link>
-                    </span>
-                </form>
-            </div>
-        )
+                    type="submit">Log In</Button>
+                </Form>
+                <div className="w-100 text-center mt-2" style={{color:"white"}}>
+                    Does not have an account? Sign Up
+                </div>
+            </Card.Body>
+        </Card>
+        
+    </>
+    )
         
 }
 
