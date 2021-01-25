@@ -67,6 +67,9 @@ html{
   .nav-links:hover {
     border-bottom: 3px solid #fff;
     transition: all 0.2s ease-out;
+    color:white;
+    list-style:none;
+  
     
   }
   .btn{
@@ -451,7 +454,7 @@ font-size:30px;
 }
 
 .footer-input{
-  width:100%;
+  width:80%;
   padding:8px 20px;
   border-radius:10px;
   margin-right:10px;
@@ -468,7 +471,7 @@ font-size:30px;
   padding:10px;
   grid-gap:50px;
   max-width:1000px;
-  width:100%;
+  width:80%;
 }
 form{
   display:flex;
@@ -490,10 +493,11 @@ form{
 .contact-message{
   padding:50px;
   border-radius:10px;
-  margin-bottom:25px    
+  margin-bottom:25px;
+  height:40vh;    
 }
 .contact-input{
-  width:100%;
+  width:90%;
   margin:15px;
   padding:10px;
   border-radius:10px;
@@ -576,7 +580,7 @@ form{
  }
  .contact-message{
    margin-right:20px;
-   width:80%;
+   width:60%;
  }
  .subscribe{
    margin-right:80px;

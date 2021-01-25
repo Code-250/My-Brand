@@ -27,6 +27,7 @@ export const Button = ({
                 ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
+                style={{backgroundColor:"black", color:"white"}}
                 >
                     {children}
                 </button>

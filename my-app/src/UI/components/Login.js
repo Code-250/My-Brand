@@ -1,35 +1,62 @@
-import React,{useRef} from 'react';
-import {Form, Button, Card} from  "react-bootstrap"
-
+import React,{useCallback,useContext} from 'react';
+import {Redirect, withRouter} from "react-router"
+import {Form, Button, Card} from  "react-bootstrap";
+import app from "../../firebase";
+import {Link} from "react-router-dom";
+import {AuthContext} from "../../context/context"
      
 
-const Login = () => {
+const Login = ({history}) => {
 
-    const emailRef= useRef();
-     const passwordRef= useRef();
+    const handleLogin =useCallback(
+        async e =>{
+            e.preventDefault();
+            const{email, password} =e.target.elements;
+            try{
+                await app
+                    .auth()
+                    .signInWithEmailAndPassword(email.value,password.value);
+                history.push("/login");
+
+            }catch (error){
+                alert(error);
+            }
+        },[history]
+    );
+
+    const {currentUser} = useContext(AuthContext);
+
+    if(currentUser){
+        return <Redirect to="/dashboard"/>;
+    }
+
+    // const emailRef= useRef();
+    //  const passwordRef= useRef();
 
      return (
         <>
         <Card style={{width:"80%"}}>
             <Card.Body style={{backgroundColor: '#212529'}}>
                 <h2 style={{color:"white"}} className="text-center mb-4">Log In</h2>
-                <Form className="align-items-center">
+                <Form className="align-items-center"onSubmit={handleLogin}>
                     <Form.Group>
                         
                     <Form.Control 
                     style={{width:"120%"}}
                     id="email"
+                    name="email"
                     type="email" 
                     placeholder="Email" 
-                    ref={emailRef} required/>
+                     required/>
                     </Form.Group>
                     <Form.Group>
                     <Form.Control 
                     style={{width:"120%"}}
                     id="password"
+                    name="password"
                     type="password"  
                     placeholder="Password"
-                    ref={passwordRef} required/>
+                    required/>
                     </Form.Group>
 
                     <Button style={{border:'none',width:"30%",backgroundColor:"black", marginLeft:'2rem'}}
@@ -37,7 +64,7 @@ const Login = () => {
                     type="submit">Log In</Button>
                 </Form>
                 <div className="w-100 text-center mt-2" style={{color:"white"}}>
-                    Does not have an account? Sign Up
+                    Does not have an account? <Link to="/signup">Sign Up</Link>
                 </div>
             </Card.Body>
         </Card>
@@ -47,4 +74,4 @@ const Login = () => {
         
 }
 
-export default Login
+export default withRouter(Login);

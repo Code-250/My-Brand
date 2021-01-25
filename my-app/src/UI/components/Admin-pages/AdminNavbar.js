@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from "react";
 import {NavLink} from 'react-router-dom';
+import app from "../../../firebase";
 import '../../../App.css';
 
 const AdNavbar =()=>{
@@ -74,6 +75,7 @@ const AdNavbar =()=>{
                                 <p className="change">Create Blog Post</p> 
                                 </NavLink>
                             </li>
+                            <button onClick={()=>app.auth().signOut()}>sign out</button>
                         </ul>
                     </div>
             </nav>
