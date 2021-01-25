@@ -28,6 +28,8 @@ function App (props){
             <Route path='/' exact component={Home}/>
             <Route path='/about' component={About}/>
             <Route path='/blog' component={blog}/>
+            <PrivateRoute path="/dashboard" component={Dashboard}/>
+            <Route path="/createPost" component={CreatePost}/>
             <Container className="d-flex align-items-center 
               justify-content-center pt-5"
               style={{minheight:"100vh"}}>
@@ -37,8 +39,7 @@ function App (props){
                 <Route path="/signup" component={SignUp}/>
               </div>                    
             </Container>
-            <PrivateRoute path="/dashboard" component={Dashboard}/>
-            <Route path="/createPost" component={CreatePost}/>
+            
           </Switch>
         </div>
       </Router>

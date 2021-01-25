@@ -2,8 +2,9 @@ import React from 'react'
 import {NavLink, Link} from 'react-router-dom';
 import {Button} from "./Button";
 import '../../App.css';
+import app from "../../firebase"
 
-function NavBar (){
+function NavBar ({currentUser}){
     return (
         <>
             <nav className="navbar" role=' navigation'
@@ -70,9 +71,10 @@ function NavBar (){
                         </li>
                         <Link to={"/login"}>
                             <Button buttonStyle='btn--outline' className='btn'>
-                                    Login
+                                  Login  
                             </Button>
-                            </Link>
+                        </Link>
+                           
                     </ul>
                 </div>
             </nav>

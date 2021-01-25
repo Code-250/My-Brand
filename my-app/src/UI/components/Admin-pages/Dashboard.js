@@ -3,8 +3,8 @@ import AdCards from "./AdCards"
 import ContactMessage from "./contactMessage"
 import Subscribe from "./subscription";
 import AdNavbar from "./AdminNavbar";
-import "./contactMessage.css"
-const Dashboard = (props) =>{
+import "./contactMessage.css";
+const Dashboard = () =>{
     return(
         <div >
             <AdNavbar/>
@@ -16,6 +16,7 @@ const Dashboard = (props) =>{
             <AdCards/>
             <ContactMessage/>
             <Subscribe/>
+            
         </div>
     )
 }
