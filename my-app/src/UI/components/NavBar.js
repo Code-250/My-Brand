@@ -1,10 +1,11 @@
 import React from 'react'
-import {NavLink, Link} from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
+import {Link} from "react-scroll/modules";
 import {Button} from "./Button";
 import '../../App.css';
-import app from "../../firebase"
 
-function NavBar ({currentUser}){
+
+function NavBar (){
     return (
         <>
             <nav className="navbar" role=' navigation'
@@ -26,7 +27,7 @@ function NavBar ({currentUser}){
                             </NavLink>
                         </li>
                         <li className='nav-items'>
-                            <NavLink to='/projects' 
+                            <Link to='projects' 
                             activeClass='active'
                             spy={true}
                             smooth={true}
@@ -34,10 +35,10 @@ function NavBar ({currentUser}){
                             duration={500}
                             className="nav-links">
                             <p className="change">Projects</p> 
-                            </NavLink>
+                            </Link>
                         </li>
                         <li className='nav-items'>
-                            <NavLink to='/ContactMessage/:name' 
+                            <Link to='blogs' 
                             activeClass='active'
                             spy={true}
                             smooth={true}
@@ -45,7 +46,7 @@ function NavBar ({currentUser}){
                             duration={500}
                             className="nav-links">
                             <p className="change">Blogs</p> 
-                            </NavLink>
+                            </Link>
                         </li>
                         <li className='nav-items'>
                             <NavLink to='/dashboard' 
@@ -59,7 +60,7 @@ function NavBar ({currentUser}){
                             </NavLink>
                         </li>
                         <li className='nav-items'>
-                            <NavLink to="/About"
+                            <Link to="About"
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -67,13 +68,13 @@ function NavBar ({currentUser}){
                                 duration={500} 
                                 className="nav-links">
                                 <p className='change'>About</p>
-                            </NavLink>
+                            </Link>
                         </li>
-                        <Link to={"/login"}>
+                        <NavLink to={"/login"}>
                             <Button buttonStyle='btn--outline' className='btn'>
                                   Login  
                             </Button>
-                        </Link>
+                        </NavLink>
                            
                     </ul>
                 </div>
