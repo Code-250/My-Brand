@@ -1,77 +1,42 @@
-import React,{useState, useEffect} from "react";
+import React from "react";
 import {NavLink} from 'react-router-dom';
 import app from "../../../firebase";
 import '../../../App.css';
 
 const AdNavbar =()=>{
-      const  [isOpen, setOpen] = useState(false);
-      const [click, setClick] = useState(false);
-      const [button, setButton] = useState(true);
-
-      const closeMobileMenu= ()=>setClick(false);
-      const showButton=()=>{
-          if (window.innerWidth<=960){
-            setButton(false);
-          } else{
-              setButton(true);
-          }
-      };
-      useEffect (()=>{
-        showButton()
-      },[]);
-      window.addEventListener('resize',showButton);
     return(
         <>
-            <nav className="navbar" role=' navigation'
-                aria-label='main-navigation'>
-                    <b className='brand-title'>Richard
-                    </b>
-                    <div className="menu-icon">
-                        <a
-                        role="button"
-                        className={`navbar-burger burger ${isOpen && 'is-active'}`}
-                        aria-label="menu"
-                        aria-expended="false"
-                        onClick={()=>setOpen(!isOpen)}
-                        >
-                            <span aria-hidden ='true'></span>
-                            <span aria-hidden ='true'></span>
-                            <span aria-hidden ='true'></span>
-                        </a>
-                    </div>
-
+            <nav className="navbar">
+                <b className='brand-title'>Richard</b>
                     <div className='navbar-links'>
-                        <ul className={click ?'nav-menu-active' : 'nav-menu'}>
+                        <ul className= 'nav-menu'>
                             <li className='nav-items'>
-                                <NavLink to='/' 
-                                activeClass='active'
+                                <NavLink to='/'
                                 spy={true}
                                 smooth={true}
                                 offset={-130}
                                 duration={500}
-                                className="nav-links" onClick={closeMobileMenu}>
+                                className="nav-links">
                                 <p className="change">Home</p> 
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <NavLink to='/createPost' 
-                                activeClass='active'
+                                <NavLink to='/createPost'
                                 spy={true}
                                 smooth={true}
                                 offset={-130}
                                 duration={500}
-                                className="nav-links" onClick={closeMobileMenu}>
+                                className="nav-links">
                                 <p className="change">Upload new project</p> 
                                 </NavLink>
                             </li>
                             <li className='nav-items'>
-                                <NavLink to='/ContactMessage/:name' 
-                                activeClass='active'
+                                <NavLink to='/ContactMessage/:name'
                                 spy={true}
                                 smooth={true}
                                 offset={-130}
                                 duration={500}
-                                className="nav-links" onClick={closeMobileMenu}>
+                                className="nav-links">
                                 <p className="change">Create Blog Post</p> 
                                 </NavLink>
                             </li>

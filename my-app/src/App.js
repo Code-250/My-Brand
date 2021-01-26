@@ -20,6 +20,7 @@ import {Container} from "react-bootstrap";
 function App (props){
   return (
     <AuthProvider>
+      
       <Router>
         <div className='main-body'>
           <ScrollToTop/>
@@ -35,7 +36,7 @@ function App (props){
               style={{minheight:"100vh"}}>
               <div  
                 style={{maxwidth:'200px'}}>
-                <Route   path='/Login'exact component={Login}/>
+                <Route path='/Login'exact component={Login}/>
                 <Route path="/signup" component={SignUp}/>
               </div>                    
             </Container>
