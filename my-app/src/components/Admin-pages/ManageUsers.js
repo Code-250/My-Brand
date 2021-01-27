@@ -3,8 +3,9 @@ import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom"
 
-function Projects(){
-    return(
+function ManageUser() {
+    
+    return (
         <div className="admin-container">
             <AdNavbar/>
              <div className="admin-wrapper">
@@ -22,49 +23,46 @@ function Projects(){
                         <NavLink to="/createProject">
                             <Button buttonStyle='btn--outline'
                             className='btn'>
-                                Add Project 
+                                Add User
                             </Button>
                         </NavLink>
                         <NavLink to="/">
                             <Button buttonStyle='btn--outline'
                             className='btn'>
-                                Manage Projects
+                                Manage Users
                             </Button>
                         </NavLink>
                     </div>
                     <div className="content">
-                        <h2 className="page-title">Manage Projects</h2>
+                        <h2 className="page-title">Manage Users</h2>
                         <table>
                             <thead>
                                 <th>SN</th>
                                 <th>Title</th>
-                                <th>contributer</th>
-                                <th colSpan="3">Action</th>
+                                <th>Role</th>
+                                <th colSpan="2">Action</th>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Task Tracker</td>
-                                    <td>Rich</td>
+                                    <td>Richard</td>
+                                    <td>Admin</td>
                                     <td><NavLink to="/" className="edit">edit</NavLink></td>
                                     <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                    <td><NavLink to="/" className="publish">publish</NavLink></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>Weather App</td>
                                     <td>Emmy Bigwi</td>
+                                    <td>Author</td>
                                     <td><NavLink to="/" className="edit">edit</NavLink></td>
                                     <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                    <td><NavLink to="/" className="publish">publish</NavLink></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>Blogger Web</td>
                                     <td>Red Janvier</td>
+                                    <td>Supervisor</td>
                                     <td><NavLink to="/" className="edit">edit</NavLink></td>
                                     <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                    <td><NavLink to="/" className="publish">publish</NavLink></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -74,4 +72,5 @@ function Projects(){
         </div>
     )
 }
-export default Projects;
+
+export default ManageUser;

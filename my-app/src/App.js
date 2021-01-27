@@ -10,6 +10,7 @@ import SignUp from "./components/RegisterForm";
 import CreatePost from "./components/Admin-pages/CreatePost";
 import Projects from "./components/Admin-pages/Projects";
 import CreateProject from "./components/Admin-pages/CreateProject";
+import ManageUser from "./components/Admin-pages/ManageUsers";
 import PrivateRoute from "./context/PrivateRoute";
  import{AuthProvider} from "./context/context";
 import Dashboard from "./components/Admin-pages/Dashboard"
@@ -32,6 +33,7 @@ function App (props){
             <Route path="/addPost" component={CreatePost}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/createproject" component={CreateProject}/>
+            <Route path="/users" component={ManageUser}/>
             <Container className="d-flex align-items-center 
               justify-content-center"
               style={{minheight:"100vh",marginTop:"12rem"}}>

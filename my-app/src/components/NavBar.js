@@ -30,7 +30,7 @@ function NavBar (){
                             <Link to='projects'
                             spy={true}
                             smooth={true}
-                            offset={-135}
+                            offset={-65}
                             duration={500}
                             className="nav-links">
                             <p className="change">Projects</p> 
@@ -50,7 +50,7 @@ function NavBar (){
                             <Link to="About"
                                 spy={true}
                                 smooth={true}
-                                offset={-135}
+                                offset={-65}
                                 duration={500} 
                                 className="nav-links">
                                 <p className='change'>About</p>
