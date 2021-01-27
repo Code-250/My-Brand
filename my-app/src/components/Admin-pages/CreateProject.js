@@ -35,11 +35,9 @@ const CreateProject = () => {
                 <div className="content">
                     <h2 className="page-title">Manage Projects</h2>
                     <form method="post">
-                        <div classname="add-post-title">
-                            <Button buttonStyle='btn--outline'
-                                className='btn btn-create'>
-                                upload image
-                            </Button>
+                        <div className="add-post-title">
+                            <label>Image :</label>
+                            <input type="file" name="image" className="text-input"/>
                         </div>
                         <div className="add-post-title">
                             <label>Title :</label>

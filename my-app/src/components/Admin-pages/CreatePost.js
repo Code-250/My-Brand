@@ -37,10 +37,8 @@ const CreatePost =()=>{
                         <h2 className="page-title">Manage Blogs</h2>
                         <form method="post">
                             <div className="add-post-title">
-                            <Button buttonStyle='btn--outline'
-                                className='btn'>
-                                   upload image 
-                                </Button>
+                                <label>Image :</label>
+                                <input type="file" name="image" className="text-input"/>
                             </div>
                             <div className="add-post-title">
                                 <label>Title :</label>

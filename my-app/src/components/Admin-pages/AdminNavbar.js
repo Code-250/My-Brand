@@ -14,6 +14,11 @@ const AdNavbar =()=>{
                 <b className='brand-title'>Richard</b>
                     <div className='navbar-links'>
                         <ul className= 'nav-menu'>
+                            <li >
+                                <NavLink to='/' className="back-home">
+                                    Home
+                                </NavLink>
+                            </li>
                             <li>
                                 <NavLink to="/">
                                     <Button buttonStyle='btn--outline'

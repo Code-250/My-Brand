@@ -1,6 +1,9 @@
 .admin-container{
     height:100%;
 }
+.nav-menu .back-home{
+    color:white;
+}
 .admin-wrapper{
     display:flex;
     flex-direction:row;

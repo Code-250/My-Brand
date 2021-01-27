@@ -20,7 +20,7 @@ function ManageUser() {
                  </div>
                  <div className="admin-content">
                     <div className="button-group">
-                        <NavLink to="/createProject">
+                        <NavLink to="/adduser">
                             <Button buttonStyle='btn--outline'
                             className='btn'>
                                 Add User

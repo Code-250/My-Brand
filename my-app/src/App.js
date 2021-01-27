@@ -1,8 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-// import './App.css';
 import Home from './components/Home';
-// import Form from './UI/components/Form';
 import ScrollToTop from './ScrollToTop';
 import blog from './components/blog';
 import Login from './components/Login';
@@ -11,6 +9,7 @@ import CreatePost from "./components/Admin-pages/CreatePost";
 import Projects from "./components/Admin-pages/Projects";
 import CreateProject from "./components/Admin-pages/CreateProject";
 import ManageUser from "./components/Admin-pages/ManageUsers";
+import CreateUser from "./components/Admin-pages/createUser";
 import PrivateRoute from "./context/PrivateRoute";
  import{AuthProvider} from "./context/context";
 import Dashboard from "./components/Admin-pages/Dashboard"
@@ -21,7 +20,6 @@ import {Container} from "react-bootstrap";
 function App (props){
   return (
     <AuthProvider>
-      
       <Router>
         <div className='main-body'>
           <ScrollToTop/>
@@ -34,6 +32,7 @@ function App (props){
             <Route path="/projects" component={Projects}/>
             <Route path="/createproject" component={CreateProject}/>
             <Route path="/users" component={ManageUser}/>
+            <Route path="/adduser" component={CreateUser}/>
             <Container className="d-flex align-items-center 
               justify-content-center"
               style={{minheight:"100vh",marginTop:"12rem"}}>
@@ -43,7 +42,6 @@ function App (props){
                 <Route path="/signup" component={SignUp}/>
               </div>                    
             </Container>
-            
           </Switch>
         </div>
       </Router>
@@ -52,8 +50,3 @@ function App (props){
 }
 
 export default App;
-
-
-<Router>
-  
-</Router>
