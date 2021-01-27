@@ -3,7 +3,8 @@ import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom"
 
-const Dashboard = () =>{
+
+function Projects(){
     return(
         <div className="admin-container">
             <AdNavbar/>
@@ -11,7 +12,7 @@ const Dashboard = () =>{
                  <div className="left-sidebar">
                     <ul>
                         <NavLink to="/dashboard"><li>Manage Blogs</li></NavLink>
-                        <NavLink to="/projects"><li>Manage Projects</li></NavLink>
+                        <NavLink to="/"><li>Manage Projects</li></NavLink>
                         <NavLink to="/"><li>Contact Messages</li></NavLink>
                         <NavLink to="/"><li>Manage Blogs</li></NavLink>
                     </ul>
@@ -19,32 +20,32 @@ const Dashboard = () =>{
                  </div>
                  <div className="admin-content">
                     <div className="button-group">
-                        <NavLink to="/addPost">
+                        <NavLink to="/createProject">
                             <Button buttonStyle='btn--outline'
                             className='btn'>
-                                Add Blog 
+                                Add Project 
                             </Button>
                         </NavLink>
                         <NavLink to="/">
                             <Button buttonStyle='btn--outline'
                             className='btn'>
-                                Manage Blogs
+                                Manage Projects
                             </Button>
                         </NavLink>
                     </div>
                     <div className="content">
-                        <h2 className="page-title">Manage Posts</h2>
+                        <h2 className="page-title">Manage Projects</h2>
                         <table>
                             <thead>
                                 <th>SN</th>
                                 <th>Title</th>
-                                <th>Author</th>
+                                <th>contributer</th>
                                 <th colSpan="3">Action</th>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>This is the first page</td>
+                                    <td>Task Tracker</td>
                                     <td>Rich</td>
                                     <td><NavLink to="/" className="edit">edit</NavLink></td>
                                     <td><NavLink to="/" className="delete">delete</NavLink></td>
@@ -52,7 +53,7 @@ const Dashboard = () =>{
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>This is the second  page</td>
+                                    <td>Weather App</td>
                                     <td>Emmy Bigwi</td>
                                     <td><NavLink to="/" className="edit">edit</NavLink></td>
                                     <td><NavLink to="/" className="delete">delete</NavLink></td>
@@ -60,7 +61,7 @@ const Dashboard = () =>{
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>This is the third page</td>
+                                    <td>Blogger Web</td>
                                     <td>Red Janvier</td>
                                     <td><NavLink to="/" className="edit">edit</NavLink></td>
                                     <td><NavLink to="/" className="delete">delete</NavLink></td>
@@ -74,5 +75,4 @@ const Dashboard = () =>{
         </div>
     )
 }
-
-export default Dashboard;
+export default Projects;

@@ -1,38 +1,67 @@
-import React from "react";
-import "./createpost.css";
+import AdNavbar from "./AdminNavbar";
+import "./adminStyle.css";
+import {Button} from "../Button";
+import {NavLink} from "react-router-dom"
+
 
 const CreatePost =()=>{
     return(
-        <div className="post-container">
-            <div className="post-header">
-                <h1 className="post-hello">Hello Richard, </h1>
-                <h1 className="post-createEdit">Let's create or edit posts</h1>
-            </div>
-            
-            <input     
-            id='post'
-             type='text'
-            name='post-title'
-            className='post-title'
-            placeholder=' Enter post Title'/>
-            <button className="post-img">upload image</button>
-            <div className="post-area">
-                <textarea type='textarea'
-                            placeholder="post details"
-                            className='post-detail'
-                            cols='40'
-                            rows='10'
-                            >
-                            
-                </textarea>
-                <button className="btn-post">upload Post</button>
-
-            </div>
-            <div className="footer">
-                <h5 className="footer-text">
-                    All rights resrved to you Richard
-                </h5>
-            </div>
+        <div className="admin-container">
+            <AdNavbar/>
+             <div className="admin-wrapper">
+                 <div className="left-sidebar">
+                    <ul>
+                        <NavLink to="/dashboard"><li>Manage Blogs</li></NavLink>
+                        <NavLink to="/"><li>Manage Projects</li></NavLink>
+                        <NavLink to="/"><li>Contact Messages</li></NavLink>
+                        <NavLink to="/"><li>Manage Blogs</li></NavLink>
+                    </ul>
+                    
+                 </div>
+                 <div className="admin-content">
+                    <div className="button-group">
+                        <NavLink to="/dashboard">
+                            <Button buttonStyle='btn--outline'
+                            className='btn'>
+                                Blogs 
+                            </Button>
+                        </NavLink>
+                        <NavLink to="/">
+                            <Button buttonStyle='btn--outline'
+                            className='btn'>
+                                Manage blogs
+                            </Button>
+                        </NavLink>
+                    </div>
+                    <div className="content">
+                        <h2 className="page-title">Manage Blogs</h2>
+                        <form method="post">
+                            <div className="add-post-title">
+                            <Button buttonStyle='btn--outline'
+                                className='btn'>
+                                   upload image 
+                                </Button>
+                            </div>
+                            <div className="add-post-title">
+                                <label>Title :</label>
+                                <input type="text" name="title" className="text-input"/>
+                            </div>
+                            <div className="add-post-title">
+                                <label>Body :</label>
+                                <textarea id="body" name="title" className="text-input"/>
+                            </div>
+                            <div>
+                                <NavLink to="/">
+                                    <Button buttonStyle='btn--outline'
+                                    className='btn'>
+                                       Add Blog 
+                                    </Button>
+                                </NavLink>
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+             </div>
         </div>
     )
 }

@@ -47,16 +47,6 @@ function NavBar (){
                             </Link>
                         </li>
                         <li className='nav-items'>
-                            <NavLink to='/dashboard'
-                                spy={true}
-                                smooth={true}
-                                offset={-135}
-                                duration={500}
-                                className="nav-links">
-                                <p className='change'>Dashboard</p>
-                            </NavLink>
-                        </li>
-                        <li className='nav-items'>
                             <Link to="About"
                                 spy={true}
                                 smooth={true}
