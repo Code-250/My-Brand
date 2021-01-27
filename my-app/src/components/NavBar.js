@@ -3,29 +3,11 @@ import {NavLink } from 'react-router-dom';
 import {Link} from "react-scroll/modules";
 import {Button} from "./Button";
 import '../App.css';
-import app from "../context/firebase"
 
 
-function NavBar ({value}){
+function NavBar (){
 
-    const handleLogout =() =>{
-        app.auth().signOut();
-    }
-let buttons;
-if(value){
-    buttons=(<NavLink to={"/"}>
-        <Button buttonStyle='btn--outline'
-        onClick={handleLogout} className='btn'>
-            Logout  
-        </Button>
-    </NavLink>)
-}else{
-    buttons=(<NavLink to={"/login"}>
-    <Button buttonStyle='btn--outline' className='btn'>
-        login
-    </Button>
-</NavLink>)
-}
+    
     return (
         <>
             <nav className="navbar">
@@ -84,11 +66,10 @@ if(value){
                                 <p className='change'>About</p>
                             </Link>
                         </li>
-                           {buttons}
-                           <NavLink to={"/"}>
+                           <NavLink to="/login">
                                 <Button buttonStyle='btn--outline'
-                                onClick={handleLogout} className='btn'>
-                                    Log Out  
+                                className='btn'>
+                                    LogIn  
                                 </Button>
                             </NavLink>
                     </ul>

@@ -1,42 +1,25 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import '../../App.css';
+import {Button} from "../Button";
+import app from "../../context/firebase"
 
 const AdNavbar =()=>{
+    const handleLogout =() =>{
+        app.auth().signOut();
+    }
     return(
         <>
             <nav className="navbar">
                 <b className='brand-title'>Richard</b>
                     <div className='navbar-links'>
                         <ul className= 'nav-menu'>
-                            <li className='nav-items'>
-                                <NavLink to='/'
-                                spy={true}
-                                smooth={true}
-                                offset={-130}
-                                duration={500}
-                                className="nav-links">
-                                <p className="change">Home</p> 
-                                </NavLink>
-                            </li>
-                            <li className='nav-items'>
-                                <NavLink to='/createPost'
-                                spy={true}
-                                smooth={true}
-                                offset={-130}
-                                duration={500}
-                                className="nav-links">
-                                <p className="change">Upload new project</p> 
-                                </NavLink>
-                            </li>
-                            <li className='nav-items'>
-                                <NavLink to='/ContactMessage/:name'
-                                spy={true}
-                                smooth={true}
-                                offset={-130}
-                                duration={500}
-                                className="nav-links">
-                                <p className="change">Create Blog Post</p> 
+                            <li>
+                                <NavLink to="/">
+                                    <Button buttonStyle='btn--outline'
+                                        onClick={handleLogout} className='btn'>
+                                        Log Out  
+                                    </Button>
                                 </NavLink>
                             </li>
                         </ul>

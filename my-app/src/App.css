@@ -27,18 +27,20 @@ html{
     padding:1rem 0;
     top: 0;
     z-index: 1;
+    height:70px;
 
   }
   .brand-title{
     display:flex;
     justify-content:center;
-    padding:20px;
+    margin-top:-20px;
+    padding:0px;
     color:#fff;
     font-size:50px;
     font-weight:bold;
   }
   .navbar-links{
-    margin-top:20px;
+    margin-top:10px;
   }
   .nav-menu {
     display: flex;

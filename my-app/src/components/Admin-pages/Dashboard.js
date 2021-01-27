@@ -1,22 +1,22 @@
-import React from 'react';
-import AdCards from "./AdCards"
-import ContactMessage from "./contactMessage"
-import Subscribe from "./subscription";
 import AdNavbar from "./AdminNavbar";
-import "./contactMessage.css";
+import {Link} from "react-router-dom";
+import "./adminStyle.css"
+
 const Dashboard = () =>{
     return(
-        <div >
+        <div className="admin-container">
             <AdNavbar/>
-            <div className="dashboard-title">
-                <h1 className="dashboard-hello">Hello Richard </h1>
-                <h1 className="dashboard-hello">welcome to your Dashboard</h1>
-            </div>
-            
-            <AdCards/>
-            <ContactMessage/>
-            <Subscribe/>
-            
+             <div className="admin-wrapper">
+                 <div className="left-sidebar">
+                    <ul >
+                        <li sytle={{color:"white"}}><Link to="/">Manage Blogs</Link></li>
+                    </ul>
+                    
+                 </div>
+                 <div className="admin-content">
+
+                 </div>
+             </div>
         </div>
     )
 }

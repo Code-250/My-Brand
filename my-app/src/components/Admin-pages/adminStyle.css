@@ -1,0 +1,24 @@
+.admin-wrapper{
+    display:flex;
+    flex-direction:row;
+    height:calc(100%-70px);
+    
+}
+ .admin-wrapper .left-sidebar{
+    flex:2;
+    height:100%;
+    border:1px solid red;
+    background-color: #18181ad0;
+}
+/* .admin-wrapper .left-sidebar ul > li{
+    list-style:none;
+    color:seashell;
+    margin:0;
+    padding:0; */
+
+
+.admin-content{
+    flex:8;
+    height:100%;
+    border:1px solid blue;
+}

@@ -4,9 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/Home';
 // import Form from './UI/components/Form';
 import ScrollToTop from './ScrollToTop';
-// import project from './UI/components/project';
 import blog from './components/blog';
-import NavBar from './components/NavBar';
 import Login from './components/Login';
 import SignUp from "./components/RegisterForm";
 import CreatePost from "./components/Admin-pages/CreatePost"
@@ -24,7 +22,6 @@ function App (props){
       <Router>
         <div className='main-body'>
           <ScrollToTop/>
-          <NavBar/>
           <Switch>
             <Route path='/' exact component={Home}/>
             <Route path='/about' component={About}/>
@@ -32,8 +29,8 @@ function App (props){
             <PrivateRoute path="/dashboard" component={Dashboard}/>
             <Route path="/createPost" component={CreatePost}/>
             <Container className="d-flex align-items-center 
-              justify-content-center pt-5"
-              style={{minheight:"100vh"}}>
+              justify-content-center"
+              style={{minheight:"100vh",marginTop:"12rem"}}>
               <div  
                 style={{maxwidth:'200px'}}>
                 <Route path='/Login'exact component={Login}/>

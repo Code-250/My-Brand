@@ -3,10 +3,8 @@ import {Form, Button, Card} from  "react-bootstrap"
 import {Link} from "react-router-dom"
 import app from '../context/firebase';
 import {withRouter} from "react-router";
+
  const SignUp = ({history}) => {
-    //  const emailRef= useRef();
-    //  const passwordRef= useRef();
-    //  const passwordComfirmRef= useRef();
 
      const handleSubmit = useCallback(async e =>{
          e.preventDefault();
@@ -22,7 +20,8 @@ import {withRouter} from "react-router";
      }, [history]);
     // 
     return (
-        
+        <>
+            
             <Card style={{width:"80%"}}>
                 <Card.Body style={{backgroundColor: '#212529'}}>
                     <h2 className="text-center mb-4">Sign Up</h2>
@@ -63,7 +62,7 @@ import {withRouter} from "react-router";
                     </div>
                 </Card.Body>
             </Card>
-       
+        </>
     )
 }
 export default withRouter(SignUp);

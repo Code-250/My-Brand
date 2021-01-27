@@ -1,9 +1,12 @@
 import React,{useCallback,useContext} from 'react';
-import {Redirect, withRouter} from "react-router"
+import {Redirect, withRouter} from "react-router";
+import "../App.css"
 import {Form, Button, Card} from  "react-bootstrap";
 import app from "../context/firebase";
 import {Link} from "react-router-dom";
-import {AuthContext} from "../context/context"
+import {AuthContext} from "../context/context";
+
+
      
 
 const Login = ({history}) => {
@@ -35,6 +38,7 @@ const Login = ({history}) => {
 
      return (
         <>
+        
         <Card style={{width:"80%"}}>
             <Card.Body style={{backgroundColor: '#212529'}}>
                 <h2 style={{color:"white"}} className="text-center mb-4">Log In</h2>
