@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
-import HelloSection from './UI/components/HelloSection';
-import Card from './UI/components/Card';
-import Footer from './UI/components/Footer';
+import '../App.css';
+import HelloSection from './HelloSection';
+import Card from './Card';
+import Footer from './Footer';
 import About from './About';
 // import Dashboard from "./UI/components/Admin-pages/Dashboard";
 

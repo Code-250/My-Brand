@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CardItem from './CardItem';
-import '../../App.css';
+import '../App.css';
 
 function Card(){
     return(

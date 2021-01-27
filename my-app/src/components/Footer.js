@@ -1,8 +1,8 @@
 import React from 'react'
-import '../../App.css';
+import '../App.css';
 import { Button } from './Button';
 import {Link} from 'react-router-dom';
-import '../../App.css';
+import '../App.css';
 import Contact from './Contact';
 
 

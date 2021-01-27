@@ -1,19 +1,19 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import './App.css';
-import Home from './Home';
+import Home from './components/Home';
 // import Form from './UI/components/Form';
 import ScrollToTop from './ScrollToTop';
 // import project from './UI/components/project';
-import blog from './UI/components/blog';
-import NavBar from './UI/components/NavBar';
-import Login from './UI/components/Login';
-import SignUp from "./UI/components/RegisterForm";
-import CreatePost from "./UI/components/Admin-pages/CreatePost"
+import blog from './components/blog';
+import NavBar from './components/NavBar';
+import Login from './components/Login';
+import SignUp from "./components/RegisterForm";
+import CreatePost from "./components/Admin-pages/CreatePost"
 import PrivateRoute from "./context/PrivateRoute";
  import{AuthProvider} from "./context/context";
-import Dashboard from "./UI/components/Admin-pages/Dashboard"
-import About from './About';
+import Dashboard from "./components/Admin-pages/Dashboard"
+import About from './components/About';
 import {Container} from "react-bootstrap";
 
 

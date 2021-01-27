@@ -1,9 +1,9 @@
 import React,{useCallback,useContext} from 'react';
 import {Redirect, withRouter} from "react-router"
 import {Form, Button, Card} from  "react-bootstrap";
-import app from "../../firebase";
+import app from "../context/firebase";
 import {Link} from "react-router-dom";
-import {AuthContext} from "../../context/context"
+import {AuthContext} from "../context/context"
      
 
 const Login = ({history}) => {
