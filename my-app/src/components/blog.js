@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from './Footer';
-import '../../App.css'
+import '../App.css'
 
 function blog() {
     return (

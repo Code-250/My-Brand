@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import '../App.css';
 
 const STYLE = ['btn--outline','btn--primary'];
 const SIZES = ['btn--medium', 'btn--large']
@@ -27,6 +27,7 @@ export const Button = ({
                 ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
+                style={{backgroundColor:"black", color:"white"}}
                 >
                     {children}
                 </button>

@@ -27,18 +27,20 @@ html{
     padding:1rem 0;
     top: 0;
     z-index: 1;
+    height:70px;
 
   }
   .brand-title{
     display:flex;
     justify-content:center;
-    padding:20px;
+    margin-top:-20px;
+    padding:0px;
     color:#fff;
     font-size:50px;
     font-weight:bold;
   }
   .navbar-links{
-    margin-top:20px;
+    margin-top:10px;
   }
   .nav-menu {
     display: flex;
@@ -67,6 +69,9 @@ html{
   .nav-links:hover {
     border-bottom: 3px solid #fff;
     transition: all 0.2s ease-out;
+    color:white;
+    list-style:none;
+  
     
   }
   .btn{
@@ -91,6 +96,9 @@ html{
     }
     .brand-title{
       margin-left:150px;
+    }
+    .navbar{
+      max-width:100%;
     }
     
   }
@@ -136,6 +144,10 @@ img{
   margin:10px;
 }
 @media screen and (max-width:768px){
+  .Home-container{
+    max-width:100%;
+    height:70vh;
+  }
  .profile{
    display:none;
  }
@@ -146,7 +158,7 @@ img{
    display:flex;
    flex-direction: column;
    text-align:center;
-   margin-left:100px;
+   margin-left:50px;
 
  }
  #button-btn{
@@ -218,8 +230,7 @@ li{
  =======================================*/
 
 .cards{
-  width:90%;
-  margin:90px;
+  width:100%;
 }
 
  .projects {
@@ -231,73 +242,75 @@ li{
 
 
 .cards__container {
-  width:100%;
-  display: flex;
-  align-items: center;
+  width:90%;
 }
 .cards__wrapper {
   position:relative;
-  margin:30px;
-  margin-left:20px;
+  width:70%;
+
 }
  
   .cards__items {
-
-   display:flex;
-   flex-direction:row;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr 1fr);
+    grid-gap:3rem;
     border-radius: 10px;
-     margin-bottom: 24px;
-    padding:10px;
+    margin: 70px;
+    font-size:1rem;
     
   }
   .holster{
-    display:flex;
-    flex-direction:column;
-    margin:20px;
+    width:42vw;
   }
-
+  
 .cards__item__link {
-  padding :20px;
-   display:grid;
-   grid-template-rows: 1fr,1fr,1fr;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    text-decoration: none;
-    background-color:#c5c2c2;
+  padding:0 4rem;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  text-decoration: none;
+  /* background-color:#c5c2c2; */
+  }
+  .cards__item{
+   width:100%;
+   padding:0 4rem
   }
 
 .cards__item__pic-wrap {
    position:relative;
     width: 100%;
-     padding-top:0%; 
-    margin:0px; 
     
    } 
 
   .cards__item__img {
-    display: flex;
+    padding: 0px;
     width: 100%;
+    font-size:2rem;
+    margin:30px 2px;
     max-width: 100%;
     height: 90%;
     max-height: 100%;
-
-    transition: all 0.2s linear;
-    margin:0px;
+     transition: all 0.2s linear; 
   }
  .cards__item__img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    cursor:pointer;
   }
 .cards__item__info {
-    padding: 30px;
+    padding: 10px;
+    width:100%;
   }
   .cards__item__text {
+    width:100%;
     color: #252e48;
     font-size: 18px;
     line-height: 24px;
     margin:0px;
     padding:0px;
+  }
+  h5:hover{
+    cursor:pointer;
   }
   @media screen and (max-width: 768px){
     .cards__items{
@@ -444,7 +457,7 @@ font-size:30px;
 }
 
 .footer-input{
-  width:100%;
+  width:80%;
   padding:8px 20px;
   border-radius:10px;
   margin-right:10px;
@@ -461,7 +474,7 @@ font-size:30px;
   padding:10px;
   grid-gap:50px;
   max-width:1000px;
-  width:100%;
+  width:80%;
 }
 form{
   display:flex;
@@ -483,10 +496,11 @@ form{
 .contact-message{
   padding:50px;
   border-radius:10px;
-  margin-bottom:25px    
+  margin-bottom:25px;
+  height:40vh;    
 }
 .contact-input{
-  width:100%;
+  width:90%;
   margin:15px;
   padding:10px;
   border-radius:10px;
@@ -569,7 +583,7 @@ form{
  }
  .contact-message{
    margin-right:20px;
-   width:80%;
+   width:60%;
  }
  .subscribe{
    margin-right:80px;
@@ -622,7 +636,7 @@ form{
   margin-left:30px;
 }
 .form-input-btn{
-  margin-left:350px;
+  margin-left:200px;
   margin-right:70px;
   margin-top:20px;
   padding: 10px;
