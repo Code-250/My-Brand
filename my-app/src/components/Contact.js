@@ -1,30 +1,60 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button } from './Button';
 
 const Contact = () => {
+
+    const initialFieldValues ={
+        fullName:"",
+        email:"",
+        message:""
+    }
+
+    const [values, setValues] = useState(initialFieldValues);
+
+    const handleChange =(e)=>{
+        const {name, value} =e.target
+        setValues({
+            ...values,
+            [name]: value
+        })
+    }
+    const handleSubmit =(e)=>{
+        e.preventDefault()
+    }
     return (
         <div id='contact'>
             <section className='footer-contact'>
                     <h1 className='contact'>
                         CONTACT US
                     </h1>
-                    <div className='contact-container'>
+                    <form className='contact-container' onSubmit={handleSubmit}>
                         <div className='contact-wrapper'>
                             <form classNane='form'>
-                                <input type='text'
+                                <input 
+                                type='text'
+                                name="fullName"
                                 placeholder="your Full Name"
-                                className='contact-input'/>
-                                <input type='email'
+                                className='contact-input'
+                                values={values.fullName}
+                                onChange={handleChange}/>
+                                <input 
+                                type='email'
+                                name="email"
                                 placeholder="your email"
-                                className='contact-input'/>
+                                className='contact-input'
+                                values={values.email}
+                                onChange={handleChange}
+                                />
                             </form>
                         </div>
                         <div className='message'>
-                            <textarea type='textarea'
+                            <textarea 
+                            type='textarea'
+                            name="message"
                             placeholder="Send your message here"
                             className='contact-message'
-                            cols='30'
-                            rows='10'
+                            values={values.message}
+                            onChange={handleChange}
                             >
                             </textarea>
                            <div className='subscribe'>
@@ -34,7 +64,7 @@ const Contact = () => {
                             
                         </div>
                     
-                    </div>
+                    </form>
                     
                     
                 </section>
