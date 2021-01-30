@@ -24,7 +24,6 @@ html{
     display: flex;
     justify-content: space-between;
     position: sticky;
-    padding:1rem 0;
     top: 0;
     z-index: 1;
     height:70px;
@@ -33,14 +32,14 @@ html{
   .brand-title{
     display:flex;
     justify-content:center;
-    margin-top:-20px;
+    margin-top:-50px;
     padding:0px;
     color:#fff;
     font-size:50px;
     font-weight:bold;
   }
   .navbar-links{
-    margin-top:10px;
+    margin-top:0px;
   }
   .nav-menu {
     display: flex;
@@ -75,7 +74,9 @@ html{
     
   }
   .btn{
-    margin-top:30px;
+    margin-bottom:25px;
+    align-items:center;
+    padding:20px;
   }
   
   .fa-bars {
@@ -121,27 +122,26 @@ img{
   grid-gap:50px
 
 }
+.btn{
+  margin-bottom:20px;
+  align-items:center;
+  padding:20px;
+}
 .header{
   font-weight:bold;
   font-size:1.9rem;
-  line-height:3rem;
 }
 .greetings{
   padding:20px;
   color:rgb(126, 123, 123)
 }
 
-#button-btn {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
  .btns {
   display:flex;
   justify-content:center;
   align-self: center;
-  margin:10px;
+  margin:0 8rem;
+
 }
 @media screen and (max-width:768px){
   .Home-container{
@@ -312,6 +312,23 @@ li{
   h5:hover{
     cursor:pointer;
   }
+  .blog-icons{
+    display:flex;
+    color:black;
+  }
+  .views,.likes,.comments{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+  }
+  .views:hover{
+    color:blue;
+    cursor:pointer;
+  }
+  .likes:hover,.comments:hover{
+    color:blue;
+    cursor:pointer;
+  }
   @media screen and (max-width: 768px){
     .cards__items{
       display:flex;
@@ -452,6 +469,9 @@ font-size:30px;
   font-weight:bold;
   font-size:20px;
 }
+.footer-contact{
+  height:70vh;
+}
 .contact{
   color:rgb(126, 123, 123)
 }
@@ -508,10 +528,14 @@ form{
   text-align:center;
 }
 .subscribe{
+  margin:3rem;
   width:20%;
   justify-content:flex-end;
   align-self:flex-end;
 
+}
+.send-message{
+  align-self:flex-end;
 }
 .contact-input::placeholder{
   color:#929090;
@@ -547,7 +571,7 @@ form{
   cursor:pointer;
 }
 .LinkedIn:hover{
-  color:rgb(2, 2, 253);
+  color:rgb(87, 87, 243);
   cursor:pointer;
 }
 .facebook,.Twitter,.Github,.LinkedIn{

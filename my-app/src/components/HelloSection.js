@@ -8,28 +8,21 @@ function HelloSection(){
         <section className='Home-container' id='home'>     
                 <div className='header'>
                     <h1 className='greetings'>
-                        Hello, <br />
+                        Hello, 
                         I'am <span>Richard Munyemana</span>Fullstack Developer
                     </h1>
-                    <div id='button-btn'>
                         <Link to='contact'
+                        className="btn"
                             activeClass='active'
                             spy={true}
                             smooth={true}
                             offset={-130}
                             duration={500}>
-                            <Button className='btns'
-                                    buttoStyle='btn--primary'
-                                    buttonSize='btn--large'
-                                    >
+                                <Button >
                                     GET IN TOUCH
-                            </Button>
+                                </Button>
+                            
                         </Link>
-                            
-                            
-                                
-                            
-                    </div>
                 </div>        
             <img src='/images/PROFILE.JPG'alt='background'className='profile'/>
                 

@@ -57,9 +57,10 @@ const Contact = () => {
                             onChange={handleChange}
                             >
                             </textarea>
-                           <div className='subscribe'>
-                                <Button 
-                                >Send</Button>
+                           <div className='send-message'>
+                                <Button>
+                                    Send
+                                </Button>
                             </div> 
                             
                         </div>

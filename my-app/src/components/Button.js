@@ -19,20 +19,15 @@ export const Button = ({
     buttonSize : SIZES[0] 
 
     return(
-        <div>
-            
-                <button
-                className={`btn
-                ${checkButtonStyle} 
-                ${checkButtonSize}`}
-                onClick={onClick}
-                type={type}
-                style={{backgroundColor:"black", color:"white"}}
-                >
-                    {children}
-                </button>
-            
-        </div>
-        
+        <button
+            className={`btn
+            ${checkButtonStyle} 
+            ${checkButtonSize}`}
+            onClick={onClick}
+            type={type}
+            style={{backgroundColor:"black", color:"white"}}
+            >
+                {children}
+        </button>
     )
 }
