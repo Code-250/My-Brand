@@ -1,3 +1,5 @@
+import React,{useState} from "react";
+import {db} from "../../context/firebase";
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
 import {Button} from "../Button";
@@ -5,6 +7,39 @@ import {NavLink} from "react-router-dom"
 
 
 const CreatePost =()=>{
+
+    
+    const AddPost = (posts) =>{
+        db.collection('blogs').add(
+            posts,
+           err =>{
+               if(err){
+                    console.log(err);
+                }
+           } 
+        )
+    }
+    const initialBlogValues = {
+        image:"",
+        title:"",
+        body:"",
+        author:""
+    }
+    const [blogs, setBlogs] = useState(initialBlogValues);
+    const changeHandler = (e)=>{
+        const {name, value} = e.target
+        
+        setBlogs({
+            ...blogs,
+            [name]:value,
+        })
+    }
+
+    const handleClick = (e) =>{
+        e.preventDefault();
+        AddPost(blogs);
+        setBlogs(initialBlogValues);
+    }
     return(
         <div className="admin-container">
             <AdNavbar/>
@@ -38,23 +73,35 @@ const CreatePost =()=>{
                         <form method="post">
                             <div className="add-post-title">
                                 <label>Image :</label>
-                                <input type="file" name="image" className="text-input"/>
+                                <input type="file" name="image" 
+                                className="text-input"
+                                onChange={changeHandler}/>
                             </div>
                             <div className="add-post-title">
                                 <label>Title :</label>
-                                <input type="text" name="title" className="text-input"/>
+                                <input type="text" name="title" className="text-input"
+                                value={blogs.title}
+                                onChange={changeHandler}/>
                             </div>
                             <div className="add-post-title">
                                 <label>Body :</label>
-                                <textarea id="body" name="title" className="text-input"/>
+                                <textarea id="body" name="body" className="text-input"
+                                value={blogs.body}
+                                onChange={changeHandler}/>
+
+                            </div>
+                            <div className="add-post-title">
+                                <label>Author :</label>
+                                <input type="text" name="author" className="text-input"
+                                value={blogs.author}
+                                onChange={changeHandler}/>
                             </div>
                             <div>
-                                <NavLink to="/">
                                     <Button buttonStyle='btn--outline'
-                                    className='btn'>
+                                    className='btn'
+                                    onClick={handleClick}>
                                        Add Blog 
                                     </Button>
-                                </NavLink>
                             </div>
                         </form>
                     </div>

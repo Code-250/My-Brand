@@ -1,9 +1,55 @@
+import React, {useState} from "react";
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
+import {db} from "../../context/firebase";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom"
 
 function CreateUser(){
+
+    const AddUser =(owners)=>{
+        db.collection('Users').add(
+            owners,
+            err=>{
+                if(err){
+                    console.log(err)
+                }
+            }
+        )
+    }
+
+    const initialUserValues = {
+        username:"",
+        email:"",
+        password:"",
+        passwordConfirm:"",
+        role:""
+    }
+
+    const [users, setUsers] = useState(initialUserValues);
+
+    const changeHandler = (e)=>{
+        const {name,value} = e.target;
+            setUsers({
+                ...users,
+                [name]:value,
+            })
+    }
+    const handleClick = (e) =>{
+        e.preventDefault();
+        if(users !== 0){
+            if(users.password === users.passwordConfirm){
+                AddUser(users);
+                setUsers(initialUserValues)
+            }else{
+                alert('password does not match');
+                setUsers(initialUserValues);
+            }
+            
+        } else{
+            alert('something went wrong')
+        }
+    }
     return(
         <div className="admin-container">
             <AdNavbar/>
@@ -37,32 +83,44 @@ function CreateUser(){
                         <form method="post">
                             <div className="add-post-title">
                                 <label>UserName :</label>
-                                <input type="text" name="username" className="text-input"/>
+                                <input type="text" name="username"
+                                 className="text-input"
+                                 value={users.username}
+                                 onChange={changeHandler}/>
                             </div>
                             <div className="add-post-title">
                                 <label>Email :</label>
-                                <input type="email" name="email" className="text-input"/>
+                                <input type="email" name="email" 
+                                className="text-input"
+                                value={users.email}
+                                onChange={changeHandler}/>
                             </div>
                             <div className="add-post-title">
                                 <label>Password :</label>
-                                <input type="password" name="password" className="text-input"/>
+                                <input type="password" name="password" 
+                                className="text-input"
+                                value={users.password}
+                                onChange={changeHandler}/>
                             </div>
                             <div className="add-post-title">
                                 <label>Password Comfirmation :</label>
-                                <input type="password" name="passwordComfirm" className="text-input"/>
+                                <input type="password" name="passwordConfirm"
+                                 className="text-input"
+                                 value={users.passwordComfirm}
+                                 onChange={changeHandler}/>
                             </div>
                             <div className="add-post-title">
                                 <label>Role :</label>
-                                <select name="role" className="text-input">
-                                    <option value="Admin">Admin</option>
-                                    <option value="Author">Author</option>
-                                    <option value="Supervisor">Supervisor</option>
-                                </select>
+                                <input type="text" name="role"
+                                 className="text-input"
+                                 value={users.role}
+                                 onChange={changeHandler}/>
                             </div>
                             <div>
                                 <NavLink to="/">
                                     <Button buttonStyle='btn--outline'
-                                    className='btn'>
+                                    className='btn'
+                                    onClick={handleClick}>
                                     Add User 
                                     </Button>
                                 </NavLink>

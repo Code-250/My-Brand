@@ -1,9 +1,20 @@
+import React, {useState} from "react";
 import AdNavbar from "./AdminNavbar";
+import {db} from "../../context/firebase";
 import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom"
 
 function ManageUser() {
+
+    const [userObjects, setUserObjects] = useState({});
+
+    db.collection('Users')
+    .get()
+    .then(querySnapshot=>{
+        const user = querySnapshot.docs.map(doc=> doc.data());
+        setUserObjects(user);
+    });
     
     return (
         <div className="admin-container">
@@ -37,33 +48,24 @@ function ManageUser() {
                         <h2 className="page-title">Manage Users</h2>
                         <table>
                             <thead>
-                                <th>SN</th>
-                                <th>Title</th>
+                                <th>title</th>
+                                <th>Email</th>
                                 <th>Role</th>
                                 <th colSpan="2">Action</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Richard</td>
-                                    <td>Admin</td>
-                                    <td><NavLink to="/" className="edit">edit</NavLink></td>
-                                    <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Emmy Bigwi</td>
-                                    <td>Author</td>
-                                    <td><NavLink to="/" className="edit">edit</NavLink></td>
-                                    <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Red Janvier</td>
-                                    <td>Supervisor</td>
-                                    <td><NavLink to="/" className="edit">edit</NavLink></td>
-                                    <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                </tr>
+                                {
+                                    Object.keys(userObjects).map(id=>{
+                                        return <tr key={id}>
+                                            <td>{userObjects[id].username}</td>
+                                            <td>{userObjects[id].email}</td>
+                                            <td>{userObjects[id].role}</td>
+                                            <td><NavLink to="/" className="edit">edit</NavLink></td>
+                                            <td><NavLink to="/" className="delete">delete</NavLink></td>
+
+                                        </tr>
+                                    })
+                                }
                             </tbody>
                         </table>
                     </div>
