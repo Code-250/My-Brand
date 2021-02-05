@@ -1,9 +1,14 @@
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
 import {Button} from "../Button";
-import {NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom";
+import UseFirestore from "../../hooks/useFirestore";
 
 const Dashboard = () =>{
+    
+    const {docs} = UseFirestore('contacts')
+        console.log(docs)
+
     return(
         <div className="admin-container">
             <AdNavbar/>
@@ -12,7 +17,7 @@ const Dashboard = () =>{
                     <ul>
                         <NavLink to="/dashboard"><li>Manage Blogs</li></NavLink>
                         <NavLink to="/projects"><li>Manage Projects</li></NavLink>
-                        <NavLink to="/"><li>Contact Messages</li></NavLink>
+                        <NavLink to="/manage-contacts"><li>Contact Messages</li></NavLink>
                         <NavLink to="/users"><li>Manage Users</li></NavLink>
                     </ul>
                     

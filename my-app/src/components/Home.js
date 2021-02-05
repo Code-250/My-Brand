@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import HelloSection from './HelloSection';
-import Card from './Card';
+import ProjectCards from './Card';
 import Footer from './Footer';
 import About from './About';
 import NavBar from "./NavBar"
@@ -14,7 +14,7 @@ function Home(){
                 <NavBar/>
                 <HelloSection/>
                 <About/>
-                <Card/>
+                <ProjectCards/>
                 <Footer/>
                 
             </div>

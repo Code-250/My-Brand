@@ -2,7 +2,7 @@ import React,{useCallback,useContext} from 'react';
 import {Redirect, withRouter} from "react-router";
 import "../App.css"
 import {Form, Button, Card} from  "react-bootstrap";
-import app from "../context/firebase";
+import {app} from "../context/firebase";
 import {Link} from "react-router-dom";
 import {AuthContext} from "../context/context";
 

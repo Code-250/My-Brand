@@ -12,7 +12,7 @@ const CreateProject = () => {
                 <ul>
                     <NavLink to="/dashboard"><li>Manage Blogs</li></NavLink>
                     <NavLink to="/projects"><li>Manage Projects</li></NavLink>
-                    <NavLink to="/"><li>Contact Messages</li></NavLink>
+                    <NavLink to="/manage-contacts"><li>Contact Messages</li></NavLink>
                     <NavLink to="/users"><li>Manage Users</li></NavLink>
                 </ul>
                 

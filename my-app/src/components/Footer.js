@@ -2,13 +2,24 @@ import React from 'react'
 import '../App.css';
 import { Button } from './Button';
 import {Link} from 'react-router-dom';
+import {db} from '../context/firebase';
 import '../App.css';
 import Contact from './Contact';
 
 
-function Footer() {
+const Footer=() =>{
 
-    
+    const addContact =(info)=>{
+        db.collection('contacts').add(
+            info,
+            err=>{
+                if(err){
+                    console.log(err)
+                }
+            }
+        )
+    }
+
     return (
         <>
             <div className='footer-container'>
@@ -20,7 +31,7 @@ function Footer() {
                         you can unsubscribe at any time.
                     </p>
                     <div className="input-areas">
-                        <form>
+                        <form >
                             <input 
                             type='email'
                             placeholder='your email'
@@ -35,7 +46,7 @@ function Footer() {
                         </form>
                     </div>
                 </section>
-                <Contact />
+                <Contact addContact={addContact}/>
                 <div className="footer-icons row">
                     <Link to="/" className="facebook footer-icons col-sm-3">
                         
@@ -77,6 +88,6 @@ function Footer() {
             </div>
         </>
     )
-}
 
+}
 export default Footer

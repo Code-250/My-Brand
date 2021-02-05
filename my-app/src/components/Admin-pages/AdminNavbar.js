@@ -2,7 +2,7 @@ import React from "react";
 import {NavLink} from 'react-router-dom';
 import '../../App.css';
 import {Button} from "../Button";
-import app from "../../context/firebase"
+import {app} from "../../context/firebase"
 
 const AdNavbar =()=>{
     const handleLogout =() =>{

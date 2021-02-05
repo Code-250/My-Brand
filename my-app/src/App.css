@@ -272,11 +272,15 @@ li{
   text-decoration: none;
   /* background-color:#c5c2c2; */
   }
-  .cards__item{
-   width:100%;
-   padding:0 4rem
-  }
-
+.cards__item{
+  width:100%;
+  padding:0 4rem
+}
+.project-title{
+  cursor:pointer;
+  font-size:2rem;
+  color:rgb(100, 99, 99);
+}
 .cards__item__pic-wrap {
    position:relative;
     width: 100%;
@@ -308,9 +312,7 @@ li{
     line-height: 24px;
     margin:0px;
     padding:0px;
-  }
-  h5:hover{
-    cursor:pointer;
+    margin-bottom:3rem;
   }
   .blog-icons{
     display:flex;

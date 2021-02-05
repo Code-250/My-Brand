@@ -1,7 +1,7 @@
 import React,{ useCallback} from 'react'
 import {Form, Button, Card} from  "react-bootstrap"
 import {Link} from "react-router-dom"
-import app from '../context/firebase';
+import {app} from '../context/firebase';
 import {withRouter} from "react-router";
 
  const SignUp = ({history}) => {
