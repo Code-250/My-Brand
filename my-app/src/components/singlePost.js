@@ -7,7 +7,7 @@ function SinglePost(){
         <>
             <NavBar/>
             <div className="image">
-                <img src="images/blog1.jpg"></img>
+                <img src="images/blog1.jpg"alt="blog-title"/>
             </div>
             <div className="container">
                 <div className="row row-title">

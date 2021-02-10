@@ -5,7 +5,7 @@ import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom";
 
-const Dashboard = () =>{
+const Dashboard = ({url}) =>{
 
     const [blogObjects, setBlogObjects] = useState({});
 
@@ -19,8 +19,8 @@ const Dashboard = () =>{
     return(
         <div className="admin-container">
             <AdNavbar/>
-             <div className="admin-wrapper">
-                 <div className="left-sidebar">
+            <div className="admin-wrapper">
+                <div className="left-sidebar">
                     <ul>
                         <NavLink to="/dashboard" className="active"><li>Manage Blogs</li></NavLink>
                         <NavLink to="/projects"><li>Manage Projects</li></NavLink>
@@ -28,8 +28,8 @@ const Dashboard = () =>{
                         <NavLink to="/users"><li>Manage Users</li></NavLink>
                     </ul>
                     
-                 </div>
-                 <div className="admin-content">
+                </div>
+                <div className="admin-content">
                     <div className="button-group">
                         <NavLink to="/addPost">
                             <Button buttonStyle='btn--outline'
@@ -53,14 +53,20 @@ const Dashboard = () =>{
                                 <th colSpan="3">Action</th>
                             </thead>
                             <tbody>
-                                {
+                                {   
                                     Object.keys(blogObjects).map(id=>{
                                         return <tr key={id}>
                                             <td>{blogObjects[id].title}</td>
                                             <td>{blogObjects[id].author}</td>
+                                            <td><NavLink to="/" className="edit">edit</NavLink></td>
+                                            <td><NavLink to="/" className="delete">delete</NavLink></td>
+                                            <td><NavLink to="/" className="publish">Publish</NavLink></td>
                                         </tr>
                                     })
                                 }
+                                <tr>
+                                    <td>{url}</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

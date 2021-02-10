@@ -5,9 +5,9 @@ import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom"
 
-function ManageUser() {
-
+function ManageUser({setCurrentId}) {
     const [userObjects, setUserObjects] = useState({});
+    
 
     db.collection('Users')
     .get()
@@ -60,9 +60,9 @@ function ManageUser() {
                                             <td>{userObjects[id].username}</td>
                                             <td>{userObjects[id].email}</td>
                                             <td>{userObjects[id].role}</td>
-                                            <td><NavLink to="/" className="edit">edit</NavLink></td>
+                                            <td><NavLink to="/updateUsers"
+                                            className="edit">edit</NavLink></td>
                                             <td><NavLink to="/" className="delete">delete</NavLink></td>
-
                                         </tr>
                                     })
                                 }

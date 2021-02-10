@@ -97,3 +97,12 @@ form div{
     background: #858282;
     color: #858282;
 }
+
+.errors{
+    color:red;
+    font-size:15px;
+    margin:0 auto;
+}
+.user-errors{
+    color:red;
+}

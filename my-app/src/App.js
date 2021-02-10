@@ -18,8 +18,7 @@ import Dashboard from "./components/Admin-pages/Dashboard"
 import About from './components/About';
 import {Container} from "react-bootstrap";
 
-
-function App (props){
+function App (){
   return (
     <AuthProvider>
       <Router>
@@ -34,6 +33,7 @@ function App (props){
             <Route path="/addPost" component={CreatePost}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/createproject" component={CreateProject}/>
+            
             <Route path="/users" component={ManageUser}/>
             <Route path ="/manage-contacts" component={ManageContacts}/>
             <Route path="/adduser" component={CreateUser}/>

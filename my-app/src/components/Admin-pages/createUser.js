@@ -17,6 +17,7 @@ function CreateUser(){
             }
         )
     }
+    
 
     const initialUserValues = {
         username:"",
@@ -26,6 +27,12 @@ function CreateUser(){
         role:""
     }
 
+
+    const [nameErrors, setNameErrors] = useState('');
+    const [emailErrors, setEmailErrors] = useState('');
+    const [passwordErrors, setPasswordErrors] = useState('');
+    const [passwordConfErrors, setPasswordConfErrors] = useState('')
+    const [roleError, setRoleError] = useState('');
     const [users, setUsers] = useState(initialUserValues);
 
     const changeHandler = (e)=>{
@@ -37,17 +44,45 @@ function CreateUser(){
     }
     const handleClick = (e) =>{
         e.preventDefault();
-        if(users !== 0){
+        if(users.username.length >=3 && users.email.length >=5 && users.password.length >=6){
             if(users.password === users.passwordConfirm){
                 AddUser(users);
                 setUsers(initialUserValues)
             }else{
-                alert('password does not match');
-                setUsers(initialUserValues);
+                if(users.password !== users.passwordConfirm){
+
+                }
             }
             
         } else{
-            alert('something went wrong')
+            if(!users.username.trim()){
+                setNameErrors("Username is required") 
+            }
+        
+            // emaill
+        
+            if(!users.email){
+                setEmailErrors("Email required")
+            } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[1-z]{2,}$/i.test(users.email)){
+                setEmailErrors("Email address is invalid")
+            }
+
+            // password
+
+            if(!users.password){
+                setPasswordErrors("password is required")
+            } else if(users.password.length < 6 ){
+                setPasswordErrors("password needs to be atleast 6 characters")
+            }
+            // password Confirm
+
+            if(!users.passwordConfirm){
+                setPasswordConfErrors('password needed')
+            }
+            // role
+            if(users.role.length < 4){
+                setRoleError("this field should be filled")
+            }
         }
     }
     return(
@@ -82,39 +117,44 @@ function CreateUser(){
                         <h2 className="page-title">Add User</h2>
                         <form method="post">
                             <div className="add-post-title">
-                                <label>UserName :</label>
+                                <label>UserName *:</label>
                                 <input type="text" name="username"
                                  className="text-input"
                                  value={users.username}
                                  onChange={changeHandler}/>
+                                 {nameErrors && <p className="user-errors">{nameErrors}</p>}
                             </div>
                             <div className="add-post-title">
-                                <label>Email :</label>
+                                <label>Email *:</label>
                                 <input type="email" name="email" 
                                 className="text-input"
                                 value={users.email}
                                 onChange={changeHandler}/>
+                                {emailErrors && <p className="user-errors">{emailErrors}</p>}
                             </div>
                             <div className="add-post-title">
-                                <label>Password :</label>
+                                <label>Password *:</label>
                                 <input type="password" name="password" 
                                 className="text-input"
                                 value={users.password}
                                 onChange={changeHandler}/>
+                                {passwordErrors && <p className="errors">{passwordErrors}</p>}
                             </div>
                             <div className="add-post-title">
-                                <label>Password Comfirmation :</label>
+                                <label>Password Comfirmation *:</label>
                                 <input type="password" name="passwordConfirm"
                                  className="text-input"
                                  value={users.passwordComfirm}
                                  onChange={changeHandler}/>
+                                 {passwordConfErrors && <p className="user-errors">{passwordConfErrors}</p>}
                             </div>
                             <div className="add-post-title">
-                                <label>Role :</label>
+                                <label>Role *:</label>
                                 <input type="text" name="role"
                                  className="text-input"
                                  value={users.role}
                                  onChange={changeHandler}/>
+                                 {roleError && <p className="user-errors">{roleError}</p>}
                             </div>
                             <div>
                                 <NavLink to="/">

@@ -1,5 +1,6 @@
 import React,{ useState }from 'react';
 import { Button } from './Button';
+import "./Admin-pages/adminStyle.css";
 
 const Contact = ({addContact}) => {
     const initialfieldValues={
@@ -7,7 +8,9 @@ const Contact = ({addContact}) => {
         email:"",
         message:""
     }
-
+    const [fullNameErrors, setfullNameErrors] = useState('');
+    const [emailErrors, setEmailErrors] = useState('');
+    const [messageErrors, setMessageErrors] = useState('');
     const [values, setValues] = useState(initialfieldValues);
 
     const changeHandler =(e)=>{
@@ -19,11 +22,27 @@ const Contact = ({addContact}) => {
     }
     const handleClick =(e)=>{
         e.preventDefault();
-        if(values.length !== 0){
+        if(values.fullName.length >= 3 && values.email.length >=2 && values.message.length >=8){
             addContact(values);
             setValues(initialfieldValues);
         } else{
-            console.log("error")
+            if(!values.fullName.trim()){
+                setfullNameErrors("Username is required") 
+            }
+        
+            // emaill
+        
+            if(!values.email){
+                setEmailErrors("Email required")
+            } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[1-z]{2,}$/i.test(values.email)){
+                setEmailErrors("Email address is invalid")
+            }
+            //  message
+
+            if(!values.message){
+                setMessageErrors('fill this field to send message')
+            }
+            
         }
             
         
@@ -45,6 +64,7 @@ const Contact = ({addContact}) => {
                                 className='contact-input'
                                 value={values.fullName}
                                 onChange={changeHandler}/>
+                                {fullNameErrors && <p className="errors">{fullNameErrors}</p>}
                                 <input 
                                 type='email'
                                 name="email"
@@ -53,6 +73,7 @@ const Contact = ({addContact}) => {
                                 value={values.email}
                                 onChange={changeHandler}
                                 />
+                                {emailErrors && <p className="errors">{emailErrors}</p>}
                             </form>
                         </div>
                         <div className='message'>
@@ -63,8 +84,8 @@ const Contact = ({addContact}) => {
                             className='contact-message'
                             value={values.message}
                                 onChange={changeHandler}
-                            >
-                            </textarea>
+                            />
+                            {messageErrors && <p className="errors">{messageErrors}</p>}
                            <div className='send-message'>
                                 <Button onClick={handleClick}>
                                     Send
