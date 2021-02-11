@@ -7,20 +7,20 @@ const BlogList = ()=>{
     const { blogs } = useContext(BlogContext);
 
     return(
-        <div id='blogs'>
-            <h1 className='blog-title'>blogs</h1>
-            <div className='cards__container'>
-                <div className='cards__wrapper'>
-                    <ul className='cards__items'>
-                        {
-                            blogs.map(blog=>{
-                                return(
-                                    <li key={blog.id}>{blog.title}</li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
+        <div className="container">
+            <h1 className='d-flex justify-content-center mb-5' style={{color:"#7e7b7b"}}>blogs</h1>
+            <div className='container-fluid justify-content-center'>
+                <ul className='row col-12 justify-content-center ml-4'>
+                    {
+                        blogs.map(blog=>{
+                            return(
+                                <li key={blog.id} className="card col-md-5">
+                                    <div className="card-title">{blog.title}</div>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
             </div>
         </div>
     )
