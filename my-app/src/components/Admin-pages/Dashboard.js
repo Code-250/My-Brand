@@ -9,7 +9,7 @@ const Dashboard = ({url}) =>{
 
     const [blogObjects, setBlogObjects] = useState({});
 
-    db.collection('blogs')
+    db.collection('Blogs')
     .get()
     .then(querySnapshot=>{
         const post = querySnapshot.docs.map(doc=> doc.data());

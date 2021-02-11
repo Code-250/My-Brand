@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import AdNavbar from "./AdminNavbar";
 import {db} from "../../context/firebase";
 import "./adminStyle.css";
 import {Button} from "../Button";
-import {NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom";
 
-function ManageUser({setCurrentId}) {
+function ManageUser() {
     const [userObjects, setUserObjects] = useState({});
     
 
@@ -15,12 +15,13 @@ function ManageUser({setCurrentId}) {
         const user = querySnapshot.docs.map(doc=> doc.data());
         setUserObjects(user);
     });
-    
+
     return (
+
         <div className="admin-container">
             <AdNavbar/>
-             <div className="admin-wrapper">
-                 <div className="left-sidebar">
+            <div className="admin-wrapper">
+                <div className="left-sidebar">
                     <ul>
                         <NavLink to="/dashboard"><li>Manage Blogs</li></NavLink>
                         <NavLink to="/projects"><li>Manage Projects</li></NavLink>

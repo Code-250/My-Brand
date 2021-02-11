@@ -8,7 +8,7 @@ import {NavLink} from "react-router-dom"
 function CreateUser(){
 
     const AddUser =(owners)=>{
-        db.collection('Users').add(
+        db.collection('Users').set(
             owners,
             err=>{
                 if(err){

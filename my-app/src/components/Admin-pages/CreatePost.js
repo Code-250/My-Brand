@@ -1,52 +1,51 @@
 import React,{useState} from "react";
-import {db} from "../../context/firebase";
+import {db, storage} from "../../context/firebase";
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom";
-import ProgressBar from "./contactMessage";
 
 
 const CreatePost =()=>{
 
     
-    const AddPost = (posts) =>{
-        db.collection('blogs').add(
-            posts,
-        err =>{
-            if(err){
-                    console.log(err);
-                }
-        } 
-        )
-    }
-    const [error, setError] =useState(null);
+    
 
+    const [fileUrl, setFileUrl] = useState(null);
+    const imageHandler =async(e)=>{
+        const file= e.target.files[0];
+        const storageRef = storage.ref()
+        const fileRef = storageRef.child(file.name)
+        await fileRef.put(file)
+        setFileUrl( await fileRef.getDownloadURL());
+    }
     const initialBlogValues = {
-        file:"",
         title:"",
         body:"",
         author:""
     }
-        const [file, setFile] =useState(null);
     
     const [titleErrors, setTitlteErrors] = useState('');
     const [bodyErrors, setBodyErrors] = useState('');
     const [authorErrors, setAuthorErrors] = useState('');
     const [blogs, setBlogs] = useState(initialBlogValues);
 
-        const changeHandler =(e)=>{
-            const { name, value} = e.target;
-            setBlogs({
+    const handleChange = (e) =>{
+        const {name,value}=e.target;
+        setBlogs({
             ...blogs,
-            [name]:value,
-            })
-        }
+            [name]:value
+        })
+    }
     const handleClick = (e) =>{
         e.preventDefault();
-        if(blogs.title.length > 5 && blogs.body.length >20 &&blogs.author.length >4){
-            AddPost(blogs);
-            setBlogs(initialBlogValues);
+
+
+        if(blogs.title.length > 5 && blogs.body.length >20 && blogs.author.length >4){
+            db.collection("Blogs").doc().set({
+                ...blogs,
+                fileUrl
+            })
         } else{
             if(!blogs.title.trim()){
                 setTitlteErrors("Title of the blog must be atleast 5 character long")
@@ -95,27 +94,21 @@ const CreatePost =()=>{
                             <div className="add-post-title">
                                 <label>Image :</label>
                                 <input type="file" 
-                                className="text-input" name="file"
-                                value={blogs.file}
-                                onChange={changeHandler}/>
-                                <div className="output">
-                                    {error && <div>{error}</div>}
-                                    {file && <div>{file.name}</div>}
-                                    {file && <ProgressBar  file={file} setFile={setFile}/>}    
-                                </div>
+                                className="text-input"
+                                onChange={imageHandler}/>
                             </div>
                             <div className="add-post-title">
                                 <label>Title :</label>
                                 <input type="text" name="title" className="text-input"
                                 value={blogs.title}
-                                onChange={changeHandler}/>
+                                onChange={handleChange}/>
                                 {titleErrors && <p className="user-errors">{titleErrors}</p>}
                             </div>
                             <div className="add-post-title">
                                 <label>Body :</label>
-                                <textarea id="body" name="body" className="text-input"
+                                <textarea  name="body" className="text-input"
                                 value={blogs.body}
-                                onChange={changeHandler}/>
+                                onChange={handleChange}/>
                                 {bodyErrors && <p className="user-errors">{bodyErrors}</p>}
 
                             </div>
@@ -123,7 +116,7 @@ const CreatePost =()=>{
                                 <label>Author :</label>
                                 <input type="text" name="author" className="text-input"
                                 value={blogs.author}
-                                onChange={changeHandler}/>
+                                onChange={handleChange}/>
                                 {authorErrors && <p className="user-errors">{authorErrors}</p>}
                             </div>
                             <div>
