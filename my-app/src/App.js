@@ -17,10 +17,12 @@ import PrivateRoute from "./context/PrivateRoute";
 import Dashboard from "./components/Admin-pages/Dashboard"
 import About from './components/About';
 import {Container} from "react-bootstrap";
+import BlogContextProvider from "./context/blogContext,";
+import ImangeContextProvider from './context/imangesContext';
 
 function App (){
   return (
-    <AuthProvider>
+    
       <Router>
         <div className='main-body'>
           <ScrollToTop/>
@@ -29,27 +31,22 @@ function App (){
             <Route path='/about' component={About}/>
             <Route path='/blog' component={blog}/>
             <Route path="/singlepost" component={SinglePost}/>
-            <PrivateRoute path="/dashboard" component={Dashboard}/>
-            <Route path="/addPost" component={CreatePost}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/createproject" component={CreateProject}/>
-            
             <Route path="/users" component={ManageUser}/>
             <Route path ="/manage-contacts" component={ManageContacts}/>
-            <Route path="/adduser" component={CreateUser}/>
-            <Container className="d-flex align-items-center 
-              justify-content-center"
-              style={{minheight:"100vh",marginTop:"12rem"}}>
-              <div  
-                style={{maxwidth:'200px'}}>
-                <Route path='/Login'exact component={Login}/>
-                <Route path="/signup" component={SignUp}/>
-              </div>                    
-            </Container>
+            <Route path="/adduser" component={CreateUser}/>\
+              <Route path="/addPost" component={CreatePost}/>
+            <AuthProvider>
+            <BlogContextProvider>
+                <PrivateRoute path="/dashboard" component={Dashboard}/>
+                
+                <Route path="/login" exact component={Login}/>
+            </BlogContextProvider>
+            </AuthProvider>
           </Switch>
         </div>
       </Router>
-    </AuthProvider>
   );
 }
 

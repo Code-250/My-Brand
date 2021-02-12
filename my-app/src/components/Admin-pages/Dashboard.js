@@ -1,20 +1,13 @@
-import React, {useState} from "react";
-import {db} from "../../context/firebase";
+import React, {useContext, useState} from "react";
+import {BlogContext} from "../../context/blogContext,";
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom";
 
-const Dashboard = ({url}) =>{
+const Dashboard = () =>{
 
-    const [blogObjects, setBlogObjects] = useState({});
-
-    db.collection('Blogs')
-    .get()
-    .then(querySnapshot=>{
-        const post = querySnapshot.docs.map(doc=> doc.data());
-        setBlogObjects(post);
-    });
+    const {blogObject} = useContext(BlogContext);
 
     return(
         <div className="admin-container">
@@ -54,24 +47,21 @@ const Dashboard = ({url}) =>{
                             </thead>
                             <tbody>
                                 {   
-                                    Object.keys(blogObjects).map(id=>{
+                                    Object.keys(blogObject).map(id=>{
                                         return <tr key={id}>
-                                            <td>{blogObjects[id].title}</td>
-                                            <td>{blogObjects[id].author}</td>
+                                            <td>{blogObject[id].title}</td>
+                                            <td>{blogObject[id].author}</td>
                                             <td><NavLink to="/" className="edit">edit</NavLink></td>
                                             <td><NavLink to="/" className="delete">delete</NavLink></td>
                                             <td><NavLink to="/" className="publish">Publish</NavLink></td>
                                         </tr>
                                     })
                                 }
-                                <tr>
-                                    <td>{url}</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
-                 </div>
-             </div>
+                </div>
+            </div>
         </div>
     )
 }

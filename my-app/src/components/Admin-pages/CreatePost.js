@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useContext, useState} from "react";
 import {db, storage} from "../../context/firebase";
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
@@ -8,9 +8,6 @@ import {NavLink} from "react-router-dom";
 
 const CreatePost =()=>{
 
-    
-    
-
     const [fileUrl, setFileUrl] = useState(null);
     const imageHandler =async(e)=>{
         const file= e.target.files[0];
@@ -19,6 +16,7 @@ const CreatePost =()=>{
         await fileRef.put(file)
         setFileUrl( await fileRef.getDownloadURL());
     }
+
     const initialBlogValues = {
         title:"",
         body:"",

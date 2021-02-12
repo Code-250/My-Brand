@@ -5,7 +5,7 @@ import {Button} from "./Button";
 import '../App.css';
 
 
-function NavBar (){
+function NavBar ({value}){
 
     
     return (
@@ -56,7 +56,7 @@ function NavBar (){
                                 <p className='change'>About</p>
                             </Link>
                         </li>
-                           <NavLink to="/login" className='btn'>
+                            <NavLink to="/login" className='btn'>
                                 <Button >
                                     LogIn  
                                 </Button>

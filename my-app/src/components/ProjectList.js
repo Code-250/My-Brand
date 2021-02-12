@@ -11,15 +11,14 @@ const ProjectList =()=>{
                 <ul className="row col-12 justify-content-center ml-4">
                     { projects.map(project=>{
                     return(
-                            <li key={project.id} className=" card col-md-5">
-                                <div className="card-title">{project.title}</div>
-                                <p className="card-text text-secondary">
-                                    lorem have been in jamaica andrenamed the gollira there it very awesome and 
-                                </p>
-                                <a href="#" className="btn btn-outline-success">See more</a>
-                            </li>
+                        <li key={project.id} className=" card col-md-5">
+                            <div className="card-title">{project.title}</div>
+                            <p className="card-text text-secondary">
+                                lorem have been in jamaica andrenamed the gollira there it very awesome and 
+                            </p>
+                            <a href="#" className="btn btn-outline-success">See more</a>
+                        </li>
                     )
-                        
                     })}
                 </ul>
             </div>
