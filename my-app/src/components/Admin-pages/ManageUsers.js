@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, { useState } from "react";
 import AdNavbar from "./AdminNavbar";
 import {db} from "../../context/firebase";
 import "./adminStyle.css";

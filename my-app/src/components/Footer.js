@@ -44,6 +44,7 @@ const Footer=() =>{
                     </form>
                 </div>
             </section>
+            <Contact addContact={ addContact }/>
             <div className="footer-icons row">
                 <Link to="/" className="facebook footer-icons col-sm-3">
                     

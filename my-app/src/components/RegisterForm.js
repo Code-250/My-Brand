@@ -1,4 +1,4 @@
-import React,{ useCallback} from 'react'
+import React, { useCallback} from 'react'
 import {Form, Button, Card} from  "react-bootstrap"
 import {Link} from "react-router-dom"
 import {app} from '../context/firebase';
@@ -8,16 +8,17 @@ import {withRouter} from "react-router";
 
      const handleSubmit = useCallback(async e =>{
          e.preventDefault();
-         const {email, password} = e.target.elements;
+         const {email,password} =e.target.elements;
          try{
             await app
                 .auth()
                 .createUserWithEmailAndPassword(email.value, password.value);
             history.push("/")
-         }catch (error){
-             alert(error);
-         }
-     }, [history]);
+
+        }catch (error){
+            alert(error);
+        }
+    }, [history]);
     // 
     return (
         <>

@@ -14,9 +14,6 @@ function ProjectCards(){
                 <BlogList/>
             </BlogContextProvider>
         </div>
-        
-        
-        
     )
 }
 export default ProjectCards;

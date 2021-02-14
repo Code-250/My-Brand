@@ -40,7 +40,11 @@ function App (){
             <AuthProvider>
             <BlogContextProvider>
                 <PrivateRoute path="/dashboard" component={Dashboard}/>
-                <Route path="/login" exact component={Login}/>
+                <Container style={{padding:"15rem"}}>
+                  <Route path="/login" exact component={Login}/>
+                  <Route path="/signUp" component={SignUp}/>
+                </Container>
+                
             </BlogContextProvider>
             <ProjectProvider>
               <Route path="/projects" component={Projects}/>
