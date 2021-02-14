@@ -1,4 +1,4 @@
-import React,{useContext, useState} from "react";
+import React,{useState} from "react";
 import {db, storage} from "../../context/firebase";
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
@@ -88,7 +88,7 @@ const CreatePost =()=>{
                     </div>
                     <div className="content">
                         <h2 className="page-title">Manage Blogs</h2>
-                        <form method="post">
+                        <form method="post" >
                             <div className="add-post-title">
                                 <label>Image :</label>
                                 <input type="file" 
@@ -120,8 +120,7 @@ const CreatePost =()=>{
                             <div>
                                 <NavLink to="/dashboard">
                                     <Button buttonStyle='btn--outline'
-                                        className='btn'
-                                        onClick={handleClick}>
+                                        className='btn' onClick={handleClick}>
                                         Add Blog 
                                     </Button>
                                 </NavLink>

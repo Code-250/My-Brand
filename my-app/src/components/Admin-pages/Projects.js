@@ -1,14 +1,20 @@
+import React,{ useContext } from "react";
 import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
+import {db} from "../../context/firebase";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom"
+import { ProjectContext } from "../../context/ProjectContext";
 
 function Projects(){
+
+    const {projectObject} = useContext(ProjectContext);
+
     return(
         <div className="admin-container">
             <AdNavbar/>
-             <div className="admin-wrapper">
-                 <div className="left-sidebar">
+            <div className="admin-wrapper">
+                <div className="left-sidebar">
                     <ul>
                         <NavLink to="/dashboard"><li>Manage Blogs</li></NavLink>
                         <NavLink to="/projects"><li>Manage Projects</li></NavLink>
@@ -16,8 +22,8 @@ function Projects(){
                         <NavLink to="/users"><li>Manage users</li></NavLink>
                     </ul>
                     
-                 </div>
-                 <div className="admin-content">
+                </div>
+                <div className="admin-content">
                     <div className="button-group">
                         <NavLink to="/createProject">
                             <Button buttonStyle='btn--outline'
@@ -36,41 +42,31 @@ function Projects(){
                         <h2 className="page-title">Manage Projects</h2>
                         <table>
                             <thead>
-                                <th>SN</th>
                                 <th>Title</th>
                                 <th>contributer</th>
                                 <th colSpan="3">Action</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Task Tracker</td>
-                                    <td>Rich</td>
-                                    <td><NavLink to="/" className="edit">edit</NavLink></td>
-                                    <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                    <td><NavLink to="/" className="publish">publish</NavLink></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Weather App</td>
-                                    <td>Emmy Bigwi</td>
-                                    <td><NavLink to="/" className="edit">edit</NavLink></td>
-                                    <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                    <td><NavLink to="/" className="publish">publish</NavLink></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Blogger Web</td>
-                                    <td>Red Janvier</td>
-                                    <td><NavLink to="/" className="edit">edit</NavLink></td>
-                                    <td><NavLink to="/" className="delete">delete</NavLink></td>
-                                    <td><NavLink to="/" className="publish">publish</NavLink></td>
-                                </tr>
+                                {
+                                    Object.keys(projectObject).map(id=>{
+                                        return<tr key={id}>
+                                            <td>{projectObject[id].title}</td>
+                                            <td>{projectObject[id].contributers}</td>
+                                            <td onClick={()=>{db.collection("Projects").doc("UP").delete().then(()=>{
+                                                console.log("document deleted ")
+                                            }).catch(error=>{
+                                                console.error("error removing ",error)
+                                            })}} className="edit">edit</td>
+                                            <td><NavLink to="/" className="delete">delete</NavLink></td>
+                                            <td><NavLink to="/" className="publish">Publish</NavLink></td>
+                                        </tr>
+                                    })
+                                }
                             </tbody>
                         </table>
                     </div>
-                 </div>
-             </div>
+                </div>
+            </div>
         </div>
     )
 }

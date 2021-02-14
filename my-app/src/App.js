@@ -18,7 +18,7 @@ import Dashboard from "./components/Admin-pages/Dashboard"
 import About from './components/About';
 import {Container} from "react-bootstrap";
 import BlogContextProvider from "./context/blogContext,";
-import ImangeContextProvider from './context/imangesContext';
+import ProjectProvider from './context/ProjectContext';
 
 function App (){
   return (
@@ -31,7 +31,7 @@ function App (){
             <Route path='/about' component={About}/>
             <Route path='/blog' component={blog}/>
             <Route path="/singlepost" component={SinglePost}/>
-            <Route path="/projects" component={Projects}/>
+            
             <Route path="/createproject" component={CreateProject}/>
             <Route path="/users" component={ManageUser}/>
             <Route path ="/manage-contacts" component={ManageContacts}/>
@@ -40,9 +40,11 @@ function App (){
             <AuthProvider>
             <BlogContextProvider>
                 <PrivateRoute path="/dashboard" component={Dashboard}/>
-                
                 <Route path="/login" exact component={Login}/>
             </BlogContextProvider>
+            <ProjectProvider>
+              <Route path="/projects" component={Projects}/>
+            </ProjectProvider>
             </AuthProvider>
           </Switch>
         </div>

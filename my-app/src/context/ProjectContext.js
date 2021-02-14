@@ -1,14 +1,19 @@
 import React, {createContext,useState}from 'react';
+import {db} from "./firebase";
 
 export const ProjectContext = createContext();
 
 const ProjectProvider =(props)=>{
-    const [projects, setProjects] = useState([
-        {title:"Hello world", id:1},
-        {title:"money heist", id:2},
-    ])
+    const [projectObject, setProjects] = useState({})
+
+    db.collection("Projects")
+    .get()
+    .then(snapshot=>{
+        const project = snapshot.docs.map(doc=>doc.data());
+        setProjects(project);
+    })
     return(
-        <ProjectContext.Provider value={{projects}}>
+        <ProjectContext.Provider value={{projectObject}}>
             {props.children}
         </ProjectContext.Provider>
     )

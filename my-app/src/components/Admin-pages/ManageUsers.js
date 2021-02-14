@@ -29,8 +29,8 @@ function ManageUser() {
                         <NavLink to="/users"><li>Manage users</li></NavLink>
                     </ul>
                     
-                 </div>
-                 <div className="admin-content">
+                </div>
+                <div className="admin-content">
                     <div className="button-group">
                         <NavLink to="/adduser">
                             <Button buttonStyle='btn--outline'
