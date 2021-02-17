@@ -24,7 +24,6 @@ function App (){
   return (
     
       <Router>
-        <div className='main-body'>
           <ScrollToTop/>
           <Switch>
             <Route path='/' exact component={Home}/>
@@ -37,7 +36,11 @@ function App (){
             <Route path ="/manage-contacts" component={ManageContacts}/>
             <Route path="/adduser" component={CreateUser}/>\
               <Route path="/addPost" component={CreatePost}/>
+
             <AuthProvider>
+              <ProjectProvider>
+              <Route path="/projects" component={Projects}/>
+            </ProjectProvider>
             <BlogContextProvider>
                 <PrivateRoute path="/dashboard" component={Dashboard}/>
                 <Container style={{padding:"15rem"}}>
@@ -46,12 +49,8 @@ function App (){
                 </Container>
                 
             </BlogContextProvider>
-            <ProjectProvider>
-              <Route path="/projects" component={Projects}/>
-            </ProjectProvider>
             </AuthProvider>
           </Switch>
-        </div>
       </Router>
   );
 }

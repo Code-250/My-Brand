@@ -19,7 +19,7 @@ function About(){
                     transparency and focus.
                 </p>
                 <div className='skill-container'>
-                    <div classNane='design skill'>
+                    <div className='design skill'>
                         <img className='img-skill' src='./images/designer.svg' alt='Designer-log'/>
                         <h2 className='skill-title'>Design</h2>
                         <ul>
@@ -28,7 +28,7 @@ function About(){
                             <li>Adobe XD</li>
                         </ul>   
                     </div>
-                    <div classNane=' skill'>
+                    <div className=' skill'>
                         <img className='img-skill' src='./images/frontend.svg' alt='Front-end-logo'/>
                         <h2 className='skill-title'>Front-End</h2>
                         <ul>
@@ -37,7 +37,7 @@ function About(){
                             <li>css</li>
                         </ul>   
                     </div>
-                    <div classNane='backend skill'>
+                    <div className='backend skill'>
                         <img className='img-skill' src='./images/mentor.svg' alt='BackEnd-Logo'/>
                         <h2 className='skill-title'>Back-End</h2>
                         <ul>
@@ -46,7 +46,7 @@ function About(){
                             <li>MongoDB and PostgressDB</li>
                         </ul>   
                     </div>
-                    <div classNane='Testing skill'>
+                    <div className='Testing skill'>
                         <img className='img-skill' src='./images/test.svg' alt='Testing-skills'/>
                         <h2 className='skill-title'>Testing</h2>
                         <ul>

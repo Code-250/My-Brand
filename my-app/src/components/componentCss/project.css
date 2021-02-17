@@ -1,5 +1,25 @@
 .project-icons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: 10px;
+}
+.listblogs {
+  display: flex;
+}
+.blog-item {
+  height: 30%;
+  width: 100%;
+  margin: 0 3rem;
+}
+.project-icons {
+  width: 80%;
+  margin-left: 3rem;
+}
+.blog-item .blog-images {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+.blog-item.blog-images:hover {
+  transition: 1s ease-out;
 }

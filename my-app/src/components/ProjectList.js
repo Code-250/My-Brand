@@ -6,20 +6,20 @@ import { ProjectContext } from '../context/ProjectContext';
 const ProjectList =()=>{
     const { projectObject } = useContext(ProjectContext);
     return(
-        <div className="container">
-            <h1 className='d-flex justify-content-center mb-5' style={{color:"#7e7b7b"}}>PROJECTS</h1>
-            <div className="container-fluid  justify-content-center">
-                <ul className="row">
+        <div style={{width:"100"}}>
+            <h1  style={{color:"#7e7b7b", textAlign:"center"}}>PROJECTS</h1>
+                <ul className="liistblogs">
                     {Object.keys(projectObject).map(id=>{
                     return(
-                        <li key={id} className=" card col-md-7 mb-3">
-                            <div>
-                                <img width="300px" height="200px"className="overflow picture card-img justify-content-center ml-4" src={projectObject[id].fileUrl} alt="project-images"/>
+                        <li key={id} className="blog-item ">
+                            <div className="blog-content">
+                                <img src={projectObject[id].fileUrl} alt="project-images"/>
+                                <h3 className="card-title">{projectObject[id].title}</h3>
+                                <p className="card-text text-secondary">
+                                    {projectObject[id].description}
+                                </p>
                             </div>
-                            <h3 className="card-title">{projectObject[id].title}</h3>
-                            <p className="card-text text-secondary">
-                                {projectObject[id].description}
-                            </p>
+                            
                             <div className="project-icons">
                                 <Link to="/dashboard">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
@@ -40,7 +40,6 @@ const ProjectList =()=>{
                     )
                     })}
                 </ul>
-            </div>
         </div>
     )
 }

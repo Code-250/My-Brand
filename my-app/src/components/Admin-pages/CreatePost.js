@@ -4,6 +4,8 @@ import AdNavbar from "./AdminNavbar";
 import "./adminStyle.css";
 import {Button} from "../Button";
 import {NavLink} from "react-router-dom";
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 
 const CreatePost =()=>{
@@ -69,7 +71,7 @@ const CreatePost =()=>{
                         <NavLink to="/manage-contacts"><li>Contact Messages</li></NavLink>
                         <NavLink to="/users"><li>Manage Users</li></NavLink>
                     </ul>
-                    
+
                 </div>
                 <div className="admin-content">
                     <div className="button-group">
@@ -104,11 +106,19 @@ const CreatePost =()=>{
                             </div>
                             <div className="add-post-title">
                                 <label>Body :</label>
-                                <textarea  name="body" className="text-input"
-                                value={blogs.body}
-                                onChange={handleChange}/>
+                                <CKEditor
+                                    editor={ ClassicEditor }
+                                    data={blogs.body}
+                                
+                                    onChange={ ( event, editor ) => {
+                                        const data = editor.getData();
+                                        blogs.body = data
+                                    } }
+                                    
+                                />
                                 {bodyErrors && <p className="user-errors">{bodyErrors}</p>}
-
+                                
+                                
                             </div>
                             <div className="add-post-title">
                                 <label>Author :</label>

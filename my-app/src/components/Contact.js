@@ -56,7 +56,7 @@ const Contact = ({addContact}) => {
                     </h1>
                     <form className='contact-container'>
                         <div className='contact-wrapper'>
-                            <form classNane='form'>
+                            <form className='form'>
                                 <input 
                                 type='text'
                                 name="fullName"

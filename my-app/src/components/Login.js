@@ -1,5 +1,5 @@
 import React,{useCallback,useContext} from 'react';
-import {Redirect, withRouter} from "react-router";
+import {Redirect, withRouter} from "react-router-dom";
 import "../App.css"
 import {Form, Button, Card} from  "react-bootstrap";
 import {app} from "../context/firebase";
